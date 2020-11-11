@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Move 1 package(s) to &apos;JavaMail/src&apos;&#x0D;&#x0A;- Original project: &apos;Trabalho2&apos;&#x0D;&#x0A;- Destination element: &apos;JavaMail/src&apos;&#x0D;&#x0A;- Original element: &apos;Trabalho2/src/Email&apos;" description="Move package" destination="=JavaMail/src" element1="/src&lt;Email" flags="589830" fragments="1" id="org.eclipse.jdt.ui.move" policy="org.eclipse.jdt.ui.movePackages" stamp="1301925199718" version="1.0"/>
+</session>

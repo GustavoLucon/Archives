@@ -1,0 +1,73 @@
+package Pai;
+import java.net.*;
+import java.awt.Toolkit;
+import java.awt.event.KeyEvent;
+import java.io.*;
+import java.util.*;
+
+import javax.swing.KeyStroke;
+
+public class ping {
+
+//public static void main(String[] args) {
+	//int cont = 0;
+	//String ip [] = Recebeip();
+	//long hora = Horas();
+	//Pingar(ip[cont]);
+	
+//}
+
+
+private static long Horas() {
+    Date d = new Date();
+    GregorianCalendar datahora;
+    TimeZone timezone;
+	datahora = new GregorianCalendar();
+	timezone = TimeZone.getTimeZone("GMT-03:00");
+	TimeZone.setDefault(timezone);
+    datahora.setTimeZone(timezone);
+    d = datahora.getTime();
+    d.setYear(1900 + d.getYear());
+    return d.getTime();
+    
+}
+
+private static String[] PreencherVetor(String[] vetor) {
+	for (int i = 0 ;i< vetor.length;i++)
+	{
+			vetor[i]="";
+	}
+	return vetor;
+}
+
+
+public static void Pingar(String ip)
+{
+	String pingResult = "";
+	String inputLine;
+
+	String pingCmd = "ping " + ip;
+
+	try {
+		Runtime r = Runtime.getRuntime();
+		Process p = r.exec(pingCmd);
+
+		BufferedReader in = new BufferedReader(new InputStreamReader(p.getInputStream()));
+		while ((inputLine = in.readLine()) != null) {
+		System.out.println(inputLine);
+		pingResult += inputLine;
+		if(inputLine.equals("Esgotado o tempo limite do pedido."))
+		{
+			Toolkit.getDefaultToolkit().beep(); 
+		}
+	}
+	in.close();
+
+	}//try
+	catch (IOException e) {
+	System.out.println(e);
+	}
+
+}
+
+}

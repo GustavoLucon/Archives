@@ -1,0 +1,24 @@
+import javax.swing.JOptionPane;
+
+public class recursividade {
+	public static int exibir(int num)
+	{
+		int f;
+		if(num == 0)
+		{
+		return 1;	
+		}
+		else
+		{
+		f = num - exibir(num-1);
+		System.out.println(f);
+		return f ;
+		}
+	}
+	public static void main (String args[])
+	{
+		int recebido ;
+		recebido = Integer.parseInt(JOptionPane.showInputDialog (null ,"Digite o numero desejado"));	
+		exibir(recebido);	
+	}
+}

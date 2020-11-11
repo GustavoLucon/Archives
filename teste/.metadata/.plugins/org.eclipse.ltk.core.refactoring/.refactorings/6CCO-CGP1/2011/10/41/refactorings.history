@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Move 1 package(s) to &apos;6CCO/src/CGP1&apos;&#x0D;&#x0A;- Original project: &apos;6CCO-CGP1&apos;&#x0D;&#x0A;- Destination element: &apos;6CCO/src/CGP1&apos;&#x0D;&#x0A;- Original element: &apos;6CCO-CGP1/src/atividade1&apos;" description="Move package" destination="=6CCO/src&lt;CGP1" element1="/src&lt;atividade1" flags="589830" fragments="1" id="org.eclipse.jdt.ui.move" policy="org.eclipse.jdt.ui.movePackages" stamp="1318046425027" version="1.0"/>
+</session>

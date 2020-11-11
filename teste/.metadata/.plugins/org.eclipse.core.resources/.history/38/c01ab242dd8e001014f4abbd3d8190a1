@@ -1,0 +1,48 @@
+package Pai;
+
+public class IP {
+	public String  IP;
+	public String nome;
+	public int altura;
+	public IP filho;
+	
+	public IP(String ip , String nome, int altura)
+	{
+		if(filho == null)
+		{
+		this.IP = ip;
+		this.nome = nome;
+		this.altura = altura;
+		}
+		else
+		{
+			filho = new IP(ip,nome,altura);
+		}
+	}
+	public String buscaIP(int i) {
+		if(this.altura == i)
+		{
+		return IP;
+		}
+		else
+		{
+		return filho.buscaIP(i);
+		}
+	}
+	public String getIP() {
+		return IP;
+	}
+	public void ProximoIp() {
+		
+	}
+	public void setIP(String ip) {
+		IP = ip;
+	}
+	public String getNome() {
+		return nome;
+	}
+	public void setNome(String nome) {
+		this.nome = nome;
+	}
+
+}

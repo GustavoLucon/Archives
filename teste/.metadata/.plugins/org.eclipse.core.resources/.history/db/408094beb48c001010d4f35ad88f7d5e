@@ -1,0 +1,47 @@
+import java.net.*;
+import java.awt.Toolkit;
+import java.awt.event.KeyEvent;
+import java.io.*;
+import java.util.*;
+
+import javax.swing.KeyStroke;
+
+public class pingTest {
+
+public static void main(String[] args) {
+	String ip = "10.21.100.100";
+	Pingar(ip);
+	
+}
+
+
+public static void Pingar(String ip)
+{
+	String pingResult = "";
+	String inputLine;
+
+	String pingCmd = "ping " + ip;
+
+	try {
+		Runtime r = Runtime.getRuntime();
+		Process p = r.exec(pingCmd);
+
+		BufferedReader in = new BufferedReader(new InputStreamReader(p.getInputStream()));
+		while ((inputLine = in.readLine()) != null) {
+		System.out.println(inputLine);
+		pingResult += inputLine;
+		if(inputLine.equals("Esgotado o tempo limite do pedido."))
+		{
+			Toolkit.getDefaultToolkit().beep(); 
+		}
+	}
+	in.close();
+
+	}//try
+	catch (IOException e) {
+	System.out.println(e);
+	}
+
+}
+
+}

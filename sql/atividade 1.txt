@@ -1,0 +1,152 @@
+Feito Por :
+4CCO1 - Veris
+Gustavo P. Lucon 04406166890
+Andre Vicente de Araujo 35895842895 
+
+1)SELECT table_name FROM user_tables;
+
+2)
+CREATE TABLE Tecnico
+(
+cod_tecnico char(10) ,
+nom_tecnico varchar2(30) not null,
+espec_tecnico char(1) not null,
+tel_tecnico char(11),
+reg_atu_tecnico char(1),
+CONSTRAINT cod_tecnico_pk PRIMARY KEY(cod_tecnico)
+);
+
+CREATE TABLE cliente
+(
+cod_cliente char(10),
+num_cliente char(10) not null,
+ender_cliente varchar2(30) not null,
+tel_cliente char(11),
+email_cliente varchar2(30),
+cpf_cliente char(11) not null,
+CONSTRAINT cod_cliente_pk PRIMARY KEY(cod_cliente)
+);
+
+CREATE TABLE Chamado
+(
+num_chamado char(10),
+data_abertura_chamado date not null,
+data_encerramento_chamado date not null,
+cod_tecnico char(10) ,
+cod_cliente char(10) ,
+CONSTRAINT num_chamado_pk PRIMARY KEY(num_chamado),
+CONSTRAINT cod_tecnico_fk Foreign KEY(cod_tecnico) REFERENCES Tecnico(cod_tecnico),
+CONSTRAINT cod_cliente_fk Foreign KEY(cod_cliente) REFERENCES Cliente(cod_cliente)
+);
+
+3)SELECT constraint_name,column_name 
+FROm user_cons_columns
+where table_name in ('CLIENTE','TECNICO','CHAMADO');
+
+4)
+CREATE SEQUENCE cod_cliente
+INCREMENT BY 1111111111
+START WITH 1
+MAXVALUE 9999999999
+NOCACHE
+NOCYCLE;
+
+CREATE SEQUENCE cod_tecnico
+INCREMENT BY 1
+START WITH 1111111111
+MAXVALUE 9999999999
+NOCACHE
+NOCYCLE;
+
+CREATE SEQUENCE num_chamado
+INCREMENT BY 1
+START WITH 1111111111
+MAXVALUE 9999999999
+NOCACHE
+NOCYCLE;
+5)
+INSERT INTO	Cliente(cod_cliente,num_cliente,ender_cliente,cpf_cliente)
+VALUES		(cod_cliente.NextVal,'1234567890', 'SAN DIEGO','12345678910');
+
+INSERT INTO	Cliente(cod_cliente,num_cliente,ender_cliente,cpf_cliente)
+VALUES		(cod_cliente.NextVal,'0987654321', 'SAN DIEGO','0987654321');
+
+INSERT INTO	Chamado(num_chamado,data_abertura_chamado,data_encerramento_chamado)
+VALUES		(num_chamado.NextVal,sysdate, sysdate);
+
+INSERT INTO	Chamado(num_chamado,data_abertura_chamado,data_encerramento_chamado)
+VALUES		(num_chamado.NextVal,sysdate, sysdate);
+
+INSERT INTO	Tecnico(cod_tecnico,nom_tecnico,espec_tecnico)
+VALUES		(cod_tecnico.NextVal,'Jao', '1');
+
+INSERT INTO	Tecnico(cod_tecnico,nom_tecnico,espec_tecnico)
+VALUES		(cod_tecnico.NextVal,'Tryn', '2');
+
+6)
+
+Alter Table cliente 
+add(
+sexo varchar2(1),
+profissao varchar2(30));
+
+7)
+
+Alter Table tecnico
+Modify(
+nom_tecnico varchar2(60));
+
+8)
+
+ALTER TABLE cliente 
+SET UNUSED (sexo);
+
+9)
+
+ALTER TABLE cliente
+DROP  UNUSED COLUMNS;
+
+10)
+
+desc cliente;
+
+11)
+
+ALTER TABLE cliente add( CONSTRAINT cliente_profissao_uk UNIQUE(PROFISSAO));
+
+12)
+
+ALTER TABLE cliente add(renda_mensal varchar2(8) CHECK (renda_mensal BETWEEN 510 AND 99999));
+
+13)
+ALTER TABLE tecnico modify(tel_tecnico not null,reg_atu_tecnico not null); 
+
+14)
+
+select * from user_sequences;
+
+15) 
+
+Drop table cliente;
+Drop table tecnico;
+Drop table Chamado;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

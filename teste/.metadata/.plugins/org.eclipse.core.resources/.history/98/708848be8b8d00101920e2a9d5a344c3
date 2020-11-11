@@ -1,0 +1,134 @@
+package Pai;
+import java.net.*;
+import java.awt.Image;
+import java.awt.Toolkit;
+import java.awt.event.KeyEvent;
+import java.io.*;
+import java.util.*;
+
+import javax.swing.JOptionPane;
+import javax.swing.KeyStroke;
+
+public class ping {
+	
+	private static String dir1 = ("C:\\Users\\Guga\\Desktop\\Nova Pasta\\");
+	private static int numips = 0;
+	private static IP lista;
+
+
+//public static void main(String[] args) {
+//	int cont = 0;
+//	Recebeip();
+//	long hora = Horas();
+//	Pingar(lista.buscaIP(cont));
+//	Imagem(1);
+	
+//}
+
+
+
+private static void Imagem(int i) {
+	 String minhaImagem = dir1 + "fundo.png";          
+     Toolkit toolkit = Toolkit.getDefaultToolkit();
+     Image imagem = toolkit.getImage(minhaImagem);
+	
+}
+
+
+private static long Horas() {
+    Date d = new Date();
+    GregorianCalendar datahora;
+    TimeZone timezone;
+	datahora = new GregorianCalendar();
+	timezone = TimeZone.getTimeZone("GMT-03:00");
+	TimeZone.setDefault(timezone);
+    datahora.setTimeZone(timezone);
+    d = datahora.getTime();
+    d.setYear(1900 + d.getYear());
+    return d.getTime();
+    
+}
+
+
+private static void Recebeip() {
+	String nome = "";
+	String IP = "";
+    try {  
+       BufferedReader leitor = new BufferedReader(new FileReader(dir1 + "IPS.txt"));
+       String linhas;
+       linhas = leitor.readLine();
+       String palavra = "";
+       int cont = 0 ;
+       int i = 0 ;
+       int a = 0 ;
+       String[] b= linhas.split("");
+
+       while (linhas != null) 
+       {  
+     	  b= linhas.split("");
+     			if(b.length > a)
+     			{
+     			if(b[a].equals(";"))
+     			{
+     			 IP = palavra;
+     			 palavra = "";
+     			}
+     			else if(b[a].equals(","))
+     			{
+     			 lista	= new IP(IP,nome,numips);
+     			 nome = palavra;
+     			 palavra = "";
+     			 cont++;
+     			}
+     			else
+     			{
+     				palavra = palavra + b[a];
+     			}
+     			i++;
+     			
+     			}
+     			else
+     			{
+					i=0;
+					a=0;
+					linhas = leitor.readLine();
+     			}
+     			a++;
+ 			}  
+     	            leitor.close();  
+     	         } catch (Exception e) {  
+     	        	 JOptionPane.showMessageDialog(null, "Erro do arquivo");
+     	        	 System.exit(0);
+     	        }                        
+}
+
+public static void Pingar(String ip)
+{
+	String pingResult = "";
+	String inputLine;
+
+	String pingCmd = "ping " + ip;
+
+	try {
+		Runtime r = Runtime.getRuntime();
+		Process p = r.exec(pingCmd);
+
+		BufferedReader in = new BufferedReader(new InputStreamReader(p.getInputStream()));
+		while ((inputLine = in.readLine()) != null) {
+		System.out.println(inputLine);
+		pingResult += inputLine;
+		if(inputLine.equals("Esgotado o tempo limite do pedido."))
+		{
+			Toolkit.getDefaultToolkit().beep(); 
+		}
+	}
+	in.close();
+
+	}
+	catch (IOException e) {
+	System.out.println(e);
+	}
+
+}
+
+}

@@ -1,0 +1,6 @@
+INDEX VERSION 1.126+F:\TCC\.metadata\.plugins\org.eclipse.jdt.core
+53912019.index
+2599305303.index
+3680402040.index
+188017619.index
+2522679235.index

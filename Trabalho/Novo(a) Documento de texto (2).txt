@@ -1,0 +1,28 @@
+public class  B{
+private A a;
+public B(){
+a=new A(this);
+}
+}
+
+Public class A{
+private B b;
+public A (B b){
+this.b=b;
+}
+}
+
+associaçao
+agregaçao
+composiçao
+herança
+Todos esses podem ser usados no codigo em cima, porem existe uma dependencia entre eles
+
+agregaçao - um elemento pode pertencer a varios
+composiçao - um objeto q depende
+
+dependencia- A = a new A();
+Independente da classe
+
+set- cardinalidade - meias e gavetas 0.n - impedir repetição - testar se referencia ja esta na lista
+bag- multiplicidade - garoto e mordidas de cachorro 1.n

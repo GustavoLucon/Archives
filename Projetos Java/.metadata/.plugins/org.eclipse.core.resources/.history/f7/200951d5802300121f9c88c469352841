@@ -1,0 +1,158 @@
+package cardDuel.telas;
+
+import java.awt.Component;
+
+import javax.swing.JPanel;
+import javax.swing.JLabel;
+
+public class CampoBatalha extends JPanel {
+
+	private JLabel resultado;
+	private JLabel nomeJog1;
+	private JLabel AtribJog1;
+	private JLabel StatusJog1;
+	private JLabel nomeJog2;
+	private JLabel AtribJog2;
+	private Component StatusJog2;
+	private JLabel nomeJog4;
+	private JLabel AtribJog4;
+	private JLabel StatusJog4;
+	private JLabel StatusJog3;
+	private JLabel AtribJog3;
+	private JLabel nomeJog3;
+
+	/**
+	 * Create the panel.
+	 */
+	public CampoBatalha() {
+		setLayout(null);
+		
+		nomeJog3 = new JLabel("");
+		nomeJog3.setBounds(10, 113, 102, 14);
+		add(nomeJog3);
+		
+		AtribJog3 = new JLabel("");
+		AtribJog3.setBounds(10, 138, 46, 14);
+		add(AtribJog3);
+		
+		StatusJog3 = new JLabel("");
+		StatusJog3.setBounds(66, 138, 46, 14);
+		add(StatusJog3);
+		
+		StatusJog4 = new JLabel("");
+		StatusJog4.setBounds(394, 138, 46, 14);
+		add(StatusJog4);
+		
+		AtribJog4 = new JLabel("");
+		AtribJog4.setBounds(338, 138, 46, 14);
+		add(AtribJog4);
+		
+		nomeJog4 = new JLabel("");
+		nomeJog4.setBounds(338, 113, 102, 14);
+		add(nomeJog4);
+		
+		StatusJog2 = new JLabel("");
+		StatusJog2.setBounds(234, 36, 46, 14);
+		add(StatusJog2);
+		
+		AtribJog2 = new JLabel("");
+		AtribJog2.setBounds(178, 36, 46, 14);
+		add(AtribJog2);
+		
+		nomeJog2 = new JLabel("");
+		nomeJog2.setBounds(178, 11, 102, 14);
+		add(nomeJog2);
+		
+		StatusJog1 = new JLabel("");
+		StatusJog1.setBounds(234, 275, 46, 14);
+		add(StatusJog1);
+		
+		AtribJog1 = new JLabel("");
+		AtribJog1.setBounds(178, 275, 46, 14);
+		add(AtribJog1);
+		
+		nomeJog1 = new JLabel("");
+		nomeJog1.setBounds(178, 250, 102, 14);
+		add(nomeJog1);
+		
+		resultado = new JLabel("");
+		resultado.setBounds(191, 138, 46, 14);
+		add(resultado);
+
+	}
+
+	public void setVerificar(JLabel verificar) {
+		this.resultado = verificar;
+	}
+
+	public void setNomeJog(int selecionado,String nome , String maior, String status) {
+		switch(selecionado){
+		case 0:
+			this.nomeJog1.setName(nome);
+			this.AtribJog1.setName(maior);
+			this.StatusJog1.setName(status);
+			break;
+		case 1:
+			this.nomeJog2.setName(nome);
+			this.AtribJog2.setName(maior);
+			this.StatusJog2.setName(status);
+			break;
+		case 2:
+			this.nomeJog3.setName(nome);
+			this.AtribJog3.setName(maior);
+			this.StatusJog3.setName(status);
+			break;
+		case 3:
+			this.nomeJog4.setName(nome);
+			this.AtribJog4.setName(maior);
+			this.StatusJog4.setName(status);
+			break;
+		}
+	}
+
+	public void setAtribJog1(JLabel atribJog1) {
+		AtribJog1 = atribJog1;
+	}
+
+	public void setStatusJog1(JLabel statusJog1) {
+		StatusJog1 = statusJog1;
+	}
+
+	public void setNomeJog2(JLabel nomeJog2) {
+		this.nomeJog2 = nomeJog2;
+	}
+
+	public void setAtribJog2(JLabel atribJog2) {
+		AtribJog2 = atribJog2;
+	}
+
+	public void setStatusJog2(Component statusJog2) {
+		StatusJog2 = statusJog2;
+	}
+
+	public void setNomeJog4(JLabel nomeJog4) {
+		this.nomeJog4 = nomeJog4;
+	}
+
+	public void setAtribJog4(JLabel atribJog4) {
+		AtribJog4 = atribJog4;
+	}
+
+	public void setStatusJog4(JLabel statusJog4) {
+		StatusJog4 = statusJog4;
+	}
+
+	public void setStatusJog3(JLabel statusJog3) {
+		StatusJog3 = statusJog3;
+	}
+
+	public void setAtribJog3(JLabel atribJog3) {
+		AtribJog3 = atribJog3;
+	}
+
+	public void setNomeJog3(JLabel nomeJog3) {
+		this.nomeJog3 = nomeJog3;
+	}
+	
+	
+}

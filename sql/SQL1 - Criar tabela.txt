@@ -1,0 +1,48 @@
+CREATE TABLE Tecnico
+(
+cod_tecnico char(10) ,
+nom_tecnico varchar2(30) not null,
+espec_tecnico char(1) not null,
+tel_tecnico char(11),
+reg_atu_tecnico char(1),
+CONSTRAINT cod_tecnico_pk PRIMARY KEY(cod_tecnico)
+);
+
+CREATE TABLE cliente
+(
+cod_cliente char(10),
+num_cliente char(10) not null,
+ender_cliente varchar2(30) not null,
+tel_cliente char(11),
+email_cliente varchar2(30),
+cpf_cliente char(11) not null,
+CONSTRAINT cod_cliente_pk PRIMARY KEY(cod_cliente)
+);
+
+CREATE TABLE Chamado
+(
+num_chamado char(10),
+data_abertura_chamado date not null,
+data_encerramento_chamado date not null,
+cod_tecnico char(10) ,
+cod_cliente char(10) ,
+CONSTRAINT num_chamado_pk PRIMARY KEY(num_chamado),
+CONSTRAINT cod_tecnico_fk Foreign KEY(cod_tecnico) REFERENCES Tecnico(cod_tecnico),
+CONSTRAINT cod_cliente_fk Foreign KEY(cod_cliente) REFERENCES Cliente(cod_cliente)
+);
+
+
+Drop table cliente;
+Drop table tecnico;
+Drop table Chamado;
+
+
+Alter Table cliente 
+add(
+sexo varchar(1),
+profissao varchar(30));
+
+
+truncate table chamado;
+truncate table tecnico;
+truncate table cliente;

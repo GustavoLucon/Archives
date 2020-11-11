@@ -1,0 +1,35 @@
+1)
+Select a.first_name, a.salary, b.job_title
+from employees a, jobs b
+where a.salary > 
+(select avg(salary) from employees)
+and a.job_id = b.Job_id;
+
+2)
+Select a.first_name, a.salary, b.job_title
+from employees a, jobs b
+where a.job_id = b.Job_id and
+a.salary > all (select distinct(salary) from employees where department_id = 80);
+
+3)
+Select a.first_name, a.salary, b.job_title
+from employees a, jobs b
+where a.job_id = b.Job_id and
+a.salary > all (select Max(distinct(salary)) from employees where department_id = 80);
+
+Select a.first_name, a.salary, b.job_title
+from employees a, jobs b
+where a.job_id = b.Job_id and
+a.salary > any (select Max(distinct(salary)) from employees where department_id = 80);
+
+4)
+Select a.first_name , a.job_id
+from employees a, job_history b
+where a.job_id =  b.Job_id
+and a.job_id = any (select Job_id from job_history); 
+
+Select a.first_name , a.job_id
+from employees a, job_history b
+where a.job_id =  b.Job_id
+and a.job_id = all (select Job_id from job_history); 
+

@@ -1,0 +1,81 @@
+import java.util.Random;
+import javax.swing.*;
+
+class Prova
+{
+	public static void main (Object objectgetClass(Fila1))
+	 {
+		int aux;
+		Random random = new Random();
+		int randomico = random.nextInt();
+		Fila1.class.getClasses();
+		aux = Integer.parseInt(JOptionPane.showInputDialog ("Digite 1 para Fila vazia 2 para fila cheia 3 para enfileirar 4 para desenfileirar e 5 para elemento do inicio e 6 para mostrar a fila 7 ou mais para sair"));
+		while(aux >0  && aux < 7 )
+		{
+		if (aux == 1)
+		{
+			Fila1.Fila1Vazia();
+		}
+		else if (aux == 2)
+		{
+			Fila1.Fila1Cheia();
+			for (int i=0 ; i < 51 ; i++)
+			{
+				Impar.ElementoInicio();
+				Par.ElementoInicio();
+				Fila1.ElementoInicio();
+				if ((Impar.ElementoInicio()/3) *3 == Impar.ElementoInicio() || (Impar.ElementoInicio()/5) *5 == Impar.ElementoInicio() || (Impar.ElementoInicio()/7) *7 == Impar.ElementoInicio())
+				{
+				Multi.Enfileirar(Impar.ElementoInicio()) ;	
+				}
+				else if ((Par.ElementoInicio()/3) *3 == Par.ElementoInicio()|| (Par.ElementoInicio()/5) *5 == Par.ElementoInicio() || (Par.ElementoInicio()/7) *7 == Par.ElementoInicio())
+				{
+				Multi.Enfileirar(Par.ElementoInicio()) ;	
+				}
+				else if ((Fila1.ElementoInicio()/3) *3 == Fila1.ElementoInicio()|| (Fila1.ElementoInicio()/5) *5 == Fila1.ElementoInicio()|| (Fila1.ElementoInicio()/7) *7 == Fila1.ElementoInicio())
+				{
+				Multi.Enfileirar(Fila1.ElementoInicio()) ;	
+				}
+				else
+				{
+				Multi.Desenfileirar() ;
+				}
+				Impar.Desenfileirar() ;
+				Par.Desenfileirar() ;
+				Fila1.Desenfileirar() ;
+			}
+			Multi.MostrarFila1() ;
+		}
+		else if (aux == 3)
+		{
+			if((randomico/2) * 2 == randomico)
+			{
+				Par.Enfileirar(Randomico) ;
+				
+			}
+			else
+			{
+				Impar.Enfileirar(Randomico) ;
+			}
+			Fila1.Enfileirar(Randomico) ;
+		}
+		else if (aux == 4)
+		{
+			Fila1.Desenfileirar() ;
+		}
+		else if (aux == 5)
+		{
+			Fila1.ElementoInicio();
+		}
+		else if (aux == 6)
+		{
+			Fila1.MostrarFila1( );
+		}
+		else 
+		{
+			System.exit(0);
+		}
+		}
+	 }
+
+}

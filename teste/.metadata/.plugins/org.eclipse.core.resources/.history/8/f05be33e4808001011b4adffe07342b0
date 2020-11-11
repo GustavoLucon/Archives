@@ -1,0 +1,91 @@
+package RML;
+/*
+import java.io.*;
+import javax.mail.*;
+import javax.mail.internet.*;
+import java.util.*; 
+
+public class Email
+{
+	public static void main (String args[])
+	{
+		String bola[] = new String[4];
+		bola[0] = "C:/msgms.txt";
+		bola[1] = "C:/emails.txt";
+		bola[2] = "gugaefo@gmail.com";
+		bola[3] = "teste";
+		
+		if (bola.length < 4) {
+			System.out.println("Forma de uso: java Spammer <arquivo msg> <arquivo emails> <from> <subject>");
+			System.exit(1);
+		}
+		
+		try {
+			postMail(bola[0], bola[1], bola[2], bola[3]);
+		}
+		catch (MessagingException e) {
+			System.out.println("Erro: "+ e);
+		}
+		
+	}
+	
+	public static void postMail(String msg_file, String mails_file,  String from, String subject) throws MessagingException
+	{
+	    final boolean debug = false;
+		 
+	     //Set the host smtp address
+	     Properties props = new Properties();
+	     props.put("tester-tesste@bol.com.br.smtp.pop.com.br", "localhost");
+	
+	    // create some properties and get the default Session
+	    Session session = Session.getDefaultInstance(props, null);
+	    session.setDebug(debug);
+	
+	    // create a message
+	    Message msg = new MimeMessage(session);
+	
+	    // set the from and to address
+	    InternetAddress addressFrom = new InternetAddress(from);
+
+		// Sux, na documentacao que eu tenho diz que da para usar um objeto
+		// Address simples, mas so funciona com um array de objetos. Entao 
+		// fiz essa gambiarra pq ja tava de saco cheio pra pensar numa 
+		// outra solucao :)
+		Address to[] = new InternetAddress[1];
+	    msg.setFrom(addressFrom);
+	    msg.setSubject(subject);
+		
+		StringBuffer mensagem = new StringBuffer();
+		String linha;
+
+		try {
+			// Arquivo com os enderecos de email ( um por linha )
+			BufferedReader reader = new BufferedReader(new FileReader(mails_file));
+
+			// Arquivo com a mensagem
+			BufferedReader msg1 = new BufferedReader(new FileReader(msg_file));
+			
+			// Le todo o conteudo da mensagem a ser enviada
+			while ((linha = msg1.readLine()) != null)
+				mensagem.append(linha);
+
+			msg1.close();
+
+	    	msg.setContent(mensagem, "text/html");
+
+			// Le cada endereco de email e envia
+			while ((linha = reader.readLine()) != null) {
+				to[0] = new InternetAddress(linha);
+				msg.setRecipients(Message.RecipientType.TO, to);
+
+				Transport.send(msg);
+				Thread.sleep(10);
+			}
+		}
+		catch (Exception e) {
+			System.out.println("Erro: "+ e);
+		}
+	}
+}
+*/
+

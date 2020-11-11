@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Copy 1 element(s) to &apos;André.inserirnum(...)&apos;&#x0D;&#x0A;- Original project: &apos;3ºbimestre&apos;&#x0D;&#x0A;- Destination element: &apos;André.inserirnum(...)&apos;&#x0D;&#x0A;- Original element: &apos;André.inserirnum(...)&apos;" description="Copy method" destination="/src&lt;{André.java[André~inserirnum~I" element1="/src&lt;{André.java[André~inserirnum~I" flags="589830" id="org.eclipse.jdt.ui.copy" members="1" policy="org.eclipse.jdt.ui.copyMembers" stamp="1264868938531" version="1.0"/>
+</session>

@@ -1,0 +1,5 @@
+https://groups.google.com/group/jrimum-community/topics?hl=pt&start=10&sa=N
+http://jrimum.nordestefomento.com.br/bopepo/wiki/Componente/Documentacao/Tutoriais/GeracaoDeBoletoPadrao
+http://jrimum.nordestefomento.com.br/bopepo/wiki/Componente/Documentacao/Tutoriais
+http://www.guj.com.br/java/121435-jsp--jboleto---problema-na-implementacao-do-codigo-de-barra
+http://www.guj.com.br/articles/34

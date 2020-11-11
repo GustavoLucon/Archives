@@ -1,0 +1,114 @@
+package com.parkhere.main;
+
+import java.util.ArrayList;
+
+import android.app.ListActivity;
+import android.os.Bundle;
+import android.view.View;
+import android.widget.AdapterView;
+import android.widget.ArrayAdapter;
+import android.widget.ListView;
+import android.widget.AdapterView.OnItemClickListener;
+
+import com.google.android.maps.MapActivity;
+import com.google.android.maps.OverlayItem;
+import com.parkhere.R;
+import com.parkhere.lista.Estacionamento;
+import com.parkhere.model.Marcador;
+import com.parkhere.overlay.AreaOverlay;
+import com.parkhere.overlay.ListaMarcadorOverlay;
+
+public class lista extends ListActivity {
+	
+	
+	private String[] listaEstacionamentoProximo;
+	private Estacionamento escolhido;
+	private ArrayList<Estacionamento> listaEstacionamentoArray;
+	
+    @Override
+    public void onCreate( Bundle savedInstanceState ) {
+        super.onCreate( savedInstanceState );
+        setContentView( R.layout.park_here_activity);
+    }
+	
+	private void EscolherDestino(double latitude, double longitude) {
+		int tamanhoLista = 0;
+		if(listaEstacionamento == null ||listaEstacionamento.size() == 0)
+		{
+		ListaDeTeste();
+		}
+		listaEstacionamentoArray = new ArrayList<Estacionamento>();
+		for(int i= 0;i < listaEstacionamento.size();i++)
+		{
+			if(listaEstacionamento.get(i).getLatitude() < latitude + 100 && listaEstacionamento.get(i).getLatitude() > latitude - 100 && listaEstacionamento.get(i).getLongitude() < longitude + 100 && listaEstacionamento.get(i).getLongitude() > longitude - 100)
+			{
+			 tamanhoLista++;
+			}
+		}
+		
+		listaEstacionamentoProximo = new String[tamanhoLista];
+		int altura = 0;
+		for(int i= 0;i < listaEstacionamento.size();i++)
+		{
+			if(listaEstacionamento.get(i).getLatitude() < latitude + 100 && listaEstacionamento.get(i).getLatitude() > latitude - 100 && listaEstacionamento.get(i).getLongitude() < longitude + 100 && listaEstacionamento.get(i).getLongitude() > longitude - 100)
+			{
+				listaEstacionamentoArray.add(altura ,listaEstacionamento.get(i));
+				listaEstacionamentoProximo[altura] = ("Nome : "+listaEstacionamento.get(i).getNomeEstacionamento() + "\nEndereço :" + listaEstacionamento.get(i).getEndereço() + "\nPreço : "+ listaEstacionamento.get(i).getPreco() + "\nVagas :" +listaEstacionamento.get(i).getVagas());
+				altura++;
+			}
+		}		
+		
+		ListView list = (ListView)findViewById(R.id.listView1);
+	       
+        list.setAdapter(new ArrayAdapter<String>(this,android.R.layout.simple_list_item_1,listaEstacionamentoProximo));
+        
+        list.setOnItemClickListener(new OnItemClickListener() {
+
+            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+      	
+                Destinar(view,position);
+                
+                
+                }
+        });
+
+        
+	}
+	
+     
+			public void Destinar(View view, int position) {
+				// TODO Auto-generated method stub
+				escolhido  = listaEstacionamentoArray.get(position);
+				    if(escolhido != null)
+	                {
+			       
+				    int x = (int)Math.round(escolhido.getLatitude());
+				    int y = (int)Math.round(escolhido.getLongitude());
+	                Marcador destino = new Marcador(x, y );
+	            
+	                           
+	                ListaMarcadorOverlay listaOverlay = new ListaMarcadorOverlay( getResources().getDrawable( R.drawable.ic_launcher ) );
+	                ArrayList<OverlayItem> listaLocais = new ArrayList<OverlayItem>();
+	                
+	                Marcador itemSP = new Marcador( -23569596,-46646519 );
+	                AreaOverlay areaOverlay = new AreaOverlay( contexto, itemSP , destino, 1000F);
+
+	                
+	                listaOverlay.setAreaOverlay( areaOverlay );
+	                
+	                listaLocais.add( new OverlayItem( itemSP, "Teste", "Apenas um teste" ) );
+	                listaOverlay.setListaOverlays( listaLocais );
+	                
+
+	                      
+	                
+	                getMapa().getOverlays().add( listaOverlay );
+	                getMapa().getOverlays().add( areaOverlay );
+	                getControle().setCenter( itemSP );
+	                getMapa().invalidate();
+	                
+	                setContentView(R.layout.mapa);
+	                                
+	                }
+			}
+}

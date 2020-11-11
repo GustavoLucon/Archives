@@ -1,0 +1,217 @@
+
+CREATE TABLE Sindico
+(
+cod_sind             NUMBER(4) NOT NULL ,
+nome_sind            VARCHAR2(100) NOT NULL ,
+telefone_sind        varchar2(20) NOT NULL ,
+email_sind           varchar2(100) ,
+cpf_sind              varchar2(11) NOT NULL ,
+sexo_sind            CHAR(1) NOT NULL);
+
+     
+CREATE TABLE Administradora
+(
+	cod_adm              NUMBER NOT NULL ,
+	end_adm              varchar2(100) not NULL 
+);
+
+
+CREATE TABLE Condominio
+(
+	cod_cond             NUMBER NOT NULL ,
+	cod_adm              NUMBER NOT NULL ,
+	cod_sind             NUMBER NOT NULL ,
+	nome_cond            VARCHAR2(100) not null ,
+	end_cond             VARCHAR2(100) not null ,
+	email_cond           VARCHAR2(100) ,
+	telefone_cond        varchar2 (20) not null 
+);
+
+CREATE TABLE Casa
+(
+	num_casa             NUMBER NOT Null ,
+	cod_cond             NUMBER not null,
+	end_casa             varchar2(100) not null ,
+	telefone_casa        varchar2(20)  
+);
+
+
+
+
+
+CREATE TABLE Apartamento
+(
+	num_apto             NUMBER NOT NULL ,
+	cod_cond             NUMBER NOT NULL ,
+	end_apto             VARCHAR2(100) not null  ,
+	telefone_apto        varchar2(20) 
+);
+
+CREATE TABLE Contas
+(
+	tipo_conta          number not null,
+	conta_agua           number,
+	conta_luz            number,
+	conta_gas            number,
+	conta_manutencao     number,
+	conta_limpeza        number,
+	conta_seguraca       number
+);
+
+
+CREATE TABLE Dado_conta
+(
+	cod_adm              NUMBER NOT NULL ,
+	tipo_conta          number not null,
+	mes_ref_conta        DATE not NULL 
+);
+
+
+CREATE TABLE Mensalidade
+(
+	Tipo_conta           number NOT NULL ,
+	data_venc            DATE NULL ,
+	valor_mens           number NOT NULL
+);
+
+
+CREATE TABLE Morador
+(
+	Nome_mor            varchar2(100) not null,
+	data_nascimento     date not null,
+	num_apto             NUMBER NULL ,
+	num_casa             NUMBER NULL ,
+	email_cond           VARCHAR2(100) 
+);
+
+
+CREATE TABLE representante_adm
+(
+	cod_rep_adm         number NOT NULL ,
+	cod_adm              NUMBER NOT NULL
+);
+
+CREATE TABLE Reuniao
+(
+	cod_sind             NUMBER NOT NULL ,
+	cod_rep_adm         number NOT NULL ,
+	data_reuniao         DATE not NULL
+);
+
+
+CREATE TABLE Atas
+(
+	num_ata              varchar2(15) NOT NULL ,
+	nome_ata             VARCHAR2(20) not NULL 
+);
+
+
+//alter table Admnistradora
+//add constraint fk_cond_adm FOREIGN KEY (cod_adm) REFERENCES Administradora (cod_adm),
+
+
+Alter table Sindico
+add constraint pk_cod_sind Primary key(cod_sind);
+
+Alter table Admnistradora
+add constraint pk_cod_adm Primary key(cod_adm);
+
+
+
+
+alter table Condominio
+add constraint pk_cod_cond Primary key(cod_cond);
+alter table Condominio
+add constraint fk_cod_sind Foreign key(cod_sind) references Sindico(cod_sind);
+alter table Condominio
+add constraint fk_cod_adm  foreign key(cod_adm) references Administradora(cod_adm);
+
+alter table Casa
+add constraint pk_num_casa Primary key(num_casa);
+alter table casa
+add constraint fk_cod_cond foreign key(cod_cond) references Condominio(cod_cond);
+
+alter table apartamento
+add constraint pk_num_apto Primary key(num_apto);
+alter table apartamento
+add constraint fk_cod_cond_apto foreign key(cod_cond) references Condominio(cod_cond);
+
+alter table Dado_conta
+add constraint pk_dado_conta primary key(tipo_conta);
+
+alter table Mensalidade
+add constraint pk_data_venc primary key(data_venc);
+alter table Mensalidade
+add constraint fk_tipo_conta_mensa foreign key(Tipo_conta) references Dado_conta(tipo_conta);
+
+alter table Morador
+add constraint fk_num_casa foreign key(num_casa) references Casa(num_casa);
+alter table Morador
+add constraint fk_num_apto foreign key(num_apto) references Apartamento(num_apto);
+
+alter table representante_adm
+add constraint pk_cod_rep_adm primary key(cod_rep_adm);
+alter table representante_adm
+add constraint fk_cod_adm_rep foreign key(cod_adm) references Administradora(cod_adm);
+
+Alter table Atas
+add constraint pk_num_ata Primary key(num_ata);
+
+alter table reuniao
+add constraint fk_cod_sind_reuniao foreign key(cod_sind) references Sindico(cod_sind);
+alter table reuniao
+add constraint fk_cod_rep_adm foreign key(cod_rep_adm) references Representante_adm(cod_rep_adm);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+drop table Atas;
+drop table Sindico;
+drop table Administradora;
+drop table Condominio;
+drop table Morador;
+drop table Casa;
+drop table Apartamento;
+drop table Contas;
+drop table Dado_Conta;
+drop table representante_adm;
+drop table Reuniao;
+drop table Mensalidade;
+
+
+
+
+
+
+
+
+
+insert into Sindico values (1,'Euclides da Cunha','3323-2323',
+'morada_das_flores@gmail.com','10144811923','m');
+
+
+
+
+
+
+
+
+
+cvn ciee 3046-8208 bela vista rodrigo
+
+
+
+bela vista banco de dados 
+
+rua tabapua, 540 mesanino levar curriculo

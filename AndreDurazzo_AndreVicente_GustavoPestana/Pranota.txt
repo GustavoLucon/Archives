@@ -1,0 +1,157 @@
+1)create user GUSTAVOLUCON identified by GUSTAVOLUCON;
+grant DBA to GUSTAVOLUCON;
+
+2)
+PRonto
+
+
+3)
+
+
+--Creates 
+
+CREATE TABLE Cliente
+(
+	IDCliente            VARCHAR2(20) NOT NULL ,
+	NomeCLiente          VARCHAR2(20) NULL ,
+	Telefone             INTEGER NULL ,
+	NomeCidade           VARCHAR2(20) NULL ,
+	SiglaDoNome          VARCHAR2(20) NULL 
+);
+CREATE TABLE Cidade
+(
+	NomeCidade           VARCHAR2(20) NULL ,
+	SiglaDoNome          VARCHAR2(20) NOT NULL ,
+	HoraLocal            DATE NULL 
+);
+CREATE TABLE Regiao
+(
+	NomeCidade           VARCHAR2(20) NOT NULL ,
+	Representante        VARCHAR2(20) NULL ,
+	Expectativas         VARCHAR2(20) NULL ,
+	SiglaDoNome          VARCHAR2(20) NOT NULL 
+);
+CREATE TABLE Servico
+(
+	Nome                 VARCHAR2(20) NOT NULL ,
+	Custo                VARCHAR2(20) NULL ,
+	HorarioDeAtividade   VARCHAR2(20) NULL ,
+	IDCliente            VARCHAR2(20) NULL 
+);
+CREATE TABLE Conta
+(
+	IDConta              INTEGER NOT NULL ,
+	Valor                INTEGER NULL ,
+	Status               VARCHAR2(20) NULL ,
+	IDCliente            VARCHAR2(20) NULL 
+);
+
+
+--ALTERS
+
+
+
+ALTER TABLE Conta ADD CONSTRAINT  PKConta PRIMARY KEY (IDConta);
+ALTER TABLE Regiao ADD CONSTRAINT  PKRegiao PRIMARY KEY (NomeCidade,SiglaDoNome);
+ALTER TABLE Cidade ADD CONSTRAINT  PKCidade PRIMARY KEY (SiglaDoNome);
+ALTER TABLE Cliente ADD CONSTRAINT  PKCliente PRIMARY KEY (IDCliente);
+ALTER TABLE Servico ADD CONSTRAINT  PKServico PRIMARY KEY (Nome);
+ALTER TABLE Regiao ADD (CONSTRAINT R_5 FOREIGN KEY (SiglaDoNome) REFERENCES Cidade (SiglaDoNome));
+ALTER TABLE Servico ADD (CONSTRAINT R_14 FOREIGN KEY (IDCliente) REFERENCES Cliente (IDCliente) ON DELETE SET NULL);
+
+
+--INSERIR
+
+INSERT INTO	Cliente(IDCliente,nomecliente,Telefone)
+VALUES		(12,'Rafael teste',35457125);
+
+INSERT INTO	Cliente(IDCliente,nomecliente,Telefone)
+VALUES		(13,'Ronaldo TEste',35457125);
+
+INSERT INTO	Cliente(IDCliente,nomecliente,Telefone)
+VALUES		(14,'MUndo teste',35457125);
+
+
+INSERT INTO	Regiao(nomecidade,representante,expectativas,SiglaDoNome)
+VALUES		('Cidade A','Rafael teste','crescer 15pontos','T1');
+
+INSERT INTO	Regiao(nomecidade,representante,expectativas,SiglaDoNome)
+VALUES		('Cidade B','Gustavo teste','crescer 20 pontos','T2');
+
+INSERT INTO	Regiao(nomecidade,representante,expectativas,SiglaDoNome)
+VALUES		('Cidade C','Gaia teste','crescer 13pontos','T3');
+
+
+INSERT INTO	Cidade(SigladoNome,nomecidade,horalocal)
+VALUES		('T1','TEste1',sysdate);
+
+INSERT INTO	Cidade(SigladoNome,nomecidade,horalocal)
+VALUES		('T2','TEste2',sysdate);
+
+INSERT INTO	Cidade(SigladoNome,nomecidade,horalocal)
+VALUES		('T3','TEste3',sysdate);
+
+
+INSERT INTO	Conta(IDConta,valor,Status)
+VALUES		(1234,1234,'Disp');
+
+
+INSERT INTO	Conta(IDCOnta,valor,Status)
+VALUES		(12,12346,'Disponivel');
+
+INSERT INTO	Conta(IDCOnta,valor,Status)
+VALUES		(1234654,123412,'Disponivel');
+
+INSERT INTO	Servico(Nome,Custo,HorarioDeAtividade)
+VALUES		('Massagem',123,'1 as 6');
+
+INSERT INTO	Servico(Nome,Custo,HorarioDeAtividade)
+VALUES		('yoga',1234,'1 as 8');
+
+INSERT INTO	Servico(Nome,Custo,HorarioDeAtividade)
+VALUES		('Massacre',1236,'4 as 6');
+
+
+4)
+
+Create OR Replace PROCEDURE AtualizaHora
+(Hora date)
+return Date
+IS
+Hora date := 0;
+BEGIN
+Hora = Sysdate;
+return Hora;
+END AtualizaHora;
+/
+
+5)
+
+Cria (Ou recria) uma funçao que retorna o valor da soma dos salario da tabela emp enquanto emp for igual a p_id tendo como numero inicial o numero passado;
+
+
+6)
+
+CREATE TABLE Log
+(
+	usuario              varchar2(15) NOT NULL ,
+	hora            date not NULL ,
+	tipo		 VARCHAR2(20) not NULL 
+);
+
+CREATE OR REPLACE TRIGGER monitor 
+after logon ON database
+BEGIN
+insert into Log(usuario,hora,tipo) values(user,sysdate,'logon');
+end monitorhr;
+/
+
+CREATE OR REPLACE TRIGGER monitor
+BEfore logoff ON database
+BEGIN
+insert into Log(usuario,hora,tipo) values(user,sysdate,'logoff');
+end monitorhr;
+/
+
+
+

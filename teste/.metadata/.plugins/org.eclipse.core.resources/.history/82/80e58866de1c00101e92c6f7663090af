@@ -1,0 +1,83 @@
+package RML;
+
+import java.io.BufferedReader;
+import java.io.FileReader;
+import java.io.FileOutputStream;
+import java.io.IOException;
+//import api iText
+import com.lowagie.text.*; 
+import com.lowagie.text.pdf.PdfWriter;
+
+public class ConvertaHTMLemPDF {
+
+	public static void main(String[] args)
+	{
+		if(args[0].equals("Gustav@Lucon"))
+		{
+			System.out.println("Este é o programa de conversão de HTML para PDF \n Feito Por : Gustavo Pestana Lucon em 10/01/2011");
+		}
+		if(args[0].equals("") == false && args[1].equals("") == false)
+		{
+		String Texto;
+		Texto = ImportarHTMl("C:\\PDF\\PF0911.html");
+		CriarPDF("C:\\PDF\\PF0911.pdf",Texto);
+		}
+		else
+		{
+			System.out.println("Execussão nao valida \n Tente por exemplo : HtmltoPDF.jar (Nome do arquivo de entrada ,ponto, extensao algo.html) (Nome do arquivo de saida ,ponto, extensao algo.pdf)");
+		}
+	}
+		public static void CriarPDF(String Nome , String Texto) {
+		        // criação do objeto documento
+		       Document document = new Document();
+		       try {
+		           
+		           PdfWriter.getInstance(document, new FileOutputStream(Nome + ".pdf"));
+		           document.open();
+		           
+		           // adicionando um parágrafo ao documento
+		           document.add(new Paragraph(Texto));
+	}
+		       catch(DocumentException de) {
+		           System.err.println(de.getMessage());
+		       }
+		       catch(IOException ioe) {
+		           System.err.println(ioe.getMessage());
+		       }
+		       document.close();
+		   }	
+	//Importa o arquivo HTML para uma variavel
+	private static String ImportarHTMl(String Caminho) { 
+		String Vetor = "";
+		//vetor retem o texto do html
+	       try {  
+	       //tenta ler o arquivo
+	    	   BufferedReader leitor = new BufferedReader(new FileReader(Caminho));
+	          String linhas;
+	          linhas = leitor.readLine();
+	          int a = 0 ;
+	          String[] b= linhas.split("");
+	   
+	          while (linhas != null) 
+	          {  
+	        	  b= linhas.split("");
+	        			if(b.length > a)
+	        			{
+	        				Vetor = Vetor + b;	
+	        			}
+	        			else
+  			          {
+				a=0;
+				linhas = leitor.readLine();
+
+  			}
+  			a++;
+			}  
+	          leitor.close();    	     
+  	         } catch (Exception e) {   
+  	        	 System.exit(0);
+  	        }
+return Vetor;                                
+
+}
+}

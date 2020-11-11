@@ -1,0 +1,94 @@
+E) 
+declare @bairro =0 number
+set @bairro = @bairro +(Select conta_luz from Contas);
+ 
+select sum(m.valor_mens) from dado_conta dc , mensalidade m
+where dc.tipo_conta = m.tipo_conta and m.tipo_conta =2 and dc.mes_ref_conta between '01/01/2010' and '31/12/2010';
+
+
+F)
+Adicionar valor da mensalidade.
+
+UPDATE Mensalidade SET valorMensalidade =[valorMensalidade] + ([valorMensalidade] * 0.15)
+
+G)
+Adicionar data de nascimento do condomino e nome
+
+UPDATE Condomino SET email_cond  = "milton_nascimento@gmail.com" where nome_cond LIKE "Milton Nascimento"
+UPDATE Condomino SET nasc_cond  = "15/02/1955" where nome_cond LIKE "Milton Nascimento"
+
+H)
+
+DELETE FROM Condomino
+WHERE nome_cond LIKE "Marisa Monte"
+
+I)
+
+Criar aquele log
+
+J)
+Adicionar email , bloco do condomino
+
+Select a.nome_cond , a.email_cond ,b.cod_cond ,c.cod_cond  from Condomino a ,Casa b ,Apartamento c where a.bloco_cond = "A" AND (a.num_casa = b.num_casa OR a.num_apto = c.num_apto)
+
+K)
+CREATE OR REPLACE TRIGGER monitorHR ON *
+BEFORE logon OR logoff
+BEGIN
+if(user LIKE "HR")
+insert into OUTFILE "Teste.txt" values(sys_context('userenv','session_user'), sysdate)
+end_if
+end
+
+L)
+
+CREATE OR REPLACE TRIGGER EMPmonitorHR
+BEFORE INSERT OR UPDATE OR DELETE ON Employees 
+BEGIN
+if(user LIKE "HR")
+insert into DML_Employees values(INSERT OR UPDATE OR DELETE,user,Sysdate)
+end_if
+end
+
+M)
+
+Create OR Replace PROCEDURE calcula_valor
+IS
+BEGIN
+declare @Calculo varchar2(90)
+SET @Calculo = (SELECT YEAR(0), MONTH(0), DAY(0) From SYsdate) && seq_num;
+END
+
+CREATE OR REPLACE TRIGGER teste
+BEFORE INSERT ON TESTE
+BEGIN
+calcula_valor
+END
+
+N)
+CREATE OR REPLACE TRIGGER DelOBJ
+BEFORE DROP OR DELETE ON *
+BEGIN
+SqlContext.Pipe.Send("Este Objeto Sera Eliminado")
+END
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+lpad(varString,tamanhoTotal,preencherCom);
+

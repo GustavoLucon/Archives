@@ -1,0 +1,525 @@
+package cardDuel.mesa;
+
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+
+import javax.swing.ImageIcon;
+import javax.swing.JButton;
+import javax.swing.JFrame;
+import javax.swing.JLabel;
+import javax.swing.JOptionPane;
+import javax.swing.JPanel;
+import javax.swing.SwingConstants;
+import javax.swing.border.EmptyBorder;
+
+import cardDuel.baralho.Baralho;
+import cardDuel.baralho.Carta;
+import cardDuel.jogador.Jogador;
+
+public class Mesa extends JFrame {
+
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
+	private JPanel contentPane;
+	private Jogador[] listaJogadores;
+	private JLabel lblJogador_2;
+	private JLabel lblJogador_3;
+	private JLabel Jog3;
+	private JLabel jog4;
+	private JLabel label_1;
+	private JLabel label_2;
+	private JLabel label_3;
+	private JLabel label_4;
+	private JLabel label_5;
+	private JLabel label;
+	private JLabel lblCartas_2;
+	private JLabel lblCartas_3;
+	private JLabel lblCartas_1;
+	private int turno =0;
+	private JLabel lblCartas;
+
+	/**
+	 * Launch the application.
+	 */
+	/**
+	 * Create the frame.
+	 */
+	public Mesa(int qtJogadores, int bots, String nomeJogador) {
+		
+		
+		listaJogadores = new Jogador[qtJogadores];
+		IniciarBaralho(listaJogadores, bots);
+		listaJogadores[0].setMinhaVez(true);
+		listaJogadores[0].setNome(nomeJogador);
+		
+		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		setBounds(100, 100, 1235, 740);
+		contentPane = new JPanel();
+		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
+		setContentPane(contentPane);
+		contentPane.setLayout(null);
+		
+		
+		JLabel lblJogador = new JLabel(listaJogadores[0].getNome());
+		lblJogador.setBounds(900, 385, 101, 14);
+		contentPane.add(lblJogador);
+
+		JLabel lblJogador_1 = new JLabel(" 2");
+		lblJogador_1.setBounds(121, 11, 59, 14);
+		contentPane.add(lblJogador_1);
+
+		lblJogador_2 = new JLabel("Jogador 4");
+		lblJogador_2.setBounds(10, 434, 65, 14);
+		contentPane.add(lblJogador_2);
+
+		lblJogador_3 = new JLabel("Jogador 3");
+		lblJogador_3.setBounds(928, 149, 65, 14);
+		contentPane.add(lblJogador_3);
+		
+		jog4 = new JLabel("");
+		jog4.setIcon(new ImageIcon(Mesa.class
+				.getResource("/cardDuel/imagens/jogadores/MARIO.JPG")));
+		jog4.setBounds(802, 11, 199, 127);
+		contentPane.add(jog4);
+
+		Jog3 = new JLabel("");
+		Jog3.setIcon(new ImageIcon(Mesa.class
+				.getResource("/cardDuel/imagens/jogadores/LINK.JPG")));
+		Jog3.setBounds(10, 488, 199, 127);
+		contentPane.add(Jog3);
+
+		JLabel lblNewLabel_2 = new JLabel("New label");
+		lblNewLabel_2.setIcon(new ImageIcon(Mesa.class
+				.getResource("/cardDuel/imagens/jogadores/Kirby.JPG")));
+		lblNewLabel_2.setBounds(10, 11, 101, 147);
+		contentPane.add(lblNewLabel_2);
+
+		JLabel lblNewLabel_3 = new JLabel("");
+		lblNewLabel_3.setVerticalAlignment(SwingConstants.TOP);
+		lblNewLabel_3.setIcon(new ImageIcon(Mesa.class
+				.getResource("/cardDuel/imagens/jogadores/Samus.JPG")));
+		lblNewLabel_3.setBounds(672, 258, 91, 120);
+		contentPane.add(lblNewLabel_3);
+
+		JButton btnSair = new JButton("Sair");
+		btnSair.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent arg0) {
+				Mesa.this.dispose();
+			}
+		});
+
+		btnSair.setBounds(936, 592, 65, 23);
+		contentPane.add(btnSair);
+		
+		lblCartas = new JLabel("Cartas:");
+		lblCartas.setBounds(936, 409, 65, 14);
+		contentPane.add(lblCartas);
+		
+		lblCartas_1 = new JLabel("Cartas:");
+		lblCartas_1.setBounds(928, 174, 73, 14);
+		contentPane.add(lblCartas_1);
+		
+		lblCartas_2 = new JLabel("Cartas:");
+		lblCartas_2.setBounds(121, 36, 79, 14);
+		contentPane.add(lblCartas_2);
+		
+		lblCartas_3 = new JLabel("Cartas:");
+		lblCartas_3.setBounds(10, 459, 79, 14);
+		contentPane.add(lblCartas_3);
+		
+		label = new JLabel("");
+		label.setVerticalAlignment(SwingConstants.TOP);
+		label.setHorizontalAlignment(SwingConstants.CENTER);
+		label.setBounds(609, 239, 494, 161);
+		contentPane.add(label);
+		
+		label_1 = new JLabel("Ataque:");
+		label_1.setBounds(318, 526, 79, 14);
+		contentPane.add(label_1);
+		
+		label_2 = new JLabel("Carta:");
+		label_2.setBounds(407, 526, 84, 14);
+		contentPane.add(label_2);
+		
+		label_3 = new JLabel("Defesa:");
+		label_3.setBounds(489, 526, 79, 14);
+		contentPane.add(label_3);
+		
+		label_4 = new JLabel("Magia:");
+		label_4.setBounds(578, 526, 110, 14);
+		contentPane.add(label_4);
+		
+		label_5 = new JLabel("Defesa Magia:");
+		label_5.setBounds(698, 526, 101, 14);
+		contentPane.add(label_5);
+		
+		JLabel label_7 = new JLabel("comparar Por:");
+		label_7.setBounds(487, 551, 131, 14);
+		contentPane.add(label_7);
+		
+		JButton button = new JButton("Magia");
+		button.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				
+				comparar(VezDeQuem(),2);
+			}
+		});
+		button.setBounds(487, 592, 124, 23);
+		contentPane.add(button);
+		
+		JButton button_1 = new JButton("Defesa");
+		button_1.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				comparar(VezDeQuem(),1);
+			}
+		});
+		button_1.setBounds(353, 592, 124, 23);
+		contentPane.add(button_1);
+		
+		JButton button_2 = new JButton("Ataque");
+		button_2.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent arg0) {
+				comparar(VezDeQuem(),0);
+			}
+		});
+		button_2.setBounds(219, 592, 124, 23);
+		contentPane.add(button_2);
+		
+		JButton button_3 = new JButton("Defesa Magia");
+		button_3.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				comparar(VezDeQuem(),3);
+			}
+		});
+		button_3.setBounds(621, 592, 124, 23);
+		contentPane.add(button_3);
+		
+		JButton button_4 = new JButton("Velocidade");
+		button_4.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				comparar(VezDeQuem(),4);
+			}
+		});
+		button_4.setBounds(755, 592, 124, 23);
+		contentPane.add(button_4);
+		
+		
+		lblJogador_2.setVisible(false);
+		Jog3.setVisible(false);
+		lblJogador_3.setVisible(false);
+		jog4.setVisible(false);
+		lblCartas_1.setVisible(false);
+		lblCartas_3.setVisible(false);
+		AtualizarCartasJogador(listaJogadores.length);
+	
+		
+
+		if (qtJogadores == 3) {
+			lblJogador_2.setVisible(true);
+			Jog3.setVisible(true);
+			lblCartas_2.setVisible(true);
+		}
+		if (qtJogadores == 4) {
+			lblJogador_2.setVisible(true);
+			Jog3.setVisible(true);
+			lblJogador_3.setVisible(true);
+			jog4.setVisible(true);
+			lblCartas_1.setVisible(true);
+			lblCartas_3.setVisible(true);
+		}
+
+		
+		setValorLabels(0);
+		
+	}
+
+
+
+	private void AtualizarCartasJogador(int numJogadores) {
+		lblCartas.setText("Cartas= " + listaJogadores[0].getQuantidadeCartas());
+		lblCartas_2.setText("Cartas= " + listaJogadores[1].getQuantidadeCartas());
+		if(numJogadores == 3)
+		{
+			lblCartas_1.setText("Cartas= " + listaJogadores[2].getQuantidadeCartas());
+		}
+		if(numJogadores == 4)
+		{
+			lblCartas_1.setText("Cartas= " + listaJogadores[2].getQuantidadeCartas());
+			lblCartas_3.setText("Cartas= " + listaJogadores[3].getQuantidadeCartas());
+		}
+	}
+
+	private void setValorLabels(int numeroCarta) {
+		Carta carta = listaJogadores[0].getBaralho().getCarta(numeroCarta);
+		label.setIcon(new ImageIcon(Mesa.class.getResource("/cardDuel/imagens/jogadores/Untitled-1.png")));
+		label_1.setText("Ataque:" + (carta.getAtaque() + ".0"));
+		label_2.setText("Defesa:" + (carta.getDefesa() + ".0"));
+		label_3.setText("Magia:" + (carta.getMagia() + ".0"));
+		label_4.setText("Defesa Magia:"
+				+ (carta.getDefesaMagia() + ".0"));
+		label_5.setText("Velocidade:" + (carta.getVelocidade() + ".0"));
+
+	}
+	public void comparar (int idJogador,int atributo)
+	{
+		if(conferirAlguemGanhou() == false)
+		{
+		Carta cartaJogador = listaJogadores[idJogador].getBaralho().getCarta(turno); 
+		int maior = 0;
+		
+		if(atributo == 0)
+		{
+			 maior = cartaJogador.getAtaque();
+		}
+		else if(atributo == 1)
+		{
+			 maior = cartaJogador.getDefesa();
+		}
+		else if(atributo == 2)
+		{
+			 maior = cartaJogador.getMagia();
+		}
+		else if(atributo == 3)
+		{
+			 maior = cartaJogador.getDefesaMagia();
+		}
+		else if(atributo == 4)
+		{
+			 maior = cartaJogador.getVelocidade();
+		}
+		
+		int winner = idJogador;
+		String recompensa = "";
+		String jogada  ="Jogador " + (idJogador + 1 ) + " : Tem : "
+				+ maior + ".0 \n";
+		for (int i = 0; i < listaJogadores.length; i++) {
+			if(listaJogadores[i].getMorreu() == false)
+			{
+				if(idJogador != i)
+				{
+			jogada = jogada + "Jogador: " + (i + 1) 
+					+ " Tem: " + listaJogadores[i].SelecionarMaior(atributo,turno)
+					+ ".0\n";
+			if (maior < listaJogadores[i].SelecionarMaior(atributo,turno)) {
+				maior = listaJogadores[i].SelecionarMaior(atributo,turno);
+				winner = i;
+			}
+			}
+			}
+		}
+		JOptionPane.showMessageDialog(null,jogada);
+		
+		JOptionPane.showMessageDialog(null, "Jogador " + (winner + 1)
+				+ " Venceu com : " + listaJogadores[winner].SelecionarMaior(atributo,turno)
+				+ ".0 Pontos de ataque \n Vez do jogador " + (winner + 1) );
+		
+		for (int i = 0; i < listaJogadores.length; i++) {
+		if(winner != i)
+		{
+			Carta c = null;
+			if(i != 0)
+			{
+			c = listaJogadores[i].SelecionarMaiorCarta(atributo,turno);
+			}
+			else
+			{
+			c = cartaJogador;
+			}
+			if(listaJogadores[i].getMorreu() == false)
+			{
+			listaJogadores[i].removerCarta(c);
+			recompensa = recompensa + c.getNomeCarta() + " | ";
+			listaJogadores[winner].adicionarCarta(c);
+			}
+		}
+		}
+		turno++;
+		AtualizarCartasJogador(listaJogadores.length);
+		setValorLabels(turno);
+			ProximoTurno(winner);		
+			VezDoBot();
+		}
+	}
+	
+
+	private void VezDoBot() {
+		
+		for(int i = 0 ; i < listaJogadores.length;i++)
+		{
+			if(listaJogadores[i].isMinhaVez())
+			{
+				if(listaJogadores[i].isComputador())
+				{
+					RodadaDoBot(i);
+				}
+			}
+		}
+	}
+
+
+
+	private void RodadaDoBot(int numBot) {
+		JOptionPane.showMessageDialog(null,"BOT " + numBot + " seleciona " +StatusIntParaNome(buscarMelhorStatus(numBot)));
+		comparar(VezDeQuem(),buscarMelhorStatus(numBot));
+		
+	}
+
+
+
+	private String StatusIntParaNome(int numMelhorStatus) {
+		String nomeStatus = "";
+		if(numMelhorStatus == 0)
+		{
+			nomeStatus = "Ataque";
+		}
+		else 		if(numMelhorStatus == 1)
+		{
+			nomeStatus = "Defesa";
+		}
+		else 		if(numMelhorStatus == 2)
+		{
+			nomeStatus = "Magia";
+		}
+		else 		if(numMelhorStatus == 3)
+		{
+			nomeStatus = "Defesa MAgia";
+		}
+		else 		if(numMelhorStatus == 4)
+		{
+			nomeStatus = "Velocidade";
+		}
+		return nomeStatus;
+	}
+
+
+
+	private int buscarMelhorStatus(int numBot) {
+		int maior = 0;
+		int status = 0;
+		
+		if(listaJogadores[numBot].getBaralho().getCarta(turno).getAtaque() > maior)
+		{
+			maior = listaJogadores[numBot].getBaralho().getCarta(turno).getAtaque();
+			status = 0;
+		}
+		if(listaJogadores[numBot].getBaralho().getCarta(turno).getDefesa() > maior)
+		{
+			maior = listaJogadores[numBot].getBaralho().getCarta(turno).getDefesa();
+			status = 1;
+		}
+		if(listaJogadores[numBot].getBaralho().getCarta(turno).getMagia() > maior)
+		{
+			maior = listaJogadores[numBot].getBaralho().getCarta(turno).getMagia();
+			status = 2;
+		}
+		if(listaJogadores[numBot].getBaralho().getCarta(turno).getDefesaMagia() > maior)
+		{
+			maior = listaJogadores[numBot].getBaralho().getCarta(turno).getDefesaMagia();
+			status = 3;
+		}
+		if(listaJogadores[numBot].getBaralho().getCarta(turno).getVelocidade() > maior)
+		{
+			maior = listaJogadores[numBot].getBaralho().getCarta(turno).getVelocidade();
+			status = 4;
+		}
+		
+		
+		return status;
+	}
+
+
+
+	private void ProximoTurno(int winner) {
+		if(listaJogadores[winner].isMinhaVez() == false)
+		{
+			for(int i = 0 ; i < listaJogadores.length;i++)
+			{
+				if(winner != i)
+				{
+					listaJogadores[i].setMinhaVez(false);
+				}
+			}
+			listaJogadores[winner].setMinhaVez(true);
+		}
+		
+	}
+	
+	private void FimDeJogo() {
+			for(int i = 0 ; i < listaJogadores.length;i++)
+			{
+
+					listaJogadores[i].setMinhaVez(false);
+
+			}
+		
+	}
+	
+	private int VezDeQuem() {
+		
+		for(int i = 0 ; i < listaJogadores.length;i++)
+		{
+			if(listaJogadores[i].isMinhaVez())
+			{
+				return i;
+			}
+		}
+		return 0 ;
+
+		
+	}
+
+
+
+	private boolean conferirAlguemGanhou() {
+		String cartas = "";
+		boolean vitoria = false;
+		for(int i = 0 ; i < listaJogadores.length;i++)
+		{
+			cartas = cartas + "Jogador " + (i + 1) + " Tinha " + listaJogadores[i].getQuantidadeCartas() + "\n";
+			if(listaJogadores[i].getQuantidadeCartas() == 10 * listaJogadores.length)
+			{
+				vitoria = true;
+				JOptionPane.showMessageDialog(null,"Jogador " + (i + 1) + " VENCEU");
+				FimDeJogo();
+			}
+		}
+		if(vitoria)
+		{
+		JOptionPane.showMessageDialog(null,"Score final \n " + cartas);
+		Mesa.this.dispose();
+		}
+		return vitoria;
+	}
+
+	private void IniciarBaralho(Jogador[] jogador, int bots) {
+		jogador[0] = new Jogador();
+		Baralho baralho = new Baralho();
+		baralho.montarBaralho();
+		jogador[0].setBaralho(baralho);
+
+		for (int i = 1; jogador.length > i; i++) {
+			Baralho baralho2 = new Baralho();
+			baralho2.montarBaralho();
+			jogador[i] = new Jogador();
+			jogador[i].setBaralho(baralho2);
+			if (bots > 0) {
+				jogador[i].setComputador(true);
+				bots--;
+			}
+
+		}
+
+		baralho = new Baralho();
+		baralho.montarBaralho();
+
+	}
+	public Jogador[] getListaJogadores() {
+		return listaJogadores;
+	}
+
+	public void setListaJogadores(Jogador[] listaJogadores) {
+		this.listaJogadores = listaJogadores;
+	}
+}

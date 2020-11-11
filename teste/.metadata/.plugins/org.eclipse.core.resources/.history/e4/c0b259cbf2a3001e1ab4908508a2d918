@@ -1,0 +1,29 @@
+
+public class Prova1 {
+	public static int exibir(int fi ,int fi2,int cont)
+	{
+		int res;
+		int r = fi-1;
+		int r2 = fi-2;
+		
+		if(cont == 7)
+		{
+			return fi;
+		}
+		else
+		{
+		cont++;
+		res = exibir(r , r2 , cont)  + r2 ;
+		System.out.println(res);
+		return res;
+		}
+		
+	}
+	public static void main (String args[])
+	{
+	int fib= 1;
+	int fi2= 0;
+	int cont = 0;
+	exibir(fib , fi2 , cont);
+	}
+}

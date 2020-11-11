@@ -1,0 +1,26 @@
+"desc user_tables" - Descreve uma tabela
+
+"select table_name from user_tables;" - Cria tabela
+
+"CREATE TABLE produto
+(
+   codpro  INT NOT NULL PRIMARY KEY,
+   descri    VARCHAR(32),
+);"- Cria uma tabela com atributos
+
+Não é case sensitive
+
+VARCHAR2(tamanho)-Dados de caractere de comprimento variável
+CHAR(tamanho)-Dados de caractere de comprimento fixo
+NUMBER(p,s)-Dados numéricos de comprimento variável
+DATE-Valores de data e hora
+
+Not Null- nao pode ser nulo ex. RA char(11)not null;
+
+CONSTRAINT dept_deptno_pk PRIMARY KEY(deptno));- Constante Chave primaria
+ 
+"alter table aluno add(constraint ra_pk primary key(ra));" - altera campo da tabela para PK
+
+"Select constraint_name from user_constraints;" mostra as constraints
+
+ed - Mostra ultimo comando para edição

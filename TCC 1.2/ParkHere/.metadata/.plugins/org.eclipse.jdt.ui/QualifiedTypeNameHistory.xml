@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<qualifiedTypeNameHistroy>
+<fullyQualifiedTypeName name="java.util.List"/>
+<fullyQualifiedTypeName name="android.location.Address"/>
+<fullyQualifiedTypeName name="android.location.Geocoder"/>
+<fullyQualifiedTypeName name="android.app.AlertDialog"/>
+<fullyQualifiedTypeName name="com.google.android.maps.Overlay"/>
+<fullyQualifiedTypeName name="java.util.Locale"/>
+<fullyQualifiedTypeName name="android.widget.AdapterView"/>
+<fullyQualifiedTypeName name="android.widget.SimpleCursorAdapter"/>
+<fullyQualifiedTypeName name="android.content.ClipData.Item"/>
+<fullyQualifiedTypeName name="android.app.ProgressDialog"/>
+<fullyQualifiedTypeName name="java.util.ArrayList"/>
+<fullyQualifiedTypeName name="android.content.Context"/>
+<fullyQualifiedTypeName name="android.view.ViewGroup"/>
+<fullyQualifiedTypeName name="android.view.LayoutInflater"/>
+<fullyQualifiedTypeName name="android.widget.TextView"/>
+<fullyQualifiedTypeName name="com.parkhere.lista.Estacionamento"/>
+<fullyQualifiedTypeName name="android.app.ListActivity"/>
+<fullyQualifiedTypeName name="com.example.testlista.R.string"/>
+<fullyQualifiedTypeName name="com.example.testlista.R.layout"/>
+<fullyQualifiedTypeName name="com.example.testlista.R.drawable"/>
+<fullyQualifiedTypeName name="com.example.testlista.R.array"/>
+<fullyQualifiedTypeName name="com.example.testlista.R.menu"/>
+<fullyQualifiedTypeName name="com.example.testlista.R"/>
+<fullyQualifiedTypeName name="android.R"/>
+<fullyQualifiedTypeName name="android.R.layout"/>
+<fullyQualifiedTypeName name="android.widget.ArrayAdapter"/>
+<fullyQualifiedTypeName name="android.view.View"/>
+<fullyQualifiedTypeName name="android.widget.Toast"/>
+<fullyQualifiedTypeName name="android.widget.ListView"/>
+<fullyQualifiedTypeName name="com.example.testlista.R.attr"/>
+<fullyQualifiedTypeName name="com.example.testlista.R.id"/>
+<fullyQualifiedTypeName name="android.widget.AdapterView.OnItemClickListener"/>
+</qualifiedTypeNameHistroy>

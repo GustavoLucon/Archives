@@ -1,0 +1,312 @@
+// fale com a BEARIZ do itau, dizendo que vc e' o ANALISTA GUSTAVO,
+// que trabalha com o RENATO da RML que atende a academia DANDY do sr. jose carlos
+// explique que vc tem que FINALIZAR o trabalho no maximo ate AMANHA
+// e precisa de alguem que TESTE o arquivo ate ficar perfeito !
+
+
+set date brit
+set cent on
+set colo to +bg/b
+clea
+@ 01,00 to 01,79
+@ 23,00 to 23,79
+@ 00,01 say "Preparacao de Cobranca ITAU"
+@ 10,01 say "Tecle ESPACO para gerar arquivo"
+inkey(0)
+
+// dados da empresa que vai gerar os boletos, a academia !
+
+TIPOREGISTRO  = "0"
+OPERACAO      = "1"
+LITERALREMESSA= "REMESSA"
+CODIGOSERVICO = "01"
+LITERALSERVICO= "COBRANCA       "
+AGENCIA       = "1234"
+ZEROS         = "00"
+CONTA         = "12345"
+DAC           = "1"
+BRANCOS6       = "12345678"
+NOMEEMPRESA   = "EMPRESA DE TESTE             "
+CODBANCO      = "341"
+NOMEBANCO     = "BANCO ITAU SA  "
+DATAGERACAO   = "100311"
+BRANCOS7       = "ESTA E A LINHA EXTREMAMENTE LONGA                                                                                                                                                                                                                                                                   "
+NUMEROSEQUENC = "000001"
+
+
+ARQUIVO  = "ITAU_D6.TXT"
+
+// aqui comeca a montagem do TXT
+
+set devi to prin
+set prin to &ARQUIVO.    // cria o txt com o nome do arquivo acima !
+
+REGISTROS = 0
+TOTAL     = 0
+
+// linha 0, o header (cabecalho)
+
+@ 00,00  say TIPOREGISTRO
+@ 00,01  say OPERACAO
+@ 00,02  say LITERALREMESSA
+@ 00,09  say CODIGOSERVICO
+@ 00,11  say LITERALSERVICO
+@ 00,26  say AGENCIA
+@ 00,30  say ZEROS
+@ 00,32  say CONTA
+@ 00,37  say DAC
+@ 00,38  say BRANCOS6
+@ 00,46  say NOMEEMPRESA
+@ 00,76  say CODBANCO
+@ 00,79  say NOMEBANCO
+@ 00,94  say DATAGERACAO
+@ 00,100 say BRANCOS7
+@ 00,394 say NUMEROSEQUENC
+
+// linha 1, o registro1
+               
+TIPOREG = "1"
+CODINS = "12"
+NUMINS = "12345678901234"
+AGENCIA = "1234"
+ZEROS = "00"
+CONTA = "12345"
+DAC = "1"
+BRANCOS1 = "ABC1"
+INSTRUC = "1234"
+DAEMPRES = "AQUI E O USO DA EMRPESA 1"
+NOSSONUM = "12345678"
+QTDEMOE = "1234567.12345"
+NCARTEIR = "123"
+USOBANCO = "ESTE E O TESTE USO  "
+CARTEIRA = "A"
+CODOCRE = "12"
+NDOCUMEN = "1234567890"
+VENCIMEN   = "130311"
+VLRTITUL = 1234567890.12
+CODBANCO = "341"
+AGENCIAC = "12345"
+ESPECIE = "CA"
+ACEITE = "A"
+DTEMISAO = "110311"
+INSTRC1 = "TS"
+INSTRC2 = "AG"
+JUROSDIA  = "1234567890.01"
+DESCATE = "100311"
+VLRDESC = "1234567890.12"
+VLRIOF = "1234567890.12"
+ABATIMEN = "1234567890.12"
+CODINSCR = "12"
+NUMINSCR = "12345678901234"
+NOME = "JOSE DA SILVA TESTE           "
+BRANCOS2 = "J123456789"
+LOGRADOU = "RUA LONGE PRA BURRO                     "
+BAIRRO = "CASA VERDE  "
+CEP = "12345678"
+CIDADE = "TOC TOC PEQUENO"
+ESTADO = "SP"
+SACADOR = "JORGE PEREIRA DOS SANTOS     "
+BRANCOS3 = "A123"
+DATAMORA =  "100311"
+PRAZO = "10"
+BRANCOS4 = "A"
+NUMSEQ  = "123456"
+
+REGISTROS++
+TOTAL = TOTAL + VLRTITUL
+ 
+@ 01,00 say TIPOREG
+@ 01,01 say CODINS
+@ 01,03 say NUMINS
+@ 01,17 say AGENCIA
+@ 01,21 say ZEROS
+@ 01,23 say CONTA
+@ 01,28 say DAC
+@ 01,29 say BRANCOS1
+@ 01,33 say INSTRUC
+@ 01,37 say DAEMPRES
+@ 01,62 say NOSSONUM
+@ 01,70 say QTDEMOE
+@ 01,83 say NCARTEIR
+@ 01,86 say USOBANCO
+@ 01,106 say CARTEIRA
+@ 01,108 say CODOCRE
+@ 01,110 say NDOCUMEN
+@ 01,120 say VENCIMEN
+@ 01,126 say transform(VLRTITUL,"9999999999.99")
+@ 01,139 say CODBANCO
+@ 01,142 say AGENCIAC
+@ 01,147 say ESPECIE
+@ 01,149 say ACEITE
+@ 01,150 say DTEMISAO
+@ 01,156 say INSTRC1
+@ 01,158 say INSTRC2
+@ 01,160 say JUROSDIA
+@ 01,173 say DESCATE
+@ 01,179 say VLRDESC
+@ 01,192 say VLRIOF
+@ 01,205 say ABATIMEN
+@ 01,218 say CODINSCR
+@ 01,220 say NUMINSCR
+@ 01,234 say NOME
+@ 01,264 say BRANCOS2
+@ 01,274 say LOGRADOU
+@ 01,314 say BAIRRO
+@ 01,326 say CEP
+@ 01,334 say CIDADE
+@ 01,349 say ESTADO
+@ 01,351 say SACADOR
+@ 01,381 say BRANCOS3
+@ 01,385 say DATAMORA
+@ 01,391 say PRAZO
+@ 01,393 say BRANCOS4
+@ 01,394 say NUMSEQ
+
+//@ 01,00  say NOME
+//@ 01,31  say transform(VALOR,"999999999.99") // transforma valor em string com mascara
+//@ 01,61  say dtoc(VCTO)    // transforma data em string
+//@ 01,51  say ENDER
+//@ 01,71  say BAIRRO
+//@ 01,91  say CIDADE
+//@ 01,393 say "000002"
+
+// agora o registro 2
+//NOME   = "GUSTAVO TESTE                 "
+//VALOR  = 200
+//VCTO   = ctod("2003/2011")
+
+//CPF    = "02345678900"
+//ENDER  = "R. JONIA 703"
+//BAIRRO = "AEROPORTO         "
+//CIDADE = "SAO PAULO         "
+//TITULO = "000124"
+
+//@ 02,00  say NOME
+//@ 02,31  say transform(VALOR,"999999999.99") // transforma valor em string com mascara
+//@ 02,51  say dtoc(VCTO)    // transforma data em string
+//@ 02,51  say ENDER
+//@ 02,71  say BAIRRO
+//@ 02,91  say CIDADE
+//@ 02,120 say TITULO
+//@ 02,393 say "000003"
+
+
+TIPOREG = "1"
+CODINS = "12"
+NUMINS = "12345678901234"
+AGENCIA = "1234"
+ZEROS = "00"
+CONTA = "12345"
+DAC = "1"
+BRANCOS1 = "ABC1"
+INSTRUC = "1234"
+DAEMPRES = "AQUI E O USO DA EMRPESA 1"
+NOSSONUM = "12345678"
+QTDEMOE = "1234567.12345"
+NCARTEIR = "123"
+USOBANCO = "ESTE E O TESTE USO  "
+CARTEIRA = "A"
+CODOCRE = "12"
+NDOCUMEN = "1234567890"
+VENCIMEN   = "130311"
+VLRTITUL = 1234567890.12
+CODBANCO = "341"
+AGENCIAC = "12345"
+ESPECIE = "CA"
+ACEITE = "A"
+DTEMISAO = "110311"
+INSTRC1 = "TS"
+INSTRC2 = "AG"
+JUROSDIA  = "1234567890.01"
+DESCATE = "100311"
+VLRDESC = "1234567890.12"
+VLRIOF = "1234567890.12"
+ABATIMEN = "1234567890.12"
+CODINSCR = "12"
+NUMINSCR = "12345678901234"
+NOME = "JOSE DA SILVA TESTE           "
+BRANCOS2 = "J123456789"
+LOGRADOU = "RUA LONGE PRA BURRO                     "
+BAIRRO = "CASA VERDE  "
+CEP = "12345678"
+CIDADE = "TOC TOC PEQUENO"
+ESTADO = "SP"
+SACADOR = "JORGE PEREIRA DOS SANTOS     "
+BRANCOS3 = "A123"
+DATAMORA =  "100311"
+PRAZO = "10"
+BRANCOS4 = "A"
+NUMSEQ  = "123456"
+
+REGISTROS++
+TOTAL = TOTAL + VLRTITUL
+ 
+@ 02,00 say TIPOREG
+@ 02,01 say CODINS
+@ 02,03 say NUMINS
+@ 02,17 say AGENCIA
+@ 02,21 say ZEROS
+@ 02,23 say CONTA
+@ 02,28 say DAC
+@ 02,29 say BRANCOS1
+@ 02,33 say INSTRUC
+@ 02,37 say DAEMPRES
+@ 02,62 say NOSSONUM
+@ 02,70 say QTDEMOE
+@ 02,83 say NCARTEIR
+@ 02,86 say USOBANCO
+@ 02,106 say CARTEIRA
+@ 02,108 say CODOCRE
+@ 02,111 say NDOCUMEN
+@ 02,121 say VENCIMEN
+@ 02,127 say transform(VLRTITUL,"9999999999.99")
+@ 02,140 say CODBANCO
+@ 02,143 say AGENCIAC
+@ 02,148 say ESPECIE
+@ 02,150 say ACEITE
+@ 02,151 say DTEMISAO
+@ 02,157 say INSTRC1
+@ 02,159 say INSTRC2
+@ 02,161 say JUROSDIA
+@ 02,174 say DESCATE
+@ 02,180 say VLRDESC
+@ 02,193 say VLRIOF
+@ 02,206 say ABATIMEN
+@ 02,219 say CODINSCR
+@ 02,221 say NUMINSCR
+@ 02,235 say NOME
+@ 02,265 say BRANCOS2
+@ 02,275 say LOGRADOU
+@ 02,315 say BAIRRO
+@ 02,327 say CEP
+@ 02,335 say CIDADE
+@ 02,350 say ESTADO
+@ 02,352 say SACADOR
+@ 02,382 say BRANCOS3
+@ 02,386 say DATAMORA
+@ 02,392 say PRAZO
+@ 02,394 say BRANCOS4
+@ 02,395 say NUMSEQ
+
+
+
+// linha final, o trailler
+
+//REGISTROS++
+//@ 03,00 say str(REGISTROS,5)
+//@ 03,07 say transform(TOTAL,"999999999.99") // transforma valor em string com mascara
+
+TIPOREGISTRO = "9"
+BRANCOS8 =  "BRANCOS DO TRAILER                                                                                                                                                                                                                                                                                                                                                              "
+NUMSEQ = "123456"
+
+@ 03,00 say TIPOREGISTRO
+@ 03,01 say BRANCOS8
+@ 03,394 say NUMSEQ
+
+
+set devi to scre
+set prin to
+@ 20,01 say "Arquivo gerado !"
+inkey(0)
+

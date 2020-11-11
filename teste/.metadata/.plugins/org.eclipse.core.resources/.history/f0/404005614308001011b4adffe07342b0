@@ -1,0 +1,41 @@
+package RML;
+
+import java.io.*;
+import javax.mail.*;
+import javax.mail.internet.*;
+import java.util.*; 
+
+public class Email
+{
+	public static void main (String args[])
+	{
+		 Properties p = new Properties();  
+		 p.put("mail.host", "smtp2.locaweb.com.br");
+		 Session session = Session.getInstance(p, null);  
+		 MimeMessage msg = new MimeMessage(session); 
+		    try {  
+			        // "de" e "para"!!  
+			        msg.setFrom(new InternetAddress("nos@guj.com.br"));  
+			        msg.setRecipient(Message.RecipientType.TO, new InternetAddress("gugaefo@gmail.com.br"));  
+			      
+			        // nao esqueca da data!  
+			        // ou ira 31/12/1969 !!!  
+			        msg.setSentDate(new Date());  
+			      
+			       msg.setSubject("teste");  
+			     
+			       msg.setText("teste");  
+			    
+			       // evniando mensagem (tentando)  
+			       Transport.send(msg);  
+			   }  
+			   catch (AddressException e) {  
+			       // nunca deixe catches vazios!  
+			   }  
+			   catch (MessagingException e) {  
+			       // nunca deixe catches vazios!  
+			   }  
+		
+		
+	}
+}

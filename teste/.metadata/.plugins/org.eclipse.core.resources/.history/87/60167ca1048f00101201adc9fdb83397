@@ -1,0 +1,90 @@
+package Pai;
+
+public class IP {
+	public String  IP;
+	public String nome;
+	public int altura;
+	public boolean barulho;
+	public IP filho;
+	
+	public IP(String ip , String nome, int altura , boolean mostrar)
+	{
+		this.IP = ip;
+		this.nome = nome;
+		this.altura = altura;
+	}
+	public void filhos(String ip , String nome, int altura, boolean mostrar)
+	{
+
+		if(filho == null)
+		{
+			filho = new IP(ip,nome,altura,mostrar);
+		}
+		else
+		{
+			filho.filhos(ip, nome, altura,mostrar);
+		}	
+	}
+	public String buscaIP(int i) {
+		if(this.altura == i)
+		{
+		return IP;
+		}
+		else
+		{
+		return filho.buscaIP(i);
+		}
+	}
+	public String getIP(int i) {
+		if(this.altura == i)
+		{
+		return IP;
+		}
+		else
+		{
+			if(filho != null)
+			{
+		return filho.getIP(i);
+			}
+			else
+			{
+				return "erro";
+			}
+	}
+	}
+		public String getNome(int i) {
+			if(this.altura == i)
+			{
+			return nome;
+			}
+			else
+			{
+				if(filho != null)
+				{
+			return filho.getNome(i);
+				}
+				else
+				{
+					return "erro";
+				}
+		}
+	}
+		public boolean getBarulho(int i) {
+			if(this.altura == i)
+			{
+			return barulho;
+			}
+			else
+			{
+				if(filho != null)
+				{
+			return filho.getBarulho(i);
+				}
+				else
+				{
+					return true;
+				}
+		}
+	}
+
+}

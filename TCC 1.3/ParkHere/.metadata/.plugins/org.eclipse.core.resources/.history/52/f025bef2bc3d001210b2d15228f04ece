@@ -1,0 +1,25 @@
+<resources>
+
+    <string name="app_name">testLista</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="menu_settings">Settings</string>
+    <string name="title_activity_main">MainActivity</string>
+    <string-array name="colors">
+        <item >blue</item>
+        <item >red</item>
+        <item >green</item>
+        <item >blue</item>
+        <item >red1</item>
+        <item >green</item>
+        <item >blue</item>
+        <item >red2</item>
+        <item >green</item>
+        <item >blue</item>
+        <item >red3</item>
+        <item >green</item>
+        <item >blue</item>
+        <item >red4</item>
+        <item >green</item>
+    </string-array>
+
+</resources>

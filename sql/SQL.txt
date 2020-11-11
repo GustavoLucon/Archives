@@ -1,0 +1,24 @@
+spool c:\temp\Resultado_5cco.txt - cria arquivo que guarda as informaçoes
+spool off; - guarda no arquivo as mudanças
+
+create user NOME identified by NOME; - cria usuario
+grant contect to scott - permite conectar
+resolve conect to scott - cancela a permissao
+grant resource to scott - permite alterar tabelas
+
+set linesize 1000;- acerta tamanho linha
+set pagesize 1000;-acerta tamanho da pagina
+
+
+http://tahiti.oracle.com
+
+CREATE TABLE Tecnico
+(
+
+select nome_morador from condomino where Sysdate = dataNiver_morador;
+
+select nome_morador,num_casa ,num_apto , email_morador from condomino where data_venc > Sysdate;
+
+select conta
+
+5cco@professorleandro.com.br

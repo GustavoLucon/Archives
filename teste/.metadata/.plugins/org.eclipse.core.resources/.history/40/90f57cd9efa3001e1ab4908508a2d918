@@ -1,0 +1,21 @@
+
+public class Prova1 {
+	public static int exibir(int fi)
+	{
+		int res;
+		if(fi == 13)
+		{
+			return 1;
+		}
+		else
+		{
+		return exibir(fi-1) + exibir(fi-2);
+		}
+		
+	}
+	public static void main (String args[])
+	{
+	int fib= 0;
+	System.out.println(exibir(fib));
+	}
+}

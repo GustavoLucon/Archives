@@ -1,0 +1,83 @@
+1)
+
+CREATE TABLE Produto
+(
+cod_prod             INT,
+nome_prod            VARCHAR(100),
+descricao_prod           varchar(100) ,
+valor_prod              VARCHAR(100) ,
+status_prod            varCHAR(100) 
+);
+
+2)
+
+bcp Prova.dbo.produto in "C:\Documents and Settings\admlab\Desktop\Prova\Carregando.txt" -T -c -t";"
+
+Bulk Insert pRODUTO
+From 'C:\Documents and Settings\admlab\Desktop\Prova\Carregando.txt'
+With
+( 	FieldTerminator = ';',
+	RowTerminator = '\n',
+	Fire_Triggers  )
+	
+
+3)
+	
+INSERT INTO PRODUTO
+SELECT * FROM OPENROWSET('Microsoft.Jet.OLEDB.4.0', 
+'Excel 8.0;Database=C:\Documents and Settings\admlab\Desktop\Prova\PRODUTO.XLS', 
+'SELECT COD, NOME, DESC, VALOR, STATUS FROM [NOMES$]') 
+	
+
+INSERT INTO PRODUTO
+SELECT *
+   FROM OPENROWSET('Microsoft.Jet.OLEDB.4.0',
+      'C:\Documents and Settings\admlab\Desktop\Prova\Pedidos2000.mdb';
+      'admin';'',Prova) 
+
+4)
+
+INSERT INTO OPENROWSET('Microsoft.Jet.OLEDB.4.0', 
+'Excel 8.0;Database=C:\Documents and Settings\admlab\Desktop\Prova\PRODUTO.XLS', 
+'SELECT COD, NOME, DESC, VALOR, STATUS FROM [NOMES$]') 
+SELECT * FROM Produto
+
+5)
+
+CREATE OR REPLACE DIRECTORY MeuDiretorio AS 'C:\Documents and Settings\admlab\Desktop\Prova\';
+GRANT READ, WRITE ON DIRECTORY MeuDiretorio TO Scott;   
+
+CREATE TABLE PRODUTO
+(
+cod_prod             INT,
+nome_prod            VARCHAR(100),
+descricao_prod           varchar(100) ,
+valor_prod              VARCHAR(100) ,
+status_prod            varCHAR(100) 
+);
+
+	CREATE TABLE PRODUTO_ext
+	(
+		cod_prod             INT,
+		nome_prod            VARCHAR(100),
+		descricao_prod           varchar(100) ,
+		valor_prod              VARCHAR(100) ,
+		status_prod            varCHAR(100) 
+	)
+	ORGANIZATION EXTERNAL
+	(
+		TYPE ORACLE_LOADER
+		DEFAULT DIRECTORY MeuDiretorio
+		ACCESS PARAMETERS
+		(
+			RECORDS DELIMITED BY NEWLINE
+			FIELDS TERMINATED BY ';'
+		)
+		LOCATION ('carregando.TXT')
+	);   
+
+select * from  produto_ext
+
+6)
+
+sqlldr userid=scott/tiger control=MeuControle.ctl log=MeuResultado.log

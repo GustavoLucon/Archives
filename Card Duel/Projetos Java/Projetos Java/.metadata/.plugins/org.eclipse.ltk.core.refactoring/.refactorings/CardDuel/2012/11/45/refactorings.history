@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename resource &apos;CardDuel/Musica.wav&apos; to &apos;Musica2.wav&apos;" description="Rename resource &apos;Musica.wav&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="Musica.wav" name="Musica2.wav" stamp="1351969510230" updateReferences="true"/>
+</session>

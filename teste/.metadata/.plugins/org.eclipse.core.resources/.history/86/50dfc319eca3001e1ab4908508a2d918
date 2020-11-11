@@ -1,0 +1,21 @@
+public class Prova1 {
+ 
+	public static int cacular(int n) {
+ 
+		if (n == 0 || n == 1)
+			return n;
+		else
+			return cacular(n - 1) + cacular(n - 2);
+	}
+ 	public static void main(String[] args) {
+ 
+		for (int x = 1; x < 10; x++) {
+			int y = cacular(x);
+			System.out.println("o Fibonacci de "+x+" é " + y);
+		}
+ 	}
+}
+
+ 
+
+ 

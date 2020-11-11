@@ -1,0 +1,39 @@
+	
+
+
+	Passos para checagem do "ambiente"
+
+	1- Selecionar a partição H2
+	
+	2- Logar como administrador da máquina:
+
+	usuário: Oracle
+	senha: Oracle
+
+	
+	3- Abrir o gerenciador de serviços do windows(services).
+
+	
+	4- Procurar e inicializar os serviços: 
+	
+	Oracle....Listener e OracleService4cco 
+	 
+		
+	5- Abrir o SQLplus e logar:
+	
+	usuário: hr
+	senha: hr
+	host: 4cco
+	
+	SQL>
+	
+	6- Verificar as tabelas do schema: 
+	select table_name from user_tables;
+
+	7 - verificar os dados dessas tabelas:
+	
+	select * from <tabela>;
+
+
+
+

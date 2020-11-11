@@ -1,0 +1,24 @@
+
+public class Prova1 {
+	public static int exibir(int fi , int fi2)
+	{
+		int res = 1;
+		if(res == 13)
+		{
+		return res ;	
+		}
+		else
+		{
+		fi = res;
+		res = fi + exibir(res +1  , fi);
+		System.out.println(res);
+		return res ;
+		}
+	}
+	public static void main (String args[])
+	{
+	int fib= 0;
+	int fib2 = 0;
+	exibir(fib , fib2);
+	}
+}

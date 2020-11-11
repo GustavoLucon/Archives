@@ -1,0 +1,290 @@
+import java.util.Random;
+
+import javax.swing.*;
+
+public class Life2 {
+	public static void lermatriz(String matriz[][], int numero)
+	{
+		int vizinhos;
+		vizinhos = 0;
+
+		for (int i =0 ; i <= numero ; i++)
+		{
+			for (int j =0 ; j <matriz.length ; j++)
+			{
+				for (int k = 0 ; k < matriz[0].length ; k++)
+				{
+					if(matriz [j][k] == "*")
+					{
+					contarvizinhos(matriz, vizinhos);
+					if(vizinhos <= 2)
+					{
+						matriz[j][k] = "-";
+					}
+					else if (vizinhos >= 4)
+					{
+						matriz[j][k] = "-";
+					}			
+					}
+					else
+					{
+					contarvizinhos(matriz, vizinhos);	
+					if (vizinhos == 3)
+					{
+						matriz[j][k] = "*";
+					}
+					}
+				}
+				}
+			}
+		}
+	public static void printamatriz(String matriz[][])
+	{
+		System.out.print(" ");
+		for (int i = 0 ; i < matriz.length ; i++)
+		{
+			System.out.print(i);
+		}
+		for (int k = 0 ; k < matriz.length ; k++)
+		{
+			System.out.print("\n" + k);
+			for (int l = 0 ; l < matriz[0].length ; l++)
+			{
+			System.out.print(matriz[k][l]);
+			}
+		}
+		System.out.println("\n- = Bacteria Morta \n* = Bacteria");
+	}
+	public static void enchermatriz(String matriz[][])
+	{
+		for (int i = 0 ; i < matriz.length ; i++)
+		{
+			for (int j = 0 ; j < matriz[0].length ; j++)
+			{
+			matriz[i][j] = "-" ;	
+			}
+		}
+	}
+		public static void contarvizinhos(String matriz[][] ,  int vizinhos)
+		{	
+		for (int j =0 ; j <matriz.length ; j++)
+		{
+			for (int k = 0 ; k < matriz[0].length ; k++)
+			{
+		if(j == 0 && k == 0)
+		{
+			if (matriz[j+1][k+1] == "*")
+			{
+				vizinhos++;
+			}
+			if (matriz[j][k+1] == "*")
+			{
+				vizinhos++;
+			}
+			if (matriz[j+1][k] == "*")
+			{
+				vizinhos++;
+			}
+		}
+		else if (j == 0)
+		{
+			if (matriz[j][k-1] == "*")
+			{
+				vizinhos++;
+			}
+			if (matriz[j][k+1] == "*")
+			{
+				vizinhos++;
+			}
+			if (matriz[j+1][k] == "*")
+			{
+				vizinhos++;
+			}
+			if (matriz[j+1][k+1] == "*")
+			{
+				vizinhos++;
+			}
+			if (matriz[j+1][k-1] == "*")
+			{
+				vizinhos++;
+			}
+		}
+		else if (k == 0)
+		{
+			if (matriz[j-1][k] == "*")
+			{
+				vizinhos++;
+			}
+			if (matriz[j+1][k] == "*")
+			{
+				vizinhos++;
+			}
+			if (matriz[j][k+1] == "*")
+			{
+				vizinhos++;
+			}
+			if (matriz[j+1][k+1] == "*")
+			{
+				vizinhos++;
+			}
+			if (matriz[j-1][k+1] == "*")
+			{
+				vizinhos++;
+			}
+		}
+		else if (j == matriz.length && k == matriz.length)
+		{
+			if (matriz[j-1][k-1] == "*")
+			{
+				vizinhos++;
+			}
+			if (matriz[j][k-1] == "*")
+			{
+				vizinhos++;
+			}
+			if (matriz[j-1][k] == "*")
+			{
+				vizinhos++;
+			}
+		}
+			else if (j == matriz.length)
+			{
+				if (matriz[j][k-1] == "*")
+				{
+					vizinhos++;
+				}
+				if (matriz[j][k+1] == "*")
+				{
+					vizinhos++;
+				}
+				if (matriz[j-1][k-1] == "*")
+				{
+					vizinhos++;
+				}
+				if (matriz[j-1][k] == "*")
+				{
+					vizinhos++;
+				}
+				if (matriz[j-1][k+1] == "*")
+				{
+					vizinhos++;
+				}
+			}
+			else if (k == matriz.length)
+			{
+				if (matriz[j-1][k] == "*")
+				{
+					vizinhos++;
+				}
+				if (matriz[j][k] == "*")
+				{
+					vizinhos++;
+				}
+				if (matriz[j+1][k] == "*")
+				{
+					vizinhos++;
+				}
+				if (matriz[j-1][k-1] == "*")
+				{
+					vizinhos++;
+				}
+				if (matriz[j][k-1] == "*")
+				{
+					vizinhos++;
+				}
+				if (matriz[j+1][k-1] == "*")
+				{
+					vizinhos++;
+				}
+			}
+			else
+			{
+				    if (matriz[j-1][k-1] == "*")
+					{
+						vizinhos++;
+					}
+					if (matriz[j][k-1] == "*")
+					{
+						vizinhos++;
+					}
+					if (matriz[j+1][k-1] == "*")
+					{
+						vizinhos++;
+					}
+					if (matriz[j-1][k] == "*")
+					{
+					vizinhos++;
+					}
+					if (matriz[j+1][k] == "*")
+					{
+					vizinhos++;
+					}
+					if (matriz[j-1][k+1] == "*")
+					{
+						vizinhos++;
+					}
+					if (matriz[j][k+1] == "*")
+					{
+						vizinhos++;
+					}
+					if (matriz[j+1][k+1] == "*")
+					{
+						vizinhos++;
+					}
+			}
+			}
+			}
+		}
+
+	public static void main (String args[]){
+	String testar1 ,testar2  ;
+	int linhas , colunas , bacterias ;
+	boolean resposta ;
+	int resp;
+	bacterias = 0;
+	System.out.println("Este é um simulador do programa Life");
+	testar1 = JOptionPane.showInputDialog (null , "Digite o numero de linhas da matriz");
+	testar2 =JOptionPane.showInputDialog (null , "Digite o numero de colunas da matriz");
+	if(testar1 != "" && testar2 != "")
+	{	
+		linhas = Integer.parseInt(testar1);
+		colunas = Integer.parseInt(testar2);
+		String tabuleiro[][] = new String [linhas][colunas];
+		enchermatriz(tabuleiro);
+		bacterias = Integer.parseInt(JOptionPane.showInputDialog (null , "Digite o numero de bacterias"));
+		if(bacterias < linhas*colunas)
+		{
+		for(int l = 0 ; l < bacterias ; l++)
+		{
+		testar1 = JOptionPane.showInputDialog (null , "Digite o numero da linhas da sua bacteria");
+		testar2 =JOptionPane.showInputDialog (null , "Digite o numero da colunas da sua bacteria");
+		if(testar1 != "" && testar2 != "")
+		{	
+			linhas = Integer.parseInt(testar1);
+			colunas = Integer.parseInt(testar2);
+		   tabuleiro[linhas][colunas] = "*";
+		   printamatriz(tabuleiro);
+           
+		}
+		}		
+	    }
+		else
+		{
+			System.out.print("Numero de bacterias escede numero de Casas \nPrograma encerrado");
+		}
+		do
+		{
+	  		resp = Integer.parseInt(JOptionPane.showInputDialog (null , "Digite 0 para encerrar."));
+			if(resp == 0)
+			{
+				resposta = false;
+			}
+			if (resposta  = true)
+			{
+				lermatriz(tabuleiro, bacterias );
+			}
+			printamatriz(tabuleiro);
+	}while(resp != 0);
+	}
+	}
+}

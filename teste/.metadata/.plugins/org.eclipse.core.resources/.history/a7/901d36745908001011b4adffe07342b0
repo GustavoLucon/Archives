@@ -1,0 +1,164 @@
+package RML;
+
+import java.io.BufferedReader;
+import java.io.FileReader;
+import java.security.Security;
+import java.util.Properties;
+
+import javax.mail.Message;
+import javax.mail.PasswordAuthentication;
+import javax.mail.Session;
+import javax.mail.Transport;
+import javax.mail.internet.InternetAddress;
+import javax.mail.internet.MimeMessage;
+
+import com.sun.xml.internal.messaging.saaj.packaging.mime.MessagingException;
+
+public class teste {
+	public static class SendMailUsingGmail {
+
+		private static final String SMTP_HOST_NAME =
+		"smtp.gmail.com";
+
+		private static final String SMTP_PORT = "465";
+		private static final String emailMsgTxt =
+		"teste de programa salvador da patria";
+
+		private static final String emailSubjectTxt =
+		 "testando Javamail e GMail";
+
+		private static final String emailFromAddress =
+		 "gugaefo@gmail.com";
+
+		private static final String SSL_FACTORY =
+		"javax.net.ssl.SSLSocketFactory";
+		private static final String[] teste = (ImportarTxt("C:/emails.txt"));
+		private static final String[] sendTo ={"gugaefo@gmail.com"};
+
+		public static void main(String args[]) throws Exception {
+
+			for(int i = 0;i< teste.length;i++)
+			{
+				System.out.print(teste[i]);
+			}
+		Security.addProvider(
+		new com.sun.net.ssl.internal.ssl.Provider());
+
+		new SendMailUsingGmail().sendSSLMessage(
+		sendTo, emailSubjectTxt, emailMsgTxt, emailFromAddress);
+
+		System.out.println(
+		"Email enviado com sucesso para os destinatarios!");
+		}
+
+		public void sendSSLMessage(String recipients[], String subject,
+		String message, String from) throws MessagingException {
+
+		//com essa flag aqui ele imprimira todos os
+		//dados da conexão e do envio,
+		//setar isso para false se quiser que rode
+		//no silent mode.
+		boolean debug = true;
+
+		Properties props = new Properties();
+		props.put("mail.smtp.host", SMTP_HOST_NAME);
+		props.put("mail.smtp.auth", "true");
+		props.put("mail.debug", "true");
+		props.put("mail.smtp.port", SMTP_PORT);
+		props.put("mail.smtp.socketFactory.port", SMTP_PORT);
+		props.put("mail.smtp.socketFactory.class", SSL_FACTORY);
+		props.put("mail.smtp.socketFactory.fallback", "false");
+
+		Session session = Session.getDefaultInstance(props,
+		new javax.mail.Authenticator() {
+
+		//Aqui o authenticator, poderia ser uma classe separada também:
+		protected PasswordAuthentication getPasswordAuthentication() {
+		return new PasswordAuthentication
+		("gugaefo@gmail.com", "mtuloko");
+		}
+		});
+
+		session.setDebug(debug);
+
+		Message msg = new MimeMessage(session);
+		try {
+		InternetAddress addressFrom = new InternetAddress(from);
+
+			msg.setFrom(addressFrom);
+		InternetAddress[] addressTo =	new InternetAddress[recipients.length];
+
+		for (int i = 0; i < recipients.length; i++) {
+		addressTo[i] = new InternetAddress(recipients[i]);
+		
+		}
+		
+		msg.setRecipients(Message.RecipientType.TO, addressTo);
+		
+		// Setting the Subject and Content Type
+		msg.setSubject(subject);
+		msg.setContent(message, "text/plain");
+		Transport.send(msg);
+		} catch (javax.mail.MessagingException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		}
+		private static String[] ImportarTxt(String Caminho) {
+		       String linha = null;  
+		       String[] Vetor = new String[10];
+		       try {  
+		    	   String linhas;
+		    	   int i =0;
+		          FileReader reader = new FileReader(Caminho);  
+		          BufferedReader leitor = new BufferedReader(reader);
+		          linhas = leitor.readLine();
+		          String palavra = "";
+		          String inicial = "";
+		          int cont = 0;
+		   
+		          while (linhas != null && linhas.toString() != "" && inicial.equalsIgnoreCase(linhas)) 
+		          {  
+		        	  String[] b = linhas.split("");
+		        		for(int a =0; a < b.length;a++)
+		    			{
+		        			if(b.length > i)
+		        			{
+		        			if(b[a].equals("") == false && b[a].equals(" ") == false)
+		        			{
+		        			if(b[a].equals(",") == false)
+		        			{
+		        				palavra = palavra + b[a];
+		        			}
+		        			else
+		        			{
+		        				Vetor[cont]= palavra;
+		        				palavra = "";
+		        				cont++;
+		        			}
+		        			i++;
+		        			}
+		        			}
+		        			else
+		        			{
+		        			inicial = linha;
+							i=0;
+							linhas = leitor.readLine();
+
+		        			}
+		    			}  
+		        		
+		        	    }  
+		        	            leitor.close();  
+		        	            reader.close();  
+		        	             
+		        	     
+		        	         } catch (Exception e) {  
+		        	        	 System.out.println("Arquivo Não Encontrado");  
+		        	        }
+		      return Vetor;                                
+		
+	}
+		}
+
+}

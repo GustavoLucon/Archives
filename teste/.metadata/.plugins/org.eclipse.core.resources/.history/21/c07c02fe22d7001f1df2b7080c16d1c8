@@ -1,0 +1,53 @@
+package CarteiraDeInvestimento;
+
+import javax.swing.JOptionPane;
+
+public class AplicacaoPre {
+	double Saldo;
+	String Nome;
+	int mes;
+	int ano;
+	int duracao;
+	double totalrendimento;
+	double valor;
+	double rendimentomes;
+	public AplicacaoPre()
+	{
+		this.Nome = JOptionPane.showInputDialog("Digite o nome da ação");
+		this.valor = Integer.parseInt(JOptionPane.showInputDialog("Digite o valor da ação"));
+		this.mes = Integer.parseInt(JOptionPane.showInputDialog("Digite o mes de criação da ação"));
+		this.ano = Integer.parseInt(JOptionPane.showInputDialog("Digite o ano de criação da ação"));
+		this.duracao = Integer.parseInt(JOptionPane.showInputDialog("Digite a duração do mesmo(em meses)"));
+		this.totalrendimento = Integer.parseInt(JOptionPane.showInputDialog("Digite o rendimento final do mesmo"));
+		pormes();
+		calcularganho();
+	}
+	public void calcularganho()
+	{
+			while(ano >= this.ano)
+			{
+				if(ano > this.ano)
+				{
+				while(mes >= 12)
+				{
+					this.Saldo = this.Saldo + this.rendimentomes;
+					mes++;
+				}
+				mes = 0;
+				ano++;
+				}
+				else
+				{
+					while(mes >= this.mes)
+					{
+						this.Saldo = this.Saldo + this.rendimentomes;
+						mes++;
+					}
+				}
+			}
+	}
+	public void pormes()
+	{
+		this.rendimentomes = this.totalrendimento /this.duracao;
+	}
+}

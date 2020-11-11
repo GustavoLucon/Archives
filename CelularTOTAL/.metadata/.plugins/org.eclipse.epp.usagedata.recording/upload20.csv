@@ -1,0 +1,326 @@
+what,kind,bundleId,bundleVersion,description,time
+closed,editor,org.eclipse.jdt.ui,3.7.1.r371_v20110824-0800,"org.eclipse.jdt.ui.CompilationUnitEditor",1335386159214
+closed,editor,com.android.ide.eclipse.adt,18.0.0.v201203301601-306762,"com.android.ide.eclipse.editors.CommonXmlEditor",1335386159230
+closed,editor,com.android.ide.eclipse.adt,18.0.0.v201203301601-306762,"com.android.ide.eclipse.editors.CommonXmlEditor",1335386159230
+opened,editor,com.android.ide.eclipse.adt,18.0.0.v201203301601-306762,"com.android.ide.eclipse.editors.CommonXmlEditor",1335386160870
+activated,editor,com.android.ide.eclipse.adt,18.0.0.v201203301601-306762,"com.android.ide.eclipse.editors.CommonXmlEditor",1335386160901
+activated,view,org.eclipse.jdt.ui,3.7.1.r371_v20110824-0800,"org.eclipse.jdt.ui.PackageExplorer",1335386209675
+opened,editor,org.eclipse.jdt.ui,3.7.1.r371_v20110824-0800,"org.eclipse.jdt.ui.CompilationUnitEditor",1335386209847
+activated,editor,org.eclipse.jdt.ui,3.7.1.r371_v20110824-0800,"org.eclipse.jdt.ui.CompilationUnitEditor",1335386209878
+deactivated,workbench,org.eclipse.ui.workbench,3.7.0.I20110519-0100,"",1335386211269
+activated,workbench,org.eclipse.ui.workbench,3.7.0.I20110519-0100,"",1335386212737
+deactivated,workbench,org.eclipse.ui.workbench,3.7.0.I20110519-0100,"",1335386218721
+activated,workbench,org.eclipse.ui.workbench,3.7.0.I20110519-0100,"",1335386347007
+activated,editor,com.android.ide.eclipse.adt,18.0.0.v201203301601-306762,"com.android.ide.eclipse.editors.CommonXmlEditor",1335386350272
+activated,view,org.eclipse.jdt.ui,3.7.1.r371_v20110824-0800,"org.eclipse.jdt.ui.PackageExplorer",1335386352240
+activated,editor,com.android.ide.eclipse.adt,18.0.0.v201203301601-306762,"com.android.ide.eclipse.editors.CommonXmlEditor",1335386352553
+activated,view,org.eclipse.jdt.ui,3.7.1.r371_v20110824-0800,"org.eclipse.jdt.ui.PackageExplorer",1335386358427
+opened,editor,com.android.ide.eclipse.adt,18.0.0.v201203301601-306762,"com.android.ide.eclipse.editors.CommonXmlEditor",1335386358709
+activated,editor,com.android.ide.eclipse.adt,18.0.0.v201203301601-306762,"com.android.ide.eclipse.editors.CommonXmlEditor",1335386358740
+activated,editor,com.android.ide.eclipse.adt,18.0.0.v201203301601-306762,"com.android.ide.eclipse.editors.CommonXmlEditor",1335386362865
+executed,command,org.eclipse.ui,3.7.0.I20110602-0100,"org.eclipse.ui.edit.copy",1335386370661
+executed,command,org.eclipse.ui,3.7.0.I20110602-0100,"org.eclipse.ui.edit.copy",1335386370911
+executed,command,org.eclipse.ui,3.7.0.I20110602-0100,"org.eclipse.ui.edit.paste",1335386372504
+executed,command,org.eclipse.ui,3.7.0.I20110602-0100,"org.eclipse.ui.file.save",1335386373567
+activated,editor,org.eclipse.jdt.ui,3.7.1.r371_v20110824-0800,"org.eclipse.jdt.ui.CompilationUnitEditor",1335386374629
+activated,editor,com.android.ide.eclipse.adt,18.0.0.v201203301601-306762,"com.android.ide.eclipse.editors.CommonXmlEditor",1335386375145
+activated,editor,org.eclipse.jdt.ui,3.7.1.r371_v20110824-0800,"org.eclipse.jdt.ui.CompilationUnitEditor",1335386375613
+deactivated,workbench,org.eclipse.ui.workbench,3.7.0.I20110519-0100,"",1335386380941
+activated,workbench,org.eclipse.ui.workbench,3.7.0.I20110519-0100,"",1335386451419
+activated,editor,com.android.ide.eclipse.adt,18.0.0.v201203301601-306762,"com.android.ide.eclipse.editors.CommonXmlEditor",1335386454528
+executed,command,org.eclipse.ui,3.7.0.I20110602-0100,"org.eclipse.ui.edit.copy",1335386461012
+executed,command,org.eclipse.ui,3.7.0.I20110602-0100,"org.eclipse.ui.edit.copy",1335386461278
+executed,command,org.eclipse.ui,3.7.0.I20110602-0100,"org.eclipse.ui.edit.paste",1335386463152
+deactivated,workbench,org.eclipse.ui.workbench,3.7.0.I20110519-0100,"",1335386465058
+activated,workbench,org.eclipse.ui.workbench,3.7.0.I20110519-0100,"",1335386465980
+error,log,,,"Current file is not a match for the given config.",1335386466418
+error,log,,,"Current file is not a match for the given config.",1335386466418
+error,log,,,"Current file is not a match for the given config.",1335386466418
+error,log,,,"Current file is not a match for the given config.",1335386466418
+error,log,,,"Current file is not a match for the given config.",1335386466418
+error,log,,,"Current file is not a match for the given config.",1335386466418
+error,log,,,"Current file is not a match for the given config.",1335386466418
+error,log,,,"Current file is not a match for the given config.",1335386466418
+error,log,,,"Current file is not a match for the given config.",1335386466418
+error,log,,,"Current file is not a match for the given config.",1335386466418
+error,log,,,"Current file is not a match for the given config.",1335386466418
+error,log,,,"Current file is not a match for the given config.",1335386466418
+error,log,,,"Current file is not a match for the given config.",1335386466418
+error,log,,,"Current file is not a match for the given config.",1335386466418
+error,log,,,"Current file is not a match for the given config.",1335386466418
+error,log,,,"Current file is not a match for the given config.",1335386466418
+error,log,,,"Current file is not a match for the given config.",1335386466418
+error,log,,,"Current file is not a match for the given config.",1335386466418
+error,log,,,"Current file is not a match for the given config.",1335386466418
+error,log,,,"Current file is not a match for the given config.",1335386466418
+error,log,,,"Current file is not a match for the given config.",1335386466418
+error,log,,,"Current file is not a match for the given config.",1335386466418
+error,log,,,"Current file is not a match for the given config.",1335386466418
+error,log,,,"Current file is not a match for the given config.",1335386466418
+error,log,,,"Current file is not a match for the given config.",1335386466418
+error,log,,,"Current file is not a match for the given config.",1335386466418
+error,log,,,"Current file is not a match for the given config.",1335386466418
+error,log,,,"Current file is not a match for the given config.",1335386466418
+error,log,,,"Current file is not a match for the given config.",1335386466418
+error,log,,,"Current file is not a match for the given config.",1335386466418
+error,log,,,"Current file is not a match for the given config.",1335386466418
+error,log,,,"Current file is not a match for the given config.",1335386466418
+error,log,,,"Current file is not a match for the given config.",1335386466433
+error,log,,,"Current file is not a match for the given config.",1335386466433
+error,log,,,"Current file is not a match for the given config.",1335386466433
+error,log,,,"Current file is not a match for the given config.",1335386466433
+error,log,,,"Current file is not a match for the given config.",1335386466433
+error,log,,,"Current file is not a match for the given config.",1335386466433
+error,log,,,"Current file is not a match for the given config.",1335386466433
+error,log,,,"Current file is not a match for the given config.",1335386466433
+error,log,,,"Current file is not a match for the given config.",1335386466433
+error,log,,,"Current file is not a match for the given config.",1335386466433
+error,log,,,"Current file is not a match for the given config.",1335386466433
+error,log,,,"Current file is not a match for the given config.",1335386466433
+error,log,,,"Current file is not a match for the given config.",1335386466433
+error,log,,,"Current file is not a match for the given config.",1335386466433
+error,log,,,"Current file is not a match for the given config.",1335386466433
+error,log,,,"Current file is not a match for the given config.",1335386466433
+error,log,,,"Current file is not a match for the given config.",1335386466433
+error,log,,,"Current file is not a match for the given config.",1335386466433
+error,log,,,"Current file is not a match for the given config.",1335386466433
+error,log,,,"Current file is not a match for the given config.",1335386466433
+error,log,,,"Current file is not a match for the given config.",1335386466433
+error,log,,,"Current file is not a match for the given config.",1335386466433
+error,log,,,"Current file is not a match for the given config.",1335386466433
+error,log,,,"Current file is not a match for the given config.",1335386466433
+error,log,,,"Current file is not a match for the given config.",1335386466433
+error,log,,,"Current file is not a match for the given config.",1335386466433
+error,log,,,"Current file is not a match for the given config.",1335386466433
+error,log,,,"Current file is not a match for the given config.",1335386466433
+error,log,,,"Current file is not a match for the given config.",1335386466433
+error,log,,,"Current file is not a match for the given config.",1335386466433
+error,log,,,"Current file is not a match for the given config.",1335386466433
+error,log,,,"Current file is not a match for the given config.",1335386466433
+error,log,,,"Current file is not a match for the given config.",1335386466449
+error,log,,,"Current file is not a match for the given config.",1335386466449
+error,log,,,"Current file is not a match for the given config.",1335386466449
+error,log,,,"Current file is not a match for the given config.",1335386466449
+error,log,,,"Current file is not a match for the given config.",1335386466449
+error,log,,,"Current file is not a match for the given config.",1335386466449
+error,log,,,"Current file is not a match for the given config.",1335386466449
+error,log,,,"Current file is not a match for the given config.",1335386466449
+error,log,,,"Current file is not a match for the given config.",1335386466449
+error,log,,,"Current file is not a match for the given config.",1335386466449
+error,log,,,"Current file is not a match for the given config.",1335386466449
+error,log,,,"Current file is not a match for the given config.",1335386466449
+error,log,,,"Current file is not a match for the given config.",1335386466449
+error,log,,,"Current file is not a match for the given config.",1335386466449
+error,log,,,"Current file is not a match for the given config.",1335386466449
+error,log,,,"Current file is not a match for the given config.",1335386466449
+error,log,,,"Current file is not a match for the given config.",1335386466449
+error,log,,,"Current file is not a match for the given config.",1335386466449
+error,log,,,"Current file is not a match for the given config.",1335386466449
+error,log,,,"Current file is not a match for the given config.",1335386466449
+error,log,,,"Current file is not a match for the given config.",1335386466449
+error,log,,,"Current file is not a match for the given config.",1335386466449
+error,log,,,"Current file is not a match for the given config.",1335386466449
+error,log,,,"Current file is not a match for the given config.",1335386466449
+error,log,,,"Current file is not a match for the given config.",1335386466449
+error,log,,,"Current file is not a match for the given config.",1335386466449
+error,log,,,"Current file is not a match for the given config.",1335386466449
+error,log,,,"Current file is not a match for the given config.",1335386466449
+error,log,,,"Current file is not a match for the given config.",1335386466449
+error,log,,,"Current file is not a match for the given config.",1335386466449
+error,log,,,"Current file is not a match for the given config.",1335386466449
+error,log,,,"Current file is not a match for the given config.",1335386466449
+error,log,,,"Current file is not a match for the given config.",1335386466449
+error,log,,,"Current file is not a match for the given config.",1335386466449
+error,log,,,"Current file is not a match for the given config.",1335386466449
+error,log,,,"Current file is not a match for the given config.",1335386466449
+error,log,,,"Current file is not a match for the given config.",1335386466449
+error,log,,,"Current file is not a match for the given config.",1335386466449
+error,log,,,"Current file is not a match for the given config.",1335386466449
+error,log,,,"Current file is not a match for the given config.",1335386466449
+error,log,,,"Current file is not a match for the given config.",1335386466449
+error,log,,,"Current file is not a match for the given config.",1335386466449
+error,log,,,"Current file is not a match for the given config.",1335386466465
+error,log,,,"Current file is not a match for the given config.",1335386466465
+error,log,,,"Current file is not a match for the given config.",1335386466465
+error,log,,,"Current file is not a match for the given config.",1335386466465
+error,log,,,"Current file is not a match for the given config.",1335386466465
+error,log,,,"Current file is not a match for the given config.",1335386466465
+error,log,,,"Current file is not a match for the given config.",1335386466465
+error,log,,,"Current file is not a match for the given config.",1335386466465
+error,log,,,"Current file is not a match for the given config.",1335386466465
+error,log,,,"Current file is not a match for the given config.",1335386466465
+error,log,,,"Current file is not a match for the given config.",1335386466465
+error,log,,,"Current file is not a match for the given config.",1335386466465
+error,log,,,"Current file is not a match for the given config.",1335386466465
+error,log,,,"Current file is not a match for the given config.",1335386466465
+error,log,,,"Current file is not a match for the given config.",1335386466465
+error,log,,,"Current file is not a match for the given config.",1335386466465
+error,log,,,"Current file is not a match for the given config.",1335386466465
+error,log,,,"Current file is not a match for the given config.",1335386466465
+error,log,,,"Current file is not a match for the given config.",1335386466465
+error,log,,,"Current file is not a match for the given config.",1335386466465
+error,log,,,"Current file is not a match for the given config.",1335386466465
+error,log,,,"Current file is not a match for the given config.",1335386466465
+error,log,,,"Current file is not a match for the given config.",1335386466465
+error,log,,,"Current file is not a match for the given config.",1335386466465
+error,log,,,"Current file is not a match for the given config.",1335386466465
+error,log,,,"Current file is not a match for the given config.",1335386466465
+error,log,,,"Current file is not a match for the given config.",1335386466465
+error,log,,,"Current file is not a match for the given config.",1335386466465
+error,log,,,"Current file is not a match for the given config.",1335386466465
+error,log,,,"Current file is not a match for the given config.",1335386466465
+error,log,,,"Current file is not a match for the given config.",1335386466465
+error,log,,,"Current file is not a match for the given config.",1335386466465
+error,log,,,"Current file is not a match for the given config.",1335386466465
+error,log,,,"Current file is not a match for the given config.",1335386466465
+error,log,,,"Current file is not a match for the given config.",1335386466465
+error,log,,,"Current file is not a match for the given config.",1335386466465
+error,log,,,"Current file is not a match for the given config.",1335386466465
+error,log,,,"Current file is not a match for the given config.",1335386466465
+error,log,,,"Current file is not a match for the given config.",1335386466465
+error,log,,,"Current file is not a match for the given config.",1335386466465
+error,log,,,"Current file is not a match for the given config.",1335386466465
+error,log,,,"Current file is not a match for the given config.",1335386466465
+error,log,,,"Current file is not a match for the given config.",1335386466465
+error,log,,,"Current file is not a match for the given config.",1335386466465
+error,log,,,"Current file is not a match for the given config.",1335386466465
+error,log,,,"Current file is not a match for the given config.",1335386466465
+error,log,,,"Current file is not a match for the given config.",1335386466465
+error,log,,,"Current file is not a match for the given config.",1335386466465
+error,log,,,"Current file is not a match for the given config.",1335386466465
+error,log,,,"Current file is not a match for the given config.",1335386466465
+error,log,,,"Current file is not a match for the given config.",1335386466465
+error,log,,,"Current file is not a match for the given config.",1335386466465
+error,log,,,"Current file is not a match for the given config.",1335386466465
+error,log,,,"Current file is not a match for the given config.",1335386466465
+error,log,,,"Current file is not a match for the given config.",1335386466465
+error,log,,,"Current file is not a match for the given config.",1335386466480
+error,log,,,"Current file is not a match for the given config.",1335386466480
+error,log,,,"Current file is not a match for the given config.",1335386466480
+error,log,,,"Current file is not a match for the given config.",1335386466480
+error,log,,,"Current file is not a match for the given config.",1335386466480
+error,log,,,"Current file is not a match for the given config.",1335386466480
+error,log,,,"Current file is not a match for the given config.",1335386466480
+error,log,,,"Current file is not a match for the given config.",1335386466480
+error,log,,,"Current file is not a match for the given config.",1335386466480
+error,log,,,"Current file is not a match for the given config.",1335386466480
+error,log,,,"Current file is not a match for the given config.",1335386466480
+error,log,,,"Current file is not a match for the given config.",1335386466480
+error,log,,,"Current file is not a match for the given config.",1335386466480
+error,log,,,"Current file is not a match for the given config.",1335386466480
+error,log,,,"Current file is not a match for the given config.",1335386466480
+error,log,,,"Current file is not a match for the given config.",1335386466480
+error,log,,,"Current file is not a match for the given config.",1335386466480
+error,log,,,"Current file is not a match for the given config.",1335386466480
+error,log,,,"Current file is not a match for the given config.",1335386466480
+error,log,,,"Current file is not a match for the given config.",1335386466480
+error,log,,,"Current file is not a match for the given config.",1335386466480
+error,log,,,"Current file is not a match for the given config.",1335386466480
+error,log,,,"Current file is not a match for the given config.",1335386466480
+error,log,,,"Current file is not a match for the given config.",1335386466480
+error,log,,,"Current file is not a match for the given config.",1335386466480
+error,log,,,"Current file is not a match for the given config.",1335386466480
+error,log,,,"Current file is not a match for the given config.",1335386466480
+error,log,,,"Current file is not a match for the given config.",1335386466480
+error,log,,,"Current file is not a match for the given config.",1335386466480
+error,log,,,"Current file is not a match for the given config.",1335386466480
+error,log,,,"Current file is not a match for the given config.",1335386466480
+error,log,,,"Current file is not a match for the given config.",1335386466480
+error,log,,,"Current file is not a match for the given config.",1335386466480
+error,log,,,"Current file is not a match for the given config.",1335386466480
+error,log,,,"Current file is not a match for the given config.",1335386466480
+error,log,,,"Current file is not a match for the given config.",1335386466480
+error,log,,,"Current file is not a match for the given config.",1335386466480
+error,log,,,"Current file is not a match for the given config.",1335386466480
+error,log,,,"Current file is not a match for the given config.",1335386466480
+error,log,,,"Current file is not a match for the given config.",1335386466480
+error,log,,,"Current file is not a match for the given config.",1335386466480
+error,log,,,"Current file is not a match for the given config.",1335386466480
+error,log,,,"Current file is not a match for the given config.",1335386466480
+error,log,,,"Current file is not a match for the given config.",1335386466480
+error,log,,,"Current file is not a match for the given config.",1335386466480
+error,log,,,"Current file is not a match for the given config.",1335386466480
+error,log,,,"Current file is not a match for the given config.",1335386466480
+error,log,,,"Current file is not a match for the given config.",1335386466480
+error,log,,,"Current file is not a match for the given config.",1335386466480
+error,log,,,"Current file is not a match for the given config.",1335386466480
+error,log,,,"Current file is not a match for the given config.",1335386466480
+error,log,,,"Current file is not a match for the given config.",1335386466480
+error,log,,,"Current file is not a match for the given config.",1335386466480
+error,log,,,"Current file is not a match for the given config.",1335386466480
+error,log,,,"Current file is not a match for the given config.",1335386466480
+error,log,,,"Current file is not a match for the given config.",1335386466496
+error,log,,,"Current file is not a match for the given config.",1335386466496
+error,log,,,"Current file is not a match for the given config.",1335386466496
+error,log,,,"Current file is not a match for the given config.",1335386466496
+error,log,,,"Current file is not a match for the given config.",1335386466496
+error,log,,,"Current file is not a match for the given config.",1335386466496
+error,log,,,"Current file is not a match for the given config.",1335386466496
+error,log,,,"Current file is not a match for the given config.",1335386466496
+error,log,,,"Current file is not a match for the given config.",1335386466496
+error,log,,,"Current file is not a match for the given config.",1335386466496
+error,log,,,"Current file is not a match for the given config.",1335386466496
+error,log,,,"Current file is not a match for the given config.",1335386466496
+error,log,,,"Current file is not a match for the given config.",1335386466496
+error,log,,,"Current file is not a match for the given config.",1335386466496
+error,log,,,"Current file is not a match for the given config.",1335386466496
+error,log,,,"Current file is not a match for the given config.",1335386466496
+error,log,,,"Current file is not a match for the given config.",1335386466496
+error,log,,,"Current file is not a match for the given config.",1335386466496
+error,log,,,"Current file is not a match for the given config.",1335386466496
+error,log,,,"Current file is not a match for the given config.",1335386466496
+error,log,,,"Current file is not a match for the given config.",1335386466496
+error,log,,,"Current file is not a match for the given config.",1335386466496
+error,log,,,"Current file is not a match for the given config.",1335386466496
+error,log,,,"Current file is not a match for the given config.",1335386466496
+error,log,,,"Current file is not a match for the given config.",1335386466496
+error,log,,,"Current file is not a match for the given config.",1335386466496
+error,log,,,"Current file is not a match for the given config.",1335386466496
+error,log,,,"Current file is not a match for the given config.",1335386466496
+error,log,,,"Current file is not a match for the given config.",1335386466496
+error,log,,,"Current file is not a match for the given config.",1335386466496
+error,log,,,"Current file is not a match for the given config.",1335386466496
+error,log,,,"Current file is not a match for the given config.",1335386466496
+error,log,,,"Current file is not a match for the given config.",1335386466496
+error,log,,,"Current file is not a match for the given config.",1335386466496
+error,log,,,"Current file is not a match for the given config.",1335386466496
+error,log,,,"Current file is not a match for the given config.",1335386466496
+error,log,,,"Current file is not a match for the given config.",1335386466496
+error,log,,,"Current file is not a match for the given config.",1335386466496
+error,log,,,"Current file is not a match for the given config.",1335386466496
+error,log,,,"Current file is not a match for the given config.",1335386466496
+error,log,,,"Current file is not a match for the given config.",1335386466496
+error,log,,,"Current file is not a match for the given config.",1335386466496
+error,log,,,"Current file is not a match for the given config.",1335386466496
+error,log,,,"Current file is not a match for the given config.",1335386466496
+error,log,,,"Current file is not a match for the given config.",1335386466496
+error,log,,,"Current file is not a match for the given config.",1335386466496
+error,log,,,"Current file is not a match for the given config.",1335386466496
+error,log,,,"Current file is not a match for the given config.",1335386466496
+activated,view,org.eclipse.ui.console,3.5.100.v20110511,"org.eclipse.ui.console.ConsoleView",1335386466527
+opened,editor,com.android.ide.eclipse.adt,18.0.0.v201203301601-306762,"com.android.ide.eclipse.editors.CommonXmlEditor",1335386466590
+activated,editor,com.android.ide.eclipse.adt,18.0.0.v201203301601-306762,"com.android.ide.eclipse.editors.CommonXmlEditor",1335386466621
+activated,editor,com.android.ide.eclipse.adt,18.0.0.v201203301601-306762,"com.android.ide.eclipse.editors.CommonXmlEditor",1335386468152
+closed,editor,com.android.ide.eclipse.adt,18.0.0.v201203301601-306762,"com.android.ide.eclipse.editors.CommonXmlEditor",1335386468152
+activated,view,org.eclipse.jdt.ui,3.7.1.r371_v20110824-0800,"org.eclipse.jdt.ui.PackageExplorer",1335386469027
+deactivated,workbench,org.eclipse.ui.workbench,3.7.0.I20110519-0100,"",1335386469605
+error,log,,,"Internal Error",1335386469996
+error,log,,,"Problems encountered while deleting resources.",1335386469996
+activated,workbench,org.eclipse.ui.workbench,3.7.0.I20110519-0100,"",1335386470464
+executed,command,org.eclipse.ui,3.7.0.I20110602-0100,"org.eclipse.ui.edit.delete",1335386470480
+deactivated,workbench,org.eclipse.ui.workbench,3.7.0.I20110519-0100,"",1335386470964
+activated,workbench,org.eclipse.ui.workbench,3.7.0.I20110519-0100,"",1335386471245
+executed,command,org.eclipse.ui,3.7.0.I20110602-0100,"org.eclipse.ui.edit.delete",1335386471261
+activated,editor,com.android.ide.eclipse.adt,18.0.0.v201203301601-306762,"com.android.ide.eclipse.editors.CommonXmlEditor",1335386473667
+activated,editor,org.eclipse.jdt.ui,3.7.1.r371_v20110824-0800,"org.eclipse.jdt.ui.CompilationUnitEditor",1335386474167
+deactivated,workbench,org.eclipse.ui.workbench,3.7.0.I20110519-0100,"",1335386479760
+activated,workbench,org.eclipse.ui.workbench,3.7.0.I20110519-0100,"",1335386573694
+activated,editor,com.android.ide.eclipse.adt,18.0.0.v201203301601-306762,"com.android.ide.eclipse.editors.CommonXmlEditor",1335386575913
+deactivated,workbench,org.eclipse.ui.workbench,3.7.0.I20110519-0100,"",1335386614489
+activated,workbench,org.eclipse.ui.workbench,3.7.0.I20110519-0100,"",1335386615380
+error,log,,,"Current file is not a match for the given config.",1335386615864
+error,log,,,"Current file is not a match for the given config.",1335386615864
+error,log,,,"Current file is not a match for the given config.",1335386615864
+error,log,,,"Current file is not a match for the given config.",1335386615864
+error,log,,,"Current file is not a match for the given config.",1335386615864
+error,log,,,"Current file is not a match for the given config.",1335386615864

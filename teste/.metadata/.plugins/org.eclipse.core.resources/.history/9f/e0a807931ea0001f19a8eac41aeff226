@@ -1,0 +1,89 @@
+import javax.swing.JOptionPane;
+
+
+public class Boliche {
+	public static void main(String[] args)
+	{
+		int terminou= 0;
+		int pinos;
+		int pinos2;
+		int cont = 1;
+		int placar[][] = new int [10][3];
+		int pontos[] =new int [21];
+		for(int i = 1 ; i < 11; i++)
+		{
+		placar[i][1] = i;
+		}        
+		while(terminou != 1)
+		{
+			for(int jogada = 1; jogada < 10 ;jogada++)
+			{
+				if(jogada < 9)
+				{
+				pinos = Integer.parseInt(JOptionPane.showInputDialog("Digite a quantidade de pinos derrubada na Primeira jogada"));
+				if(pinos <= 9 && pinos >= 0)
+				{
+					pinos2 = Integer.parseInt(JOptionPane.showInputDialog("Digite a quantidade de pinos derrubada na Segunda jogada"));
+					pontos[cont] = pinos;
+					cont++;
+					pontos[cont] = pinos2;
+					cont++;	
+				}
+				else if(pinos == 10)
+				{
+					pontos[cont] = pinos;
+					cont++;
+					pontos[cont] = -12;
+					cont++;
+				}
+				else
+				{
+					System.out.println("Valor Incorreto");
+				}
+				}
+				else
+				{
+					pinos = Integer.parseInt(JOptionPane.showInputDialog("Digite a quantidade de pinos derrubada na Primeira jogada"));
+					if(pinos <= 9 && pinos >= 0)
+					{
+						pinos2 = Integer.parseInt(JOptionPane.showInputDialog("Digite a quantidade de pinos derrubada na Segunda jogada"));
+						pontos[cont] = pinos;
+						cont++;
+						pinos = Integer.parseInt(JOptionPane.showInputDialog("Digite a quantidade de pinos derrubada na Terceira jogada"));
+						pontos[cont] = pinos2;
+						cont++;
+						pontos[cont] = pinos;
+						cont++;
+				}
+			}
+		}
+	}
+		for(int y =1; y < 22;y = y+2)
+		{
+			int a =1;
+		if(pontos[y]+pontos[y+1] < 0)
+		{
+		placar[a][3] = pontos[y]+pontos[y+2] +pontos[y+3];
+		}   
+		else
+		{
+		placar[a][3] = pontos[y]+pontos[y+1];
+		}
+		a++;
+		}
+        for(int a= 1; a <= 10;a++)
+		{
+			System.out.println(placar[a][1]);
+		}
+        for(int a= 1; a <= 21;a++)
+		{
+			System.out.println(pontos[a]);
+		}
+        for(int a= 1; a <= 10;a++)
+		{
+			System.out.println(placar[a][3]);
+		}
+		terminou = Integer.parseInt(JOptionPane.showInputDialog("Digite 0 para continuar e 1 para encerrar"));
+		
+}
+}

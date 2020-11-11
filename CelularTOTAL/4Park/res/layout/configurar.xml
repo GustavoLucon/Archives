@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:gravity="top"
+    android:orientation="vertical" >
+
+    <TextView
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="Velocidade de atualização do mapa"
+        android:textColor="#FFFFFF"
+        android:textSize="16sp" />
+
+    <RadioGroup
+        android:id="@+id/radioSex"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content" >
+
+        <RadioButton
+            android:id="@+id/radio1"
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:checked="true"
+            android:text="A cada 1 segundo" />
+
+        <RadioButton
+            android:id="@+id/radio2"
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:text="A cada 3 segundos" />
+
+        <RadioButton
+            android:id="@+id/radio3"
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:text="A cada 5 segundos" />
+
+        <RadioButton
+            android:id="@+id/radio4"
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:text="A cada 10 segundos" />
+    </RadioGroup>
+
+    <TextView
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="Modulos Diferenciados"
+        android:textColor="#FFFFFF"
+        android:textSize="16sp" />
+
+    <CheckBox
+        android:id="@+id/defc"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="selfDef"
+        android:text="Modulo Para Deficiente" />
+
+    <CheckBox
+        android:id="@+id/dalt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="selfDal"
+        android:text="Modulo para Daltonico" />
+
+    <Button
+        android:id="@+id/button5"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:onClick="selfBack"
+        android:text="Voltar" />
+
+</LinearLayout>

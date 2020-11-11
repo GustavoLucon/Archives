@@ -1,0 +1,4 @@
+1;CARLOS MAGNO      ;S;17/08/1991;bolota@email.com
+2;OLAVO C. PASSA    ;S;17/08/1991;
+3;MIKAIL GORDA CHOVE;C;17/08/1992;bolota2@email.com
+4;ARNALDO K.B. SUDO ;C;17/08/1994;

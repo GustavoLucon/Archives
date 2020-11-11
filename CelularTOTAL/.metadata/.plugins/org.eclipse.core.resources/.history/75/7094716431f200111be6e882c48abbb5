@@ -1,0 +1,19 @@
+package cardDuel;
+
+public class Campo {
+		private int Jogadores;
+
+		public Campo(int jogadores) {
+			super();
+			Jogadores = jogadores;
+		}
+		
+		private int CompararCartas(Carta jogadores[],int numJogadores,int atributo)
+		{
+			for(int i =0;i< numJogadores;i++)
+			{
+				if (jogadores[i].)
+			}
+		}
+		
+}

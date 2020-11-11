@@ -1,0 +1,8 @@
+package com.parkhere.lista;
+
+import android.app.ListActivity;
+
+public class list extends ListActivity{
+
+	static final String[] Food = new String[]{"Ice cream","hamburguer"};
+}

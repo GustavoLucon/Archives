@@ -1,0 +1,66 @@
+package boleto;
+
+import org.jboleto.JBoleto;
+import org.jboleto.JBoletoBean;
+
+
+
+public class GeraBoletaItau {
+
+public static void main(String args[]) {
+        
+		JBoletoBean jBoletoBean = new JBoletoBean();
+		jBoletoBean.setAceite("N");
+		jBoletoBean.setDataDocumento("24/01/2011");
+        jBoletoBean.setDataProcessamento("25/01/2011");   
+        jBoletoBean.setCodigoOperacao("20110200002");
+        jBoletoBean.setCodigoFornecidoAgencia("1111111111");
+        jBoletoBean.setCedente(" ECE 2000 Emp. Esportivos Ltda.");  
+        jBoletoBean.setCarteira("06");
+        jBoletoBean.setNomeSacado("ANDRE FRANCISQUINI.");
+        jBoletoBean.setEnderecoSacado("R DR OSCAR M. DE BARROS,580 AP 111");        
+        jBoletoBean.setBairroSacado(" VILA SUZANA");
+        jBoletoBean.setCidadeSacado("São Paulo");
+        jBoletoBean.setUfSacado("SP");
+        jBoletoBean.setCepSacado("05641-010");
+        jBoletoBean.setCpfSacado("87524988753");
+        jBoletoBean.setLocalPagamento("ATE O VENCIMENTO, PREFERENCIALMENTE NO SANTANDER");
+        jBoletoBean.setLocalPagamento2("APOS O VENCIMENTO, SOMENTE NO SANTANDER");           
+        jBoletoBean.setDataVencimento("28/02/2011");
+        jBoletoBean.setInstrucao1("APOS O VENCIMENTO COBRAR MULTA DE 2%");
+        jBoletoBean.setInstrucao2("APOS O VENCIMENTO COBRAR R$ 0,50 POR DIA DE ATRASO");
+        jBoletoBean.setInstrucao3("PROTESTO APÓS 5 DIAS ÚTEIS DO VENCIMENTO ");
+        jBoletoBean.setInstrucao4("");
+        jBoletoBean.setInstrucao5("A Play Tennis lhe deseja um feliz natal !!! ");
+        jBoletoBean.setAgencia("0435/13003498-2");
+        jBoletoBean.setDvAgencia("13");   
+        jBoletoBean.setContaCorrente("02647");
+        jBoletoBean.setDvContaCorrente("8"); 
+        jBoletoBean.setCodCliente("1300349802");
+        jBoletoBean.setNossoNumero("000000000273",12);        
+        jBoletoBean.setValorBoleto("774.00");
+        jBoletoBean.setCarteira("COB");
+        
+        jBoletoBean.setAcrescimo("0");
+        jBoletoBean.setCaminho("Vai na esquerda");
+        jBoletoBean.setNoDocumento("20110200002");
+        jBoletoBean.setIOS("TESTE IOS");
+        jBoletoBean.setLinhaDigitavel("4");
+        jBoletoBean.setNumConvenio("12345678");
+        jBoletoBean.setQtdMoeda("");
+        jBoletoBean.setTipoSaida("VEndas");
+        jBoletoBean.setValorMoeda("");
+        jBoletoBean.setDvNossoNumero("11111111");
+        jBoletoBean.setEspecieDocumento("CObrança");
+        jBoletoBean.setCodigoBarras("03399000030000000000000273901025548920000077400");
+        
+
+       JBoleto jBoleto = new JBoleto();
+     //   JBarcodeBean generator = new PDFGenerator(jBoletoBean, JBoleto.ITAU);
+    //    JBoleto jBoleto = new JBoleto(generator, jBoletoBean, JBoleto.ITAU);
+
+        jBoleto.addBoleto(jBoletoBean,JBoleto.SANTANDER);
+        jBoleto.writeToFile("C:\\santander.pdf");	        
+            
+	}
+}

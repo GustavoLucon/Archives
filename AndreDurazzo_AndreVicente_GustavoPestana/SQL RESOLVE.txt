@@ -1,0 +1,115 @@
+E) 
+declare @bairro =0 number
+set @bairro = @bairro +(Select conta_luz from Contas);
+ 
+select sum(m.valor_mens) from dado_conta dc , mensalidade m
+where dc.tipo_conta = m.tipo_conta and m.tipo_conta =2 and dc.mes_ref_conta between '01/01/2010' and '31/12/2010';
+
+
+F)
+Adicionar valor da mensalidade.
+
+UPDATE Mensalidade SET valor_mens= valor_mens + valor_mens * 0.15;
+
+G)
+Adicionar data de nascimento do condomino e nome
+
+UPDATE Morador SET email_cond  = 'milton_nascimento@gmail.com' where nome_mor LIKE 'Milton Nascimento';
+UPDATE Morador SET data_nascimento  = '15/02/1955' where nome_mor LIKE 'Milton Nascimento';
+
+H)
+
+DELETE FROM Morador
+WHERE nome_mor LIKE 'Marisa Monte';
+
+I)
+
+Criar aquele log
+
+
+J)//PARO AKI
+Adicionar email , bloco do condomino
+
+Select a.nome_cond , a.email_cond ,b.cod_cond
+from Condominio a ,Apartamento b
+where a.bloco_cond = 'A' AND (a.cod_cond = b.cod_cond);
+
+K)
+CREATE OR REPLACE TRIGGER monitorHR 
+after logon ON database
+BEGIN
+insert into Log(usuario,hora,tipo) values(user,sysdate,'logon');
+end monitorhr;
+/
+
+CREATE OR REPLACE TRIGGER monitorHR 
+BEfore logoff ON database
+BEGIN
+insert into Log(usuario,hora,tipo) values(user,sysdate,'logoff');
+end monitorhr;
+/
+
+L)
+
+CREATE OR REPLACE TRIGGER EMPmonitorHR
+BEFORE INSERT ON Employees 
+BEGIN
+insert into DML_Employees values('INSERT',user,Sysdate);
+end EmpmonitorHr;
+/
+CREATE OR REPLACE TRIGGER EMPmonitorHR2
+BEFORE Delete ON Employees 
+BEGIN
+insert into DML_Employees values('Delete',user,Sysdate);
+end EmpmonitorHr;
+/
+CREATE OR REPLACE TRIGGER EMPmonitorHR3
+BEFORE Update ON Employees 
+BEGIN
+insert into DML_Employees values('Update',user,Sysdate);
+end EmpmonitorHr;
+/
+
+M)
+
+Create OR Replace PROCEDURE calcula_valor ( p_codigo out varchar2(200))
+IS
+BEGIN
+p_codigo = to_char(sysdate as varchar(10)) || 0 ;
+END calcula_valor;
+/
+
+CREATE OR REPLACE TRIGGER teste
+BEFORE INSERT ON TESTE
+BEGIN
+calcula_valor
+END
+
+N)
+CREATE OR REPLACE TRIGGER DelOBJ
+Before DROP ON database
+BEGIN
+SqlContext.Pipe.Send("Este Objeto Sera Eliminado");
+END DelOBJ;
+/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+lpad(varString,tamanhoTotal,preencherCom);
+

@@ -1,0 +1,67 @@
+package cardDuel.telas;
+
+import javax.swing.JPanel;
+import javax.swing.JLabel;
+
+public class CampoBatalha extends JPanel {
+
+	/**
+	 * Create the panel.
+	 */
+	public CampoBatalha() {
+		setLayout(null);
+		
+		JLabel nomeJog3 = new JLabel("New label");
+		nomeJog3.setBounds(10, 113, 102, 14);
+		add(nomeJog3);
+		
+		JLabel AtribJog3 = new JLabel("New label");
+		AtribJog3.setBounds(10, 138, 46, 14);
+		add(AtribJog3);
+		
+		JLabel lblNewLabel_2 = new JLabel("New label");
+		lblNewLabel_2.setBounds(66, 138, 46, 14);
+		add(lblNewLabel_2);
+		
+		JLabel label = new JLabel("New label");
+		label.setBounds(394, 138, 46, 14);
+		add(label);
+		
+		JLabel AtribJog4 = new JLabel("New label");
+		AtribJog4.setBounds(338, 138, 46, 14);
+		add(AtribJog4);
+		
+		JLabel nomeJog4 = new JLabel("New label");
+		nomeJog4.setBounds(338, 113, 102, 14);
+		add(nomeJog4);
+		
+		JLabel label_3 = new JLabel("New label");
+		label_3.setBounds(234, 36, 46, 14);
+		add(label_3);
+		
+		JLabel AtribJog2 = new JLabel("New label");
+		AtribJog2.setBounds(178, 36, 46, 14);
+		add(AtribJog2);
+		
+		JLabel nomeJog2 = new JLabel("New label");
+		nomeJog2.setBounds(178, 11, 102, 14);
+		add(nomeJog2);
+		
+		JLabel label_6 = new JLabel("New label");
+		label_6.setBounds(234, 275, 46, 14);
+		add(label_6);
+		
+		JLabel AtribJog1 = new JLabel("New label");
+		AtribJog1.setBounds(178, 275, 46, 14);
+		add(AtribJog1);
+		
+		JLabel nomeJog1 = new JLabel("New label");
+		nomeJog1.setBounds(178, 250, 102, 14);
+		add(nomeJog1);
+		
+		JLabel verificar = new JLabel("New label");
+		verificar.setBounds(191, 138, 46, 14);
+		add(verificar);
+
+	}
+}

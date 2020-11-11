@@ -1,0 +1,9 @@
+#1#smtp.gmail.com
+#2#gugaefo@gmail.com
+#3#mtuloko
+#4#gugaefo@gmail.com
+#5#Tester
+#6#Email de teste
+#7#gugaefo@gmail.com,
+#8#
+#9#teste;teersee

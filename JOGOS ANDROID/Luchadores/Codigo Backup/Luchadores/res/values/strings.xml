@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">Luchadores</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="action_settings">Settings</string>
+    <string name="title_activity_champselect">Champselect</string>
+    <string name="loginfb">loginfb</string>
+    <string name="title_activity_arena">Arena</string>
+
+</resources>

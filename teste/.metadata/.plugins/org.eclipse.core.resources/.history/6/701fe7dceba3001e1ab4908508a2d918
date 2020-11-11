@@ -1,0 +1,27 @@
+
+public class Prova1 {
+	public static int exibir(int fi , int fi2 ,int cont)
+	{
+		int res = fi2;
+
+		if(cont == 7)
+		{
+		return 1 ;	
+		}
+		else
+		{
+		cont++ ;
+		res = exibir(fi+1 ,res ,cont) + exibir(fi+2 , res , cont);
+	
+		System.out.println(res);
+		return fi2 ;
+		}
+	}
+	public static void main (String args[])
+	{
+	int fib= 1;
+	int fib2 = 1;
+	int cont = 0 ;
+	exibir(fib , fib2 , cont);
+	}
+}

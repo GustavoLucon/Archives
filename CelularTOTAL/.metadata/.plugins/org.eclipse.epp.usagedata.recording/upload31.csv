@@ -1,0 +1,276 @@
+what,kind,bundleId,bundleVersion,description,time
+activated,workbench,org.eclipse.ui.workbench,3.7.0.I20110519-0100,"",1335467086032
+deactivated,workbench,org.eclipse.ui.workbench,3.7.0.I20110519-0100,"",1335467086173
+activated,workbench,org.eclipse.ui.workbench,3.7.0.I20110519-0100,"",1335467087079
+deactivated,workbench,org.eclipse.ui.workbench,3.7.0.I20110519-0100,"",1335467087720
+activated,workbench,org.eclipse.ui.workbench,3.7.0.I20110519-0100,"",1335467122939
+activated,view,org.eclipse.jdt.ui,3.7.1.r371_v20110824-0800,"org.eclipse.jdt.ui.PackageExplorer",1335467126329
+activated,editor,com.android.ide.eclipse.adt,18.0.0.v201203301601-306762,"com.android.ide.eclipse.editors.CommonXmlEditor",1335467130361
+activated,view,org.eclipse.jdt.ui,3.7.1.r371_v20110824-0800,"org.eclipse.jdt.ui.PackageExplorer",1335467131907
+deactivated,workbench,org.eclipse.ui.workbench,3.7.0.I20110519-0100,"",1335467132595
+activated,workbench,org.eclipse.ui.workbench,3.7.0.I20110519-0100,"",1335467133986
+activated,view,org.eclipse.ui.ide,3.7.0.v20110809-1737,"org.eclipse.ui.views.ProblemView",1335467135392
+activated,view,org.eclipse.jdt.ui,3.7.1.r371_v20110824-0800,"org.eclipse.jdt.ui.PackageExplorer",1335467137689
+deactivated,workbench,org.eclipse.ui.workbench,3.7.0.I20110519-0100,"",1335467141720
+activated,workbench,org.eclipse.ui.workbench,3.7.0.I20110519-0100,"",1335467150642
+deactivated,workbench,org.eclipse.ui.workbench,3.7.0.I20110519-0100,"",1335467153001
+activated,workbench,org.eclipse.ui.workbench,3.7.0.I20110519-0100,"",1335467154986
+activated,editor,com.android.ide.eclipse.adt,18.0.0.v201203301601-306762,"com.android.ide.eclipse.editors.CommonXmlEditor",1335467162626
+error,log,,,"inicial.xml: Failed to convert @drawable/Sair.bmp into a drawable",1335467167423
+deactivated,workbench,org.eclipse.ui.workbench,3.7.0.I20110519-0100,"",1335467168048
+activated,workbench,org.eclipse.ui.workbench,3.7.0.I20110519-0100,"",1335467168751
+executed,command,org.eclipse.ui,3.7.0.I20110602-0100,"org.eclipse.ui.file.save",1335467208252
+error,log,,,"inicial.xml: Failed to convert @drawable/Estacionamento.jpg into a drawable",1335467208752
+error,log,,,"inicial.xml: Failed to convert @drawable/Estacionamento.jpg into a drawable",1335467208908
+deactivated,workbench,org.eclipse.ui.workbench,3.7.0.I20110519-0100,"",1335467227877
+activated,workbench,org.eclipse.ui.workbench,3.7.0.I20110519-0100,"",1335467229127
+closed,editor,org.eclipse.jdt.ui,3.7.1.r371_v20110824-0800,"org.eclipse.jdt.ui.CompilationUnitEditor",1335467237018
+closed,editor,com.android.ide.eclipse.adt,18.0.0.v201203301601-306762,"com.android.ide.eclipse.editors.CommonXmlEditor",1335467237049
+closed,editor,com.android.ide.eclipse.adt,18.0.0.v201203301601-306762,"com.android.ide.eclipse.editors.CommonXmlEditor",1335467237049
+closed,editor,com.android.ide.eclipse.adt,18.0.0.v201203301601-306762,"com.android.ide.eclipse.editors.CommonXmlEditor",1335467237049
+closed,editor,com.android.ide.eclipse.adt,18.0.0.v201203301601-306762,"com.android.ide.eclipse.editors.CommonXmlEditor",1335467237064
+closed,editor,org.jboss.tools.common.model.ui,3.3.0.v20110915-1551-H16-M3,"org.jboss.tools.common.propertieseditor.PropertiesCompoundEditor",1335467237064
+closed,editor,com.android.ide.eclipse.adt,18.0.0.v201203301601-306762,"com.android.ide.eclipse.editors.CommonXmlEditor",1335467237127
+executed,command,org.eclipse.ui,3.7.0.I20110602-0100,"org.eclipse.ui.file.save",1335467238830
+executed,command,org.eclipse.ui,3.7.0.I20110602-0100,"org.eclipse.ui.edit.delete",1335467259002
+deactivated,workbench,org.eclipse.ui.workbench,3.7.0.I20110519-0100,"",1335467262705
+activated,workbench,org.eclipse.ui.workbench,3.7.0.I20110519-0100,"",1335467266143
+executed,command,org.eclipse.ui,3.7.0.I20110602-0100,"org.eclipse.ui.edit.copy",1335467276612
+deactivated,workbench,org.eclipse.ui.workbench,3.7.0.I20110519-0100,"",1335467320424
+activated,workbench,org.eclipse.ui.workbench,3.7.0.I20110519-0100,"",1335467409737
+executed,command,org.eclipse.ui,3.7.0.I20110602-0100,"org.eclipse.ui.edit.undo",1335467415831
+executed,command,org.eclipse.ui,3.7.0.I20110602-0100,"org.eclipse.ui.edit.undo",1335467416112
+deactivated,workbench,org.eclipse.ui.workbench,3.7.0.I20110519-0100,"",1335467418237
+activated,workbench,org.eclipse.ui.workbench,3.7.0.I20110519-0100,"",1335467418237
+deactivated,workbench,org.eclipse.ui.workbench,3.7.0.I20110519-0100,"",1335467418300
+activated,workbench,org.eclipse.ui.workbench,3.7.0.I20110519-0100,"",1335467424237
+executed,command,org.eclipse.ui,3.7.0.I20110602-0100,"org.eclipse.ui.edit.paste",1335467426534
+executed,command,org.eclipse.ui,3.7.0.I20110602-0100,"org.eclipse.ui.edit.copy",1335467432284
+executed,command,org.eclipse.ui,3.7.0.I20110602-0100,"org.eclipse.ui.edit.paste",1335467435019
+executed,command,org.eclipse.ui,3.7.0.I20110602-0100,"org.eclipse.ui.edit.delete",1335467437659
+executed,command,org.eclipse.ui,3.7.0.I20110602-0100,"org.eclipse.ui.file.save",1335467441300
+deactivated,workbench,org.eclipse.ui.workbench,3.7.0.I20110519-0100,"",1335467450909
+activated,workbench,org.eclipse.ui.workbench,3.7.0.I20110519-0100,"",1335467501863
+deactivated,workbench,org.eclipse.ui.workbench,3.7.0.I20110519-0100,"",1335467501879
+activated,workbench,org.eclipse.ui.workbench,3.7.0.I20110519-0100,"",1335467503410
+executed,command,org.eclipse.ui,3.7.0.I20110602-0100,"org.eclipse.ui.file.save",1335467511488
+deactivated,workbench,org.eclipse.ui.workbench,3.7.0.I20110519-0100,"",1335467522801
+activated,workbench,org.eclipse.ui.workbench,3.7.0.I20110519-0100,"",1335467536207
+deactivated,workbench,org.eclipse.ui.workbench,3.7.0.I20110519-0100,"",1335467539082
+activated,workbench,org.eclipse.ui.workbench,3.7.0.I20110519-0100,"",1335467563754
+deactivated,workbench,org.eclipse.ui.workbench,3.7.0.I20110519-0100,"",1335467566270
+activated,workbench,org.eclipse.ui.workbench,3.7.0.I20110519-0100,"",1335467567176
+executed,command,org.eclipse.ui,3.7.0.I20110602-0100,"org.eclipse.ui.file.save",1335467574442
+deactivated,workbench,org.eclipse.ui.workbench,3.7.0.I20110519-0100,"",1335467583629
+activated,workbench,org.eclipse.ui.workbench,3.7.0.I20110519-0100,"",1335467583629
+deactivated,workbench,org.eclipse.ui.workbench,3.7.0.I20110519-0100,"",1335467583738
+activated,workbench,org.eclipse.ui.workbench,3.7.0.I20110519-0100,"",1335467659489
+activated,view,org.eclipse.jdt.ui,3.7.1.r371_v20110824-0800,"org.eclipse.jdt.ui.PackageExplorer",1335467659505
+deactivated,workbench,org.eclipse.ui.workbench,3.7.0.I20110519-0100,"",1335467659833
+activated,workbench,org.eclipse.ui.workbench,3.7.0.I20110519-0100,"",1335467660927
+executed,command,org.eclipse.ui,3.7.0.I20110602-0100,"org.eclipse.ui.edit.delete",1335467660943
+deactivated,workbench,org.eclipse.ui.workbench,3.7.0.I20110519-0100,"",1335467661411
+activated,workbench,org.eclipse.ui.workbench,3.7.0.I20110519-0100,"",1335467661427
+deactivated,workbench,org.eclipse.ui.workbench,3.7.0.I20110519-0100,"",1335467661489
+activated,workbench,org.eclipse.ui.workbench,3.7.0.I20110519-0100,"",1335467663255
+deactivated,workbench,org.eclipse.ui.workbench,3.7.0.I20110519-0100,"",1335467663255
+activated,workbench,org.eclipse.ui.workbench,3.7.0.I20110519-0100,"",1335467664443
+activated,editor,com.android.ide.eclipse.adt,18.0.0.v201203301601-306762,"com.android.ide.eclipse.editors.CommonXmlEditor",1335467664849
+executed,command,org.eclipse.ui,3.7.0.I20110602-0100,"org.eclipse.ui.edit.copy",1335467671177
+executed,command,org.eclipse.ui,3.7.0.I20110602-0100,"org.eclipse.ui.edit.paste",1335467673333
+executed,command,org.eclipse.ui.workbench.texteditor,3.7.0.v20110505-0800,"org.eclipse.ui.edit.text.toggleOverwrite",1335467674224
+executed,command,org.eclipse.ui,3.7.0.I20110602-0100,"org.eclipse.ui.edit.delete",1335467674474
+executed,command,org.eclipse.ui.workbench.texteditor,3.7.0.v20110505-0800,"org.eclipse.ui.edit.text.toggleOverwrite",1335467677286
+executed,command,org.eclipse.ui,3.7.0.I20110602-0100,"org.eclipse.ui.edit.undo",1335467694365
+executed,command,org.eclipse.ui,3.7.0.I20110602-0100,"org.eclipse.ui.edit.undo",1335467694693
+executed,command,org.eclipse.ui,3.7.0.I20110602-0100,"org.eclipse.ui.edit.copy",1335467702052
+deactivated,workbench,org.eclipse.ui.workbench,3.7.0.I20110519-0100,"",1335467707318
+activated,workbench,org.eclipse.ui.workbench,3.7.0.I20110519-0100,"",1335467708599
+executed,command,org.eclipse.ui,3.7.0.I20110602-0100,"org.eclipse.ui.file.save",1335467716975
+executed,command,org.eclipse.ui,3.7.0.I20110602-0100,"org.eclipse.ui.file.save",1335467727584
+executed,command,org.eclipse.ui,3.7.0.I20110602-0100,"org.eclipse.ui.edit.undo",1335467735459
+executed,command,org.eclipse.ui,3.7.0.I20110602-0100,"org.eclipse.ui.edit.undo",1335467749553
+deactivated,workbench,org.eclipse.ui.workbench,3.7.0.I20110519-0100,"",1335467752506
+activated,workbench,org.eclipse.ui.workbench,3.7.0.I20110519-0100,"",1335467755475
+error,log,,,"inicial.xml: Dimension ""250"" in attribute ""layout_width"" is missing unit!",1335467755537
+error,log,,,"inicial.xml: Dimension ""250"" in attribute ""layout_width"" is missing unit!",1335467765006
+error,log,,,"inicial.xml: Dimension ""250"" in attribute ""layout_width"" is missing unit!",1335467769491
+error,log,,,"inicial.xml: Dimension ""250"" in attribute ""layout_width"" is missing unit!",1335467778428
+error,log,,,"inicial.xml: Dimension ""250"" in attribute ""layout_width"" is missing unit!",1335467784866
+error,log,,,"inicial.xml: Dimension ""250"" in attribute ""layout_width"" is missing unit!",1335467787725
+error,log,,,"inicial.xml: Dimension ""250"" in attribute ""layout_width"" is missing unit!",1335467793522
+error,log,,,"inicial.xml: Dimension ""250"" in attribute ""layout_width"" is missing unit!",1335467799804
+error,log,,,"inicial.xml: Dimension ""250"" in attribute ""layout_width"" is missing unit!",1335467804679
+deactivated,workbench,org.eclipse.ui.workbench,3.7.0.I20110519-0100,"",1335467812929
+activated,workbench,org.eclipse.ui.workbench,3.7.0.I20110519-0100,"",1335467814241
+error,log,,,"inicial.xml: Dimension ""250"" in attribute ""layout_width"" is missing unit!",1335467814288
+error,log,,,"inicial.xml: Dimension ""250"" in attribute ""layout_width"" is missing unit!",1335467814304
+deactivated,workbench,org.eclipse.ui.workbench,3.7.0.I20110519-0100,"",1335467819523
+activated,workbench,org.eclipse.ui.workbench,3.7.0.I20110519-0100,"",1335467821163
+error,log,,,"inicial.xml: Dimension ""250"" in attribute ""layout_width"" is missing unit!",1335467821210
+error,log,,,"inicial.xml: Dimension ""200"" in attribute ""layout_width"" is missing unit!",1335467821226
+deactivated,workbench,org.eclipse.ui.workbench,3.7.0.I20110519-0100,"",1335467828601
+activated,workbench,org.eclipse.ui.workbench,3.7.0.I20110519-0100,"",1335467830148
+error,log,,,"inicial.xml: Dimension ""250"" in attribute ""layout_width"" is missing unit!",1335467830210
+error,log,,,"inicial.xml: Dimension ""230"" in attribute ""layout_width"" is missing unit!",1335467830226
+deactivated,workbench,org.eclipse.ui.workbench,3.7.0.I20110519-0100,"",1335467836289
+activated,workbench,org.eclipse.ui.workbench,3.7.0.I20110519-0100,"",1335467837710
+error,log,,,"inicial.xml: Dimension ""250"" in attribute ""layout_width"" is missing unit!",1335467837742
+error,log,,,"inicial.xml: Dimension ""230"" in attribute ""layout_width"" is missing unit!",1335467837757
+error,log,,,"inicial.xml: Dimension ""230"" in attribute ""layout_width"" is missing unit!",1335467837773
+error,log,,,"inicial.xml: Dimension ""250"" in attribute ""layout_width"" is missing unit!",1335467841070
+error,log,,,"inicial.xml: Dimension ""230"" in attribute ""layout_width"" is missing unit!",1335467841070
+error,log,,,"inicial.xml: Dimension ""230"" in attribute ""layout_width"" is missing unit!",1335467841085
+deactivated,workbench,org.eclipse.ui.workbench,3.7.0.I20110519-0100,"",1335467845054
+activated,workbench,org.eclipse.ui.workbench,3.7.0.I20110519-0100,"",1335467846023
+error,log,,,"inicial.xml: Dimension ""250"" in attribute ""layout_width"" is missing unit!",1335467846070
+error,log,,,"inicial.xml: Dimension ""230"" in attribute ""layout_width"" is missing unit!",1335467846086
+error,log,,,"inicial.xml: Dimension ""230"" in attribute ""layout_width"" is missing unit!",1335467846086
+error,log,,,"inicial.xml: Dimension ""230"" in attribute ""layout_width"" is missing unit!",1335467846086
+deactivated,workbench,org.eclipse.ui.workbench,3.7.0.I20110519-0100,"",1335467850289
+activated,workbench,org.eclipse.ui.workbench,3.7.0.I20110519-0100,"",1335467851242
+error,log,,,"inicial.xml: Dimension ""230"" in attribute ""layout_width"" is missing unit!",1335467851289
+error,log,,,"inicial.xml: Dimension ""230"" in attribute ""layout_width"" is missing unit!",1335467851289
+error,log,,,"inicial.xml: Dimension ""230"" in attribute ""layout_width"" is missing unit!",1335467851304
+error,log,,,"inicial.xml: Dimension ""230"" in attribute ""layout_width"" is missing unit!",1335467851304
+error,log,,,"inicial.xml: Dimension ""230"" in attribute ""layout_width"" is missing unit!",1335467857492
+error,log,,,"inicial.xml: Dimension ""230"" in attribute ""layout_width"" is missing unit!",1335467857492
+error,log,,,"inicial.xml: Dimension ""230"" in attribute ""layout_width"" is missing unit!",1335467857508
+error,log,,,"inicial.xml: Dimension ""230"" in attribute ""layout_width"" is missing unit!",1335467857508
+error,log,,,"inicial.xml: Dimension ""230"" in attribute ""layout_width"" is missing unit!",1335467860367
+error,log,,,"inicial.xml: Dimension ""230"" in attribute ""layout_width"" is missing unit!",1335467860367
+error,log,,,"inicial.xml: Dimension ""230"" in attribute ""layout_width"" is missing unit!",1335467860383
+error,log,,,"inicial.xml: Dimension ""230"" in attribute ""layout_width"" is missing unit!",1335467860383
+executed,command,org.eclipse.ui,3.7.0.I20110602-0100,"org.eclipse.ui.edit.undo",1335467860414
+error,log,,,"inicial.xml: Dimension ""230"" in attribute ""layout_width"" is missing unit!",1335467863023
+error,log,,,"inicial.xml: Dimension ""230"" in attribute ""layout_width"" is missing unit!",1335467863023
+error,log,,,"inicial.xml: Dimension ""230"" in attribute ""layout_width"" is missing unit!",1335467863039
+error,log,,,"inicial.xml: Dimension ""230"" in attribute ""layout_width"" is missing unit!",1335467863039
+error,log,,,"inicial.xml: Dimension ""230"" in attribute ""layout_width"" is missing unit!",1335467868148
+error,log,,,"inicial.xml: Dimension ""230"" in attribute ""layout_width"" is missing unit!",1335467868164
+error,log,,,"inicial.xml: Dimension ""230"" in attribute ""layout_width"" is missing unit!",1335467868164
+error,log,,,"inicial.xml: Dimension ""230"" in attribute ""layout_width"" is missing unit!",1335467868164
+error,log,,,"inicial.xml: Dimension ""230"" in attribute ""layout_width"" is missing unit!",1335467870258
+error,log,,,"inicial.xml: Dimension ""230"" in attribute ""layout_width"" is missing unit!",1335467870273
+error,log,,,"inicial.xml: Dimension ""230"" in attribute ""layout_width"" is missing unit!",1335467870273
+error,log,,,"inicial.xml: Dimension ""230"" in attribute ""layout_width"" is missing unit!",1335467870273
+executed,command,org.eclipse.ui,3.7.0.I20110602-0100,"org.eclipse.ui.edit.undo",1335467870320
+error,log,,,"inicial.xml: Dimension ""230"" in attribute ""layout_width"" is missing unit!",1335467870601
+error,log,,,"inicial.xml: Dimension ""230"" in attribute ""layout_width"" is missing unit!",1335467870601
+error,log,,,"inicial.xml: Dimension ""230"" in attribute ""layout_width"" is missing unit!",1335467870601
+error,log,,,"inicial.xml: Dimension ""230"" in attribute ""layout_width"" is missing unit!",1335467870601
+executed,command,org.eclipse.ui,3.7.0.I20110602-0100,"org.eclipse.ui.edit.undo",1335467870648
+error,log,,,"inicial.xml: Dimension ""230"" in attribute ""layout_width"" is missing unit!",1335467873961
+error,log,,,"inicial.xml: Dimension ""230"" in attribute ""layout_width"" is missing unit!",1335467873961
+error,log,,,"inicial.xml: Dimension ""230"" in attribute ""layout_width"" is missing unit!",1335467873961
+error,log,,,"inicial.xml: Dimension ""230"" in attribute ""layout_width"" is missing unit!",1335467873961
+error,log,,,"inicial.xml: Dimension ""230"" in attribute ""layout_width"" is missing unit!",1335467875945
+error,log,,,"inicial.xml: Dimension ""230"" in attribute ""layout_width"" is missing unit!",1335467875945
+error,log,,,"inicial.xml: Dimension ""230"" in attribute ""layout_width"" is missing unit!",1335467875945
+error,log,,,"inicial.xml: Dimension ""230"" in attribute ""layout_width"" is missing unit!",1335467875961
+executed,command,org.eclipse.ui,3.7.0.I20110602-0100,"org.eclipse.ui.edit.undo",1335467875992
+deactivated,workbench,org.eclipse.ui.workbench,3.7.0.I20110519-0100,"",1335467881586
+activated,workbench,org.eclipse.ui.workbench,3.7.0.I20110519-0100,"",1335467937337
+deactivated,workbench,org.eclipse.ui.workbench,3.7.0.I20110519-0100,"",1335467940727
+activated,workbench,org.eclipse.ui.workbench,3.7.0.I20110519-0100,"",1335467940727
+deactivated,workbench,org.eclipse.ui.workbench,3.7.0.I20110519-0100,"",1335467940868
+activated,workbench,org.eclipse.ui.workbench,3.7.0.I20110519-0100,"",1335467945337
+deactivated,workbench,org.eclipse.ui.workbench,3.7.0.I20110519-0100,"",1335467945337
+activated,workbench,org.eclipse.ui.workbench,3.7.0.I20110519-0100,"",1335467946431
+error,log,,,"inicial.xml: Dimension ""230"" in attribute ""layout_width"" is missing unit!",1335467946868
+error,log,,,"inicial.xml: Dimension ""230"" in attribute ""layout_width"" is missing unit!",1335467946868
+error,log,,,"inicial.xml: Dimension ""230"" in attribute ""layout_width"" is missing unit!",1335467946868
+error,log,,,"inicial.xml: Dimension ""230"" in attribute ""layout_width"" is missing unit!",1335467946884
+executed,command,org.eclipse.ui,3.7.0.I20110602-0100,"org.eclipse.ui.edit.copy",1335467961400
+executed,command,org.eclipse.ui,3.7.0.I20110602-0100,"org.eclipse.ui.edit.copy",1335467963118
+executed,command,org.eclipse.ui,3.7.0.I20110602-0100,"org.eclipse.ui.edit.selectAll",1335467963775
+executed,command,org.eclipse.ui,3.7.0.I20110602-0100,"org.eclipse.ui.edit.paste",1335467970228
+deactivated,workbench,org.eclipse.ui.workbench,3.7.0.I20110519-0100,"",1335467981462
+activated,workbench,org.eclipse.ui.workbench,3.7.0.I20110519-0100,"",1335468021650
+deactivated,workbench,org.eclipse.ui.workbench,3.7.0.I20110519-0100,"",1335468022353
+activated,workbench,org.eclipse.ui.workbench,3.7.0.I20110519-0100,"",1335468035807
+deactivated,workbench,org.eclipse.ui.workbench,3.7.0.I20110519-0100,"",1335468035822
+activated,workbench,org.eclipse.ui.workbench,3.7.0.I20110519-0100,"",1335468037275
+executed,command,org.eclipse.ui,3.7.0.I20110602-0100,"org.eclipse.ui.edit.paste",1335468040338
+executed,command,org.eclipse.ui,3.7.0.I20110602-0100,"org.eclipse.ui.file.save",1335468044322
+error,log,,,"inicial.xml: Dimension ""230"" in attribute ""layout_width"" is missing unit!",1335468045104
+error,log,,,"inicial.xml: Dimension ""230"" in attribute ""layout_width"" is missing unit!",1335468045104
+error,log,,,"inicial.xml: Failed to convert @drawable/Ajuda into a drawable",1335468045104
+error,log,,,"inicial.xml: Dimension ""230"" in attribute ""layout_width"" is missing unit!",1335468045104
+error,log,,,"inicial.xml: Dimension ""230"" in attribute ""layout_width"" is missing unit!",1335468045119
+error,log,,,"inicial.xml: Dimension ""230"" in attribute ""layout_width"" is missing unit!",1335468053838
+error,log,,,"inicial.xml: Dimension ""230"" in attribute ""layout_width"" is missing unit!",1335468053838
+error,log,,,"inicial.xml: Dimension ""230"" in attribute ""layout_width"" is missing unit!",1335468053885
+error,log,,,"inicial.xml: Dimension ""230"" in attribute ""layout_width"" is missing unit!",1335468053885
+error,log,,,"inicial.xml: Dimension ""230"" in attribute ""layout_width"" is missing unit!",1335468070151
+error,log,,,"inicial.xml: Dimension ""230"" in attribute ""layout_width"" is missing unit!",1335468070151
+error,log,,,"inicial.xml: Dimension ""230"" in attribute ""layout_width"" is missing unit!",1335468070151
+error,log,,,"inicial.xml: Dimension ""230"" in attribute ""layout_width"" is missing unit!",1335468070151
+deactivated,workbench,org.eclipse.ui.workbench,3.7.0.I20110519-0100,"",1335468081464
+activated,workbench,org.eclipse.ui.workbench,3.7.0.I20110519-0100,"",1335468084354
+error,log,,,"inicial.xml: Dimension ""230"" in attribute ""layout_width"" is missing unit!",1335468084432
+error,log,,,"inicial.xml: Dimension ""230"" in attribute ""layout_width"" is missing unit!",1335468084432
+error,log,,,"inicial.xml: Dimension ""200"" in attribute ""layout_height"" is missing unit!",1335468084432
+error,log,,,"inicial.xml: Dimension ""230"" in attribute ""layout_width"" is missing unit!",1335468084432
+error,log,,,"inicial.xml: Dimension ""230"" in attribute ""layout_width"" is missing unit!",1335468084432
+deactivated,workbench,org.eclipse.ui.workbench,3.7.0.I20110519-0100,"",1335468087151
+activated,workbench,org.eclipse.ui.workbench,3.7.0.I20110519-0100,"",1335468088589
+error,log,,,"inicial.xml: Dimension ""230"" in attribute ""layout_width"" is missing unit!",1335468088620
+error,log,,,"inicial.xml: Dimension ""230"" in attribute ""layout_width"" is missing unit!",1335468088636
+error,log,,,"inicial.xml: Dimension ""100"" in attribute ""layout_height"" is missing unit!",1335468088636
+error,log,,,"inicial.xml: Dimension ""230"" in attribute ""layout_width"" is missing unit!",1335468088636
+error,log,,,"inicial.xml: Dimension ""230"" in attribute ""layout_width"" is missing unit!",1335468088636
+deactivated,workbench,org.eclipse.ui.workbench,3.7.0.I20110519-0100,"",1335468092542
+activated,workbench,org.eclipse.ui.workbench,3.7.0.I20110519-0100,"",1335468094573
+error,log,,,"inicial.xml: Dimension ""230"" in attribute ""layout_width"" is missing unit!",1335468094620
+error,log,,,"inicial.xml: Dimension ""230"" in attribute ""layout_width"" is missing unit!",1335468094620
+error,log,,,"inicial.xml: Dimension ""75"" in attribute ""layout_height"" is missing unit!",1335468094620
+error,log,,,"inicial.xml: Dimension ""230"" in attribute ""layout_width"" is missing unit!",1335468094620
+error,log,,,"inicial.xml: Dimension ""230"" in attribute ""layout_width"" is missing unit!",1335468094620
+deactivated,workbench,org.eclipse.ui.workbench,3.7.0.I20110519-0100,"",1335468098979
+activated,workbench,org.eclipse.ui.workbench,3.7.0.I20110519-0100,"",1335468100495
+error,log,,,"inicial.xml: Dimension ""230"" in attribute ""layout_width"" is missing unit!",1335468100620
+error,log,,,"inicial.xml: Dimension ""230"" in attribute ""layout_width"" is missing unit!",1335468100620
+error,log,,,"inicial.xml: Dimension ""75"" in attribute ""layout_height"" is missing unit!",1335468100620
+error,log,,,"inicial.xml: Dimension ""230"" in attribute ""layout_width"" is missing unit!",1335468100620
+error,log,,,"inicial.xml: Dimension ""75"" in attribute ""layout_height"" is missing unit!",1335468100620
+error,log,,,"inicial.xml: Dimension ""230"" in attribute ""layout_width"" is missing unit!",1335468100620
+activated,view,org.eclipse.jdt.ui,3.7.1.r371_v20110824-0800,"org.eclipse.jdt.ui.PackageExplorer",1335468113167
+deactivated,workbench,org.eclipse.ui.workbench,3.7.0.I20110519-0100,"",1335468113401
+activated,workbench,org.eclipse.ui.workbench,3.7.0.I20110519-0100,"",1335468114605
+activated,editor,com.android.ide.eclipse.adt,18.0.0.v201203301601-306762,"com.android.ide.eclipse.editors.CommonXmlEditor",1335468115292
+executed,command,org.eclipse.ui,3.7.0.I20110602-0100,"org.eclipse.ui.edit.paste",1335468125511
+error,log,,,"inicial.xml: Dimension ""230"" in attribute ""layout_width"" is missing unit!",1335468133574
+error,log,,,"inicial.xml: Dimension ""230"" in attribute ""layout_width"" is missing unit!",1335468133574
+error,log,,,"inicial.xml: Dimension ""75"" in attribute ""layout_height"" is missing unit!",1335468133574
+error,log,,,"inicial.xml: Dimension ""230"" in attribute ""layout_width"" is missing unit!",1335468133589
+error,log,,,"inicial.xml: Dimension ""75"" in attribute ""layout_height"" is missing unit!",1335468133589
+error,log,,,"inicial.xml: Dimension ""230"" in attribute ""layout_width"" is missing unit!",1335468133589
+deactivated,workbench,org.eclipse.ui.workbench,3.7.0.I20110519-0100,"",1335468139261
+activated,workbench,org.eclipse.ui.workbench,3.7.0.I20110519-0100,"",1335468179782
+deactivated,workbench,org.eclipse.ui.workbench,3.7.0.I20110519-0100,"",1335468180423
+activated,workbench,org.eclipse.ui.workbench,3.7.0.I20110519-0100,"",1335468195816
+deactivated,workbench,org.eclipse.ui.workbench,3.7.0.I20110519-0100,"",1335468195831
+activated,workbench,org.eclipse.ui.workbench,3.7.0.I20110519-0100,"",1335468196675
+error,log,,,"inicial.xml: Dimension ""230"" in attribute ""layout_width"" is missing unit!",1335468197159
+error,log,,,"inicial.xml: Dimension ""230"" in attribute ""layout_width"" is missing unit!",1335468197159
+error,log,,,"inicial.xml: Dimension ""75"" in attribute ""layout_height"" is missing unit!",1335468197159
+error,log,,,"inicial.xml: Dimension ""230"" in attribute ""layout_width"" is missing unit!",1335468197191
+error,log,,,"inicial.xml: Dimension ""75"" in attribute ""layout_height"" is missing unit!",1335468197191
+error,log,,,"inicial.xml: Dimension ""230"" in attribute ""layout_width"" is missing unit!",1335468197191
+executed,command,org.eclipse.ui,3.7.0.I20110602-0100,"org.eclipse.ui.edit.selectAll",1335468202113
+executed,command,org.eclipse.ui,3.7.0.I20110602-0100,"org.eclipse.ui.edit.selectAll",1335468204473
+executed,command,org.eclipse.ui,3.7.0.I20110602-0100,"org.eclipse.ui.edit.selectAll",1335468221663
+executed,command,org.eclipse.ui,3.7.0.I20110602-0100,"org.eclipse.ui.edit.selectAll",1335468224835
+executed,command,org.eclipse.ui,3.7.0.I20110602-0100,"org.eclipse.ui.edit.undo",1335468225585
+executed,command,org.eclipse.ui,3.7.0.I20110602-0100,"org.eclipse.ui.edit.undo",1335468234711
+executed,command,org.eclipse.ui,3.7.0.I20110602-0100,"org.eclipse.ui.edit.paste",1335468237024
+deactivated,workbench,org.eclipse.ui.workbench,3.7.0.I20110519-0100,"",1335468243775
+activated,workbench,org.eclipse.ui.workbench,3.7.0.I20110519-0100,"",1335468243931
+deactivated,workbench,org.eclipse.ui.workbench,3.7.0.I20110519-0100,"",1335468244932
+activated,workbench,org.eclipse.ui.workbench,3.7.0.I20110519-0100,"",1335468246088
+deactivated,workbench,org.eclipse.ui.workbench,3.7.0.I20110519-0100,"",1335468246119
+activated,workbench,org.eclipse.ui.workbench,3.7.0.I20110519-0100,"",1335468248370
+deactivated,workbench,org.eclipse.ui.workbench,3.7.0.I20110519-0100,"",1335468248385
+activated,workbench,org.eclipse.ui.workbench,3.7.0.I20110519-0100,"",1335468248401
+executed,command,org.eclipse.ui,3.7.0.I20110602-0100,"org.eclipse.ui.file.save",1335468252823

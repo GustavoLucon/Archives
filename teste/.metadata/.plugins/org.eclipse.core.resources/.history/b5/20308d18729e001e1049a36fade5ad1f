@@ -1,0 +1,33 @@
+import javax.swing.JOptionPane;
+
+public class recursividade4 {
+	static int exibir (int num[])
+	{
+		int a , b;
+		a = 0;
+		b = num.length;
+      if (a == b/2)
+      {
+    	  return a;
+      }
+      else
+      {
+    	a = num[b] ;
+    	num[b] = num[a];
+    	a++;
+    	b++;
+    	num[a] = exibir(num);
+      }
+		
+	}
+	public static void main (String args[])
+	{
+		int recebido[] = new int[10] ;
+		for(int a = 0; a  < 10 ; a++)
+		{
+		recebido[a] = Integer.parseInt(JOptionPane.showInputDialog (null ,"Digite o numero desejado"));	
+		}
+		exibir(recebido);	
+			
+	}
+}

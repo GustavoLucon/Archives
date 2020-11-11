@@ -1,0 +1,21 @@
+package Jogo1a8;
+
+public class No {
+
+	protected int altura;
+	protected int chavePai;
+	protected No[] no;
+	protected Tabuleiro tabuleiro;
+
+	public No(int noPai, No array[],Tabuleiro tab) {
+
+		chavePai = noPai;
+		no = new No[array.length];
+		altura = 0;
+		tabuleiro = tab;
+	}
+	public void criarTabuleiro(Tabuleiro tab,int indo)
+	{
+		
+	}
+}

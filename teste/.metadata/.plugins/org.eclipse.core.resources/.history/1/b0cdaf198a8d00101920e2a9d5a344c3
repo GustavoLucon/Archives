@@ -1,0 +1,20 @@
+package Pai;
+
+public class IP {
+	public String  IP;
+	public String nome;
+	
+	public String getIP() {
+		return IP;
+	}
+	public void setIP(String ip) {
+		IP = ip;
+	}
+	public String getNome() {
+		return nome;
+	}
+	public void setNome(String nome) {
+		this.nome = nome;
+	}
+
+}

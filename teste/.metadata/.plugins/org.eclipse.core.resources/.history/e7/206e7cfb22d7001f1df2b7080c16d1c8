@@ -1,0 +1,44 @@
+package CarteiraDeInvestimento;
+
+import javax.swing.JOptionPane;
+
+public class Fundo {
+	double Saldo;
+	String Nome;
+	int atualizacaomes;
+	int atualizacaoano;
+	BAnco valor = new BAnco();
+	public Fundo()
+	{
+	this.Nome = JOptionPane.showInputDialog("Digite o nome da ação");
+	this.Saldo = Integer.parseInt(JOptionPane.showInputDialog("Digite o valor da ação"));
+	this.atualizacaomes = Integer.parseInt(JOptionPane.showInputDialog("Digite o mes de criação da ação"));
+	this.atualizacaoano = Integer.parseInt(JOptionPane.showInputDialog("Digite o ano de criação da ação"));
+	}
+	public void calcularganho(int mes ,int ano)
+	{
+		while(ano >= this.atualizacaoano)
+		{
+			if(ano > this.atualizacaoano)
+			{
+			while(mes >= 12)
+			{
+				this.Saldo = this.Saldo + valor.Percento();
+				mes++;
+			}
+			mes = 0;
+			ano++;
+			}
+			else
+			{
+				while(mes >= this.atualizacaomes)
+				{
+					this.Saldo = this.Saldo + valor.Percento();
+					mes++;
+				}
+			}
+		}
+		this.atualizacaomes = mes;
+		this.atualizacaoano = ano;
+}
+}

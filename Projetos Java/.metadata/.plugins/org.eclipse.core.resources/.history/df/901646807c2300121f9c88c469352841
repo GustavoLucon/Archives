@@ -1,0 +1,14 @@
+package cardDuel.telas;
+
+import javax.swing.JPanel;
+
+public class CampoBatalha extends JPanel {
+
+	/**
+	 * Create the panel.
+	 */
+	public CampoBatalha() {
+
+	}
+
+}

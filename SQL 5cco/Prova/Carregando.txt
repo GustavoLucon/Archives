@@ -1,0 +1,5 @@
+1;MAGNUM            ;S;1991;bom
+2;PASSAS            ;S;1991;tet
+3;GUARDA CHUVA      ;C;1992;ruim
+4;SUCO              ;C;1994;tet
+5;MALA              ;S;1994;ete

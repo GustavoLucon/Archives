@@ -1,0 +1,136 @@
+package cardDuel.telas;
+
+import java.awt.Component;
+import java.awt.EventQueue;
+
+import javax.swing.ImageIcon;
+import javax.swing.JFrame;
+import javax.swing.JLabel;
+import javax.swing.SwingConstants;
+
+
+public class c {
+
+	private JFrame frame;
+	private JLabel resultado;
+	private JLabel nomeJog1;
+	private JLabel AtribJog1;
+	private JLabel StatusJog1;
+	private JLabel nomeJog2;
+	private JLabel AtribJog2;
+	private Component StatusJog2;
+	private JLabel nomeJog4;
+	private JLabel AtribJog4;
+	private JLabel StatusJog4;
+	private JLabel StatusJog3;
+	private JLabel AtribJog3;
+	private JLabel nomeJog3;
+	private JLabel lblNewLabel;
+
+	/**
+	 * Launch the application.
+	 */
+	/**
+	 * Create the application.
+	 */
+	public c() {
+		initialize();
+	}
+
+	/**
+	 * Initialize the contents of the frame.
+	 */
+	private void initialize() {
+		frame = new JFrame();
+		frame.setBounds(100, 100, 450, 300);
+		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		
+		nomeJog3 = new JLabel("");
+		nomeJog3.setBounds(10, 113, 102, 14);
+		frame.add(nomeJog3);
+		
+		AtribJog3 = new JLabel("");
+		AtribJog3.setBounds(10, 138, 46, 14);
+		frame.add(AtribJog3);
+		
+		StatusJog3 = new JLabel("");
+		StatusJog3.setBounds(66, 138, 46, 14);
+		frame.add(StatusJog3);
+		
+		StatusJog4 = new JLabel("");
+		StatusJog4.setBounds(394, 138, 46, 14);
+		frame.add(StatusJog4);
+		
+		AtribJog4 = new JLabel("");
+		AtribJog4.setBounds(338, 138, 46, 14);
+		frame.add(AtribJog4);
+		
+		nomeJog4 = new JLabel("");
+		nomeJog4.setBounds(338, 113, 102, 14);
+		frame.add(nomeJog4);
+		
+		StatusJog2 = new JLabel("");
+		StatusJog2.setBounds(234, 36, 46, 14);
+		frame.add(StatusJog2);
+		
+		AtribJog2 = new JLabel("");
+		AtribJog2.setBounds(178, 36, 46, 14);
+		frame.add(AtribJog2);
+		
+		nomeJog2 = new JLabel("");
+		nomeJog2.setBounds(178, 11, 102, 14);
+		frame.add(nomeJog2);
+		
+		StatusJog1 = new JLabel("");
+		StatusJog1.setBounds(234, 275, 46, 14);
+		frame.add(StatusJog1);
+		
+		AtribJog1 = new JLabel("");
+		AtribJog1.setBounds(178, 275, 46, 14);
+		frame.add(AtribJog1);
+		
+		nomeJog1 = new JLabel("");
+		nomeJog1.setBounds(178, 250, 102, 14);
+		frame.add(nomeJog1);
+		
+		resultado = new JLabel("");
+		resultado.setBounds(191, 138, 46, 14);
+		frame.add(resultado);
+		
+		lblNewLabel = new JLabel("");
+		lblNewLabel.setHorizontalAlignment(SwingConstants.CENTER);
+		lblNewLabel.setIcon(new ImageIcon(CampoBatalha.class.getResource("/cardDuel/imagens/jogadores/Umbrella_Corporation_Dock_Icon_by_SilentBang.png")));
+		lblNewLabel.setBounds(140, 68, 160, 160);
+		frame.add(lblNewLabel);
+		
+	}
+	public void setResultado(String verificar) {
+		this.resultado.setText(verificar);
+	}
+
+	public void setValoresCampos(int selecionado,String nome , String maior, String status) {
+		switch(selecionado){
+		case 0:
+			this.nomeJog1.setName(nome);
+			this.AtribJog1.setName(maior);
+			this.StatusJog1.setName(status);
+			break;
+		case 1:
+			this.nomeJog2.setName(nome);
+			this.AtribJog2.setName(maior);
+			this.StatusJog2.setName(status);
+			break;
+		case 2:
+			this.nomeJog3.setName(nome);
+			this.AtribJog3.setName(maior);
+			this.StatusJog3.setName(status);
+			break;
+		case 3:
+			this.nomeJog4.setName(nome);
+			this.AtribJog4.setName(maior);
+			this.StatusJog4.setName(status);
+			break;
+		}
+	}
+
+}

@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/arena">
+
+    <guandv.luchadores.PlayGifView
+        android:id= "@+id/oponente"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_above="@+id/linearLayout"
+        android:layout_toStartOf="@+id/round" />
+
+    <guandv.luchadores.PlayGifView
+        android:id= "@+id/player"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_above="@+id/linearLayout"
+        android:layout_toEndOf="@+id/round" />
+
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="65dp"
+        android:id="@+id/linearLayout"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentStart="true"
+        android:gravity="center">
+
+        <Button
+            android:layout_width="120dp"
+            android:layout_height="60dp"
+            android:id="@+id/Punch"
+            android:background="@drawable/punch"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentStart="true" />
+
+        <Button
+            android:layout_width="120dp"
+            android:layout_height="60dp"
+            android:id="@+id/Shield"
+            android:background="@drawable/golpecordas"
+            android:layout_alignParentBottom="true"
+            android:layout_toStartOf="@+id/special" />
+
+        <Button
+            android:layout_width="120dp"
+            android:layout_height="60dp"
+            android:id="@+id/Stomp"
+            android:background="@drawable/stomp"
+            android:layout_alignParentBottom="true"
+            android:layout_toEndOf="@+id/Punch" />
+
+        <Button
+            android:layout_width="120dp"
+            android:layout_height="60dp"
+            android:id="@+id/special"
+            android:background="@drawable/especial"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentEnd="true" />
+    </LinearLayout>
+
+    <ImageView
+        android:layout_width="50dp"
+        android:layout_height="175dp"
+        android:id="@+id/barraVidaOponente"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentStart="true"
+        android:background="@drawable/barravida" />
+
+    <ImageView
+        android:layout_width="50dp"
+        android:layout_height="175dp"
+        android:id="@+id/barraVidaPlayer"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentTop="true"
+        android:layout_alignBottom="@+id/barraVidaOponente"
+        android:background="@drawable/barravida" />
+
+    <ImageView
+        android:layout_width="150dp"
+        android:layout_height="75dp"
+        android:id="@+id/round"
+        android:layout_alignParentTop="true"
+        android:background="@drawable/round"
+        android:layout_centerHorizontal="true" />
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="50dp"
+        android:layout_height="100dp"
+        android:id="@+id/linearLayout2"
+        android:gravity="center_horizontal"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/round"
+        android:layout_centerVertical="true">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/opvida1"
+            android:background="@drawable/coracao" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/opvida2"
+            android:background="@drawable/coracao" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/opvida3"
+            android:background="@drawable/coracao" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="50dp"
+        android:layout_height="150dp"
+        android:id="@+id/linearLayout3"
+        android:gravity="center_horizontal"
+        android:layout_alignStart="@+id/barraVidaPlayer"
+        android:layout_below="@+id/round"
+        android:layout_centerVertical="true">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/plvida1"
+            android:background="@drawable/coracao" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/plvida2"
+            android:background="@drawable/coracao" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/plvida3"
+            android:background="@drawable/coracao" />
+    </LinearLayout>
+
+</RelativeLayout>

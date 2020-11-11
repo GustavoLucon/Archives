@@ -1,0 +1,35 @@
+
+
+ LOG file opened at 05/27/11 20:46:19
+
+Field Definitions for table PRODUTO
+  Record format DELIMITED BY NEWLINE
+  Data in file has same endianness as the platform
+  Rows with all null fields are accepted
+
+  Fields in Data Source: 
+
+    COD_PROD                        CHAR (255)
+      Terminated by ";"
+      Trim whitespace same as SQL Loader
+    NOME_PROD                       CHAR (255)
+      Terminated by ";"
+      Trim whitespace same as SQL Loader
+    DESCRICAO_PROD                  CHAR (255)
+      Terminated by ";"
+      Trim whitespace same as SQL Loader
+    VALOR_PROD                      CHAR (255)
+      Terminated by ";"
+      Trim whitespace same as SQL Loader
+    STATUS_PROD                     CHAR (255)
+      Terminated by ";"
+      Trim whitespace same as SQL Loader
+KUP-04021: field formatting error for field STATUS_PROD
+KUP-04023: field start is after end of record
+KUP-04101: record 2 rejected in file C:\Documents and Settings\admlab\Desktop\Prova\carregando.TXT
+KUP-04021: field formatting error for field STATUS_PROD
+KUP-04023: field start is after end of record
+KUP-04101: record 4 rejected in file C:\Documents and Settings\admlab\Desktop\Prova\carregando.TXT
+KUP-04021: field formatting error for field STATUS_PROD
+KUP-04023: field start is after end of record
+KUP-04101: record 5 rejected in file C:\Documents and Settings\admlab\Desktop\Prova\carregando.TXT

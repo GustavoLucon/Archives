@@ -1,0 +1,47 @@
+package com.example.park;
+
+import android.location.Location;
+import android.location.LocationListener;
+import android.location.LocationManager;
+import android.os.Bundle;
+import android.app.Activity;
+import android.content.Context;
+import android.view.Menu;
+import android.view.View;
+import android.widget.Button;
+import android.widget.Toast;
+
+public class MainActivity extends Activity {
+	
+	private Gps gps;
+
+	@Override
+	public void onCreate(Bundle savedInstanceState) {
+		super.onCreate(savedInstanceState);
+		setContentView(R.layout.tela_inicial);
+	}
+
+	public void selfSair(View view) {
+		super.finish();
+	}
+
+	public void selfAjuda(View view) {
+		setContentView(R.layout.tela_ajuda);
+
+	}
+
+	public void selfPrincipal(View view) {
+		setContentView(R.layout.tela_inicial);
+
+	}
+	
+	public void selfGPS(View view) {
+		gps = new Gps(this);
+		
+	}
+	
+	public void selfPesquisa(View view) {
+		setContentView(R.layout.tela_pesquisa);
+
+	}
+}

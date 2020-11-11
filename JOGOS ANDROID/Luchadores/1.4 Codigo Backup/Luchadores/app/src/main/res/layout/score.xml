@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    tools:context="guandv.luchadores.TelaInicial"
+    android:background="@drawable/bg_full">
+
+    <ImageView
+        android:layout_width="75dp"
+        android:layout_height="75dp"
+        android:id="@+id/redpeper"
+        android:background="@drawable/peper1"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentStart="true" />
+
+    <ImageView
+        android:layout_width="50dp"
+        android:layout_height="75dp"
+        android:id="@+id/greenpeper"
+        android:background="@drawable/peper2"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentEnd="true" />
+
+    <ImageView
+        android:layout_width="450dp"
+        android:layout_height="match_parent"
+        android:id="@+id/lvlcompleto"
+        android:layout_centerVertical="true"
+        android:layout_centerHorizontal="true"
+        android:background="@drawable/tela_completa"
+        android:layout_marginBottom="20dp"
+        android:layout_marginTop="20dp" />
+
+    <Button
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:id="@+id/botaomenu"
+        android:background="@drawable/menu"
+        android:layout_alignParentBottom="true"
+        android:layout_toStartOf="@+id/botaoNext"
+        android:layout_marginRight="20dp" />
+
+    <Button
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:id="@+id/botaovs"
+        android:background="@drawable/vs"
+        android:layout_alignParentBottom="true"
+        android:layout_toStartOf="@+id/botaomenu"
+        android:layout_marginRight="20dp" />
+
+    <Button
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:id="@+id/botaoNext"
+        android:layout_alignParentBottom="true"
+        android:layout_alignEnd="@+id/lvlcompleto"
+        android:background="@drawable/next" />
+
+    <TextView
+        android:layout_width="180dp"
+        android:layout_height="110dp"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:id="@+id/resultado"
+        android:layout_above="@+id/botaomenu"
+        android:layout_toStartOf="@+id/botaoNext"
+        android:layout_marginRight="10dp"
+        android:layout_alignParentEnd="false"
+        android:textColor="#091550"
+        android:textSize="15dp"
+        android:textAlignment="center" />
+</RelativeLayout>

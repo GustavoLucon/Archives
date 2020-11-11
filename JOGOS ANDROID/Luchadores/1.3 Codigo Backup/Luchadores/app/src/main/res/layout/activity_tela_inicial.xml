@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    tools:context="guandv.luchadores.TelaInicial"
+    android:background="@drawable/tela1">
+
+    <Button
+        android:layout_width="250dp"
+        android:layout_height="50dp"
+        android:id="@+id/LoginFB"
+        android:visibility="visible"
+        android:clickable="false"
+        android:enabled="true"
+        android:width="200dp"
+        android:background="@drawable/btn1"
+        android:layout_above="@+id/EntrarGuest"
+        android:layout_alignStart="@+id/EntrarGuest" />
+
+    <Button
+        android:layout_width="250dp"
+        android:layout_height="50dp"
+        android:id="@+id/EntrarGuest"
+        android:onClick="loginguest"
+        android:visibility="visible"
+        android:clickable="false"
+        android:enabled="true"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:width="200dp"
+        android:background="@drawable/btn2" />
+
+</RelativeLayout>

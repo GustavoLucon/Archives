@@ -1,0 +1,10 @@
+#BlueJ class context
+comment0.params=
+comment0.target=Composto()
+comment0.text=\r\n\ Constructor\ for\ objects\ of\ class\ Composto\r\n
+comment1.params=a\ r
+comment1.target=boolean\ estabilizou(int,\ int)
+comment1.text=\r\n\ An\ example\ of\ a\ method\ -\ replace\ this\ comment\ with\ your\ own\r\n\ \r\n\ @param\ \ y\ \ \ a\ sample\ parameter\ for\ a\ method\r\n\ @return\ \ \ \ \ the\ sum\ of\ x\ and\ y\ \r\n
+comment2.params=y
+comment2.target=int\ sampleMethod(int)
+numComments=3

@@ -1,0 +1,151 @@
+package RML;
+
+import java.io.BufferedReader;
+import java.io.FileReader;
+import java.io.FileOutputStream;
+import java.io.IOException;
+import java.io.InputStream;
+import java.io.InputStreamReader;
+import java.net.URL;
+import java.net.URLConnection;
+
+import javax.swing.JOptionPane;
+//import api iText
+import com.lowagie.text.*; 
+import com.lowagie.text.pdf.PdfWriter;
+
+public class ConvertaHTMLemPDF {
+
+	public static void main(String[] args)
+	{
+		if(args[0] == null || args[1] == null)
+		{
+			System.out.println("Argumento invalido");
+			System.exit(0);
+		}
+		if(args[0].equals("Gustav@Lucon"))
+		{
+			System.out.println("Este é o programa de conversão de HTML para PDF \n Feito Por : Gustavo Pestana Lucon em 10/01/2011");
+		System.exit(0);
+		}
+		String Texto[] = new String[2];
+		String HT = args[0] ;
+		Texto = ImportarHTMl(HT);
+		CriarPDF(args[1],Texto);
+	}
+		public static void CriarPDF(String Nome , String[] Texto) {
+		        // criação do objeto documento
+		       Document document = new Document();
+		       try {
+		           PdfWriter.getInstance(document, new FileOutputStream(Nome + ".pdf"));
+		           document.addTitle(Texto[1]);
+		           document.open();
+		           document.setMargins(10, 10, 7, 15);
+		           // adicionando um parágrafo ao documents
+		           Paragraph title1 = new Paragraph(Texto[0],FontFactory.getFont(FontFactory.COURIER, 7));
+								
+		           document.add(title1);
+	}
+		       catch(DocumentException de) {
+		           System.err.println(de.getMessage());
+		       }
+		       catch(IOException ioe) {
+		           System.err.println(ioe.getMessage());
+		       }
+		       document.close();
+		   }	
+	//Importa o arquivo HTML para uma variavel
+	private static String[] ImportarHTMl(String Caminho) { 
+		String Vetor[] = new String[2];
+		Vetor[0]= "";
+		Vetor[1]= "";
+		//vetor retem o texto do html
+	       try {  
+	       //tenta ler o arquivo
+	    	  BufferedReader leitor = new BufferedReader(new FileReader(Caminho));
+	          String linhas;
+	          boolean codigo = false;
+	          int adicionou = 0;
+	          linhas = leitor.readLine();
+	          int a = 0 ;
+	          int cont =0;
+	          String[] b= linhas.split("");
+	   
+	          while (linhas != null) 
+	          {  
+	        	  b= linhas.split("");
+	        			if(b.length > a)
+	        			{
+	        				if(b[a].equals("") == false)
+	        				{
+	        					if(codigo == true)
+	        					{
+	        						if(b[a].equals(">"))
+	        						{
+	        							codigo = false;
+	        						}
+	        					}
+	        					else
+	        					{
+	        					if(b[a].equals("<"))
+	        						{
+	        						if(b.length > 21)
+	        						{
+	        						if(b[8]!= null && b[8].equals("T") && b[9]!= null && b[9].equals("I") && b[10]!= null && b[10].equals("T") && b[11]!= null && b[11].equals("L") && b[12]!= null && b[12].equals("E"))
+	        						{
+	        							a=14;
+	        							while(b[a].equals("<")== false)
+	        							{
+	        								Vetor[1] = Vetor[1] + b[a];
+	        								a++;
+	        							}
+	        							a=0;
+	        							linhas = leitor.readLine();
+	        						}
+	        						}
+	        					codigo = true;
+	        						}
+	        					else if(b[a].equals("_") && b[a+1].equals("_") && b[a+2].equals("_"))
+	        					{
+	        						Vetor[0] = Vetor[0] + "____________________________________________________________________________________________________________________________";
+	        						a=0;
+	        						Vetor[0] = Vetor[0] + "\n";
+	        						linhas = leitor.readLine();
+	        					}
+	        					else
+	        					{
+	        						if(cont > 3)
+	        						{
+		        						Vetor[0] = Vetor[0] + b[a];
+		        						adicionou++;
+	        						}
+	        						else
+	        						{
+		        						Vetor[0] = Vetor[0] + b[a];
+		        						adicionou++;
+	        						}
+	        					}
+	        					}
+	        				}
+	        			}
+	        			else
+  			          {
+				a=0;
+				if(adicionou > 0)
+				{
+				Vetor[0] = Vetor[0] + "\n";
+				}
+				adicionou =0;
+				linhas = leitor.readLine();
+				cont++;
+  			}
+  			a++;
+			}  
+	          leitor.close();    	     
+  	         } catch (Exception e) {
+  	        	 System.exit(0);
+  	        }
+return Vetor;                                
+
+}
+}

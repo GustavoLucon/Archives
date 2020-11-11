@@ -1,0 +1,18 @@
+package com.parkhere.main;
+
+import java.util.ArrayList;
+
+import android.os.Bundle;
+
+import com.parkhere.R;
+import com.parkhere.lista.Estacionamento;
+
+public class lista {
+    @Override
+    public void onCreate( Bundle savedInstanceState ) {
+    	listaEstacionamento = new ArrayList<Estacionamento>();
+        super.onCreate( savedInstanceState );
+        setContentView( R.layout.park_here_activity);
+    }
+	
+}

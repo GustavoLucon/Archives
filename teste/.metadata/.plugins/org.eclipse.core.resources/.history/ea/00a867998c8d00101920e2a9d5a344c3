@@ -1,0 +1,40 @@
+package testes;
+
+import java.awt.*;
+import java.io.File;
+
+import javax.swing.*;
+
+public class PaintPanel extends JFrame
+{
+ 
+ public PaintPanel()
+ {
+  super("painted panel example");
+  setSize(440, 400);
+  setResizable(false);
+  setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+  setVisible(true);                              //create frame
+
+  Container contentArea = getContentPane();      //create container
+
+  CustomPanel panel = new CustomPanel();
+  contentArea.add(panel);
+  setContentPane(contentArea);                   //add components
+ }
+
+  class CustomPanel extends JPanel
+  {
+   public void paintComponent (Graphics painter)
+   {
+	String dir1 = ("C:\\Users\\Guga\\Desktop\\Nova Pasta\\gui1.gif");
+    Image pic =
+          Toolkit.getDefaultToolkit().getImage(dir1);
+   if(pic != null) painter.drawImage(pic, 1, 1, this);     //create image
+ 
+  }
+}
+ 
+  public static void main(String [] args)
+  {PaintPanel eg = new PaintPanel();}
+}

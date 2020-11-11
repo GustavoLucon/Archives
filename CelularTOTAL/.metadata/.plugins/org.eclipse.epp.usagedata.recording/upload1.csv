@@ -1,0 +1,251 @@
+what,kind,bundleId,bundleVersion,description,time
+started,bundle,org.jboss.ide.eclipse.archives.core,3.2.1.v20110915-1646-H20-M3,"org.jboss.ide.eclipse.archives.core",1335375795340
+started,bundle,org.jboss.tools.jmx.core,1.2.0.v20110915-1533-H15-M3,"org.jboss.tools.jmx.core",1335375795340
+started,bundle,org.jboss.ide.eclipse.archives.webtools,2.3.0.v20110915-1659-H30-M3,"org.jboss.ide.eclipse.archives.webtools",1335375795668
+started,bundle,org.jboss.ide.eclipse.as.wtp.core,2.3.0.v20110915-1659-H30-M3,"org.jboss.ide.eclipse.as.wtp.core",1335375795684
+started,bundle,org.eclipse.pde.core,3.7.1.v20110822-2108,"org.eclipse.pde.core",1335375795715
+started,bundle,org.jboss.ide.eclipse.as.ui.mbeans,2.3.0.v20110915-1659-H30-M3,"org.jboss.ide.eclipse.as.ui.mbeans",1335375795731
+started,bundle,org.eclipse.jst.server.core,1.2.202.v20110419,"org.eclipse.jst.server.core",1335375795731
+activated,view,org.eclipse.jdt.ui,3.7.1.r371_v20110824-0800,"org.eclipse.jdt.ui.PackageExplorer",1335375800434
+started,bundle,org.eclipse.jpt.common.core,1.0.1.v201108080010,"org.eclipse.jpt.common.core",1335375802012
+started,bundle,org.eclipse.jpt.jpa.core,3.0.1.v201109073010,"org.eclipse.jpt.jpa.core",1335375802012
+started,bundle,org.eclipse.m2e.core,1.0.100.20110804-1717,"org.eclipse.m2e.core",1335375802841
+started,bundle,org.jboss.tools.common.model.ui,3.3.0.v20110915-1551-H16-M3,"org.jboss.tools.common.model.ui",1335375802841
+started,bundle,org.jboss.tools.common.verification,3.3.0.v20110915-1551-H16-M3,"org.jboss.tools.common.verification",1335375803231
+started,bundle,org.jboss.tools.jst.web.verification,3.3.0.v20110915-1635-H19-M3,"org.jboss.tools.jst.web.verification",1335375803450
+started,bundle,org.jboss.tools.jsf.verification,3.3.0.v20110915-1824-H20-M3,"org.jboss.tools.jsf.verification",1335375803497
+started,bundle,org.jboss.tools.jsf,3.3.0.v20110915-1824-H20-M3,"org.jboss.tools.jsf",1335375803528
+started,bundle,org.jboss.tools.jst.web.tiles,3.3.0.v20110915-1635-H19-M3,"org.jboss.tools.jst.web.tiles",1335375803528
+started,bundle,org.jboss.tools.hibernate.xml,3.4.0.v20110915-1559-H24-M3,"org.jboss.tools.hibernate.xml",1335375803528
+started,bundle,org.jboss.tools.seam.xml,3.3.0.v20110915-1921-H35-M3,"org.jboss.tools.seam.xml",1335375803528
+started,bundle,org.jboss.tools.seam.pages.xml,3.3.0.v20110915-1921-H35-M3,"org.jboss.tools.seam.pages.xml",1335375803528
+started,bundle,org.jboss.tools.cdi.xml,1.2.0.v20110915-1759-H18-M3,"org.jboss.tools.cdi.xml",1335375803528
+started,bundle,org.eclipse.compare.core,3.5.200.I20110208-0800,"org.eclipse.compare.core",1335375806388
+opened,editor,org.eclipse.jdt.ui,3.7.1.r371_v20110824-0800,"org.eclipse.jdt.ui.CompilationUnitEditor",1335375806450
+started,bundle,org.eclipse.jdt.debug,3.7.1.v20110802_r371,"org.eclipse.jdt.debug",1335375806544
+started,bundle,org.eclipse.jdt.debug.ui,3.6.1.v20110803_r371,"org.eclipse.jdt.debug.ui",1335375806591
+activated,editor,org.eclipse.jdt.ui,3.7.1.r371_v20110824-0800,"org.eclipse.jdt.ui.CompilationUnitEditor",1335375807060
+started,bundle,org.eclipse.jdt.junit,3.7.0.v20110505-0800,"org.eclipse.jdt.junit",1335375807138
+opened,view,org.eclipse.ui.console,3.5.100.v20110511,"org.eclipse.ui.console.ConsoleView",1335375808138
+activated,view,org.eclipse.jdt.ui,3.7.1.r371_v20110824-0800,"org.eclipse.jdt.ui.PackageExplorer",1335375808700
+started,bundle,org.eclipse.compare,3.5.201.R37x_v20110817-0800,"org.eclipse.compare",1335375809263
+deactivated,workbench,org.eclipse.ui.workbench,3.7.0.I20110519-0100,"",1335375812575
+activated,workbench,org.eclipse.ui.workbench,3.7.0.I20110519-0100,"",1335375854640
+executed,command,org.eclipse.ui,3.7.0.I20110602-0100,"org.eclipse.ui.newWizard",1335375854655
+started,bundle,org.hibernate.eclipse.mapper,3.4.0.v20110915-1559-H24-M3,"org.hibernate.eclipse.mapper",1335375855390
+started,bundle,org.eclipse.wst.xsl.core,1.1.100.v201102270516,"org.eclipse.wst.xsl.core",1335375855421
+started,bundle,org.eclipse.wst.xsl.exslt.core,1.0.0.v201005240426,"org.eclipse.wst.xsl.exslt.core",1335375855421
+started,bundle,org.eclipse.wst.dtd.ui,1.0.600.v201103171359,"org.eclipse.wst.dtd.ui",1335375855562
+started,bundle,org.eclipse.wst.xsl.ui,1.1.200.v201103082057,"org.eclipse.wst.xsl.ui",1335375855609
+started,bundle,org.eclipse.jem.workbench,2.0.400.v201104251400,"org.eclipse.jem.workbench",1335375857234
+started,bundle,org.eclipse.wst.internet.cache,1.0.400.v201004280700,"org.eclipse.wst.internet.cache",1335375857265
+opened,editor,com.android.ide.eclipse.adt,18.0.0.v201203301601-306762,"com.android.ide.eclipse.editors.CommonXmlEditor",1335375862640
+activated,editor,com.android.ide.eclipse.adt,18.0.0.v201203301601-306762,"com.android.ide.eclipse.editors.CommonXmlEditor",1335375862671
+activated,view,org.eclipse.ui.ide,3.7.0.v20110809-1737,"org.eclipse.ui.views.ProblemView",1335375920377
+opened,editor,com.android.ide.eclipse.adt,18.0.0.v201203301601-306762,"com.android.ide.eclipse.editors.manifest.ManifestEditor",1335375925580
+activated,editor,com.android.ide.eclipse.adt,18.0.0.v201203301601-306762,"com.android.ide.eclipse.editors.manifest.ManifestEditor",1335375925596
+deactivated,workbench,org.eclipse.ui.workbench,3.7.0.I20110519-0100,"",1335375927565
+activated,workbench,org.eclipse.ui.workbench,3.7.0.I20110519-0100,"",1335375928877
+activated,view,org.eclipse.ui.ide,3.7.0.v20110809-1737,"org.eclipse.ui.views.ProblemView",1335375941691
+activated,editor,org.eclipse.jdt.ui,3.7.1.r371_v20110824-0800,"org.eclipse.jdt.ui.CompilationUnitEditor",1335375942081
+activated,view,org.eclipse.jdt.ui,3.7.1.r371_v20110824-0800,"org.eclipse.jdt.ui.PackageExplorer",1335375958707
+deactivated,workbench,org.eclipse.ui.workbench,3.7.0.I20110519-0100,"",1335375960660
+started,bundle,org.eclipse.wst.jsdt.manipulation,1.0.300.v201104272153,"org.eclipse.wst.jsdt.manipulation",1335375962004
+started,bundle,org.eclipse.wst.jsdt.core,1.1.102.v201111090634,"org.eclipse.wst.jsdt.core",1335375962598
+started,bundle,org.eclipse.wst.jsdt.ui,1.1.102.v201201131900,"org.eclipse.wst.jsdt.ui",1335375962676
+closed,editor,org.eclipse.jdt.ui,3.7.1.r371_v20110824-0800,"org.eclipse.jdt.ui.CompilationUnitEditor",1335375962801
+activated,workbench,org.eclipse.ui.workbench,3.7.0.I20110519-0100,"",1335375962863
+executed,command,org.eclipse.ui,3.7.0.I20110602-0100,"org.eclipse.ui.edit.delete",1335375962879
+activated,editor,com.android.ide.eclipse.adt,18.0.0.v201203301601-306762,"com.android.ide.eclipse.editors.manifest.ManifestEditor",1335375979910
+activated,view,org.eclipse.jdt.ui,3.7.1.r371_v20110824-0800,"org.eclipse.jdt.ui.PackageExplorer",1335375981645
+activated,editor,com.android.ide.eclipse.adt,18.0.0.v201203301601-306762,"com.android.ide.eclipse.editors.manifest.ManifestEditor",1335375983879
+deactivated,workbench,org.eclipse.ui.workbench,3.7.0.I20110519-0100,"",1335375985410
+activated,workbench,org.eclipse.ui.workbench,3.7.0.I20110519-0100,"",1335375986473
+activated,view,org.eclipse.jdt.ui,3.7.1.r371_v20110824-0800,"org.eclipse.jdt.ui.PackageExplorer",1335375989520
+deactivated,workbench,org.eclipse.ui.workbench,3.7.0.I20110519-0100,"",1335375994254
+activated,workbench,org.eclipse.ui.workbench,3.7.0.I20110519-0100,"",1335375998661
+deactivated,workbench,org.eclipse.ui.workbench,3.7.0.I20110519-0100,"",1335376000801
+activated,workbench,org.eclipse.ui.workbench,3.7.0.I20110519-0100,"",1335376002005
+deactivated,workbench,org.eclipse.ui.workbench,3.7.0.I20110519-0100,"",1335376002145
+activated,workbench,org.eclipse.ui.workbench,3.7.0.I20110519-0100,"",1335376004489
+deactivated,workbench,org.eclipse.ui.workbench,3.7.0.I20110519-0100,"",1335376007723
+activated,workbench,org.eclipse.ui.workbench,3.7.0.I20110519-0100,"",1335376008630
+executed,command,org.eclipse.ui,3.7.0.I20110602-0100,"org.eclipse.ui.edit.delete",1335376008645
+activated,editor,com.android.ide.eclipse.adt,18.0.0.v201203301601-306762,"com.android.ide.eclipse.editors.manifest.ManifestEditor",1335376016880
+opened,view,org.eclipse.jdt.ui,3.7.1.r371_v20110824-0800,"org.eclipse.jdt.ui.SourceView",1335376019349
+activated,view,org.eclipse.jdt.ui,3.7.1.r371_v20110824-0800,"org.eclipse.jdt.ui.SourceView",1335376019349
+opened,view,org.eclipse.jdt.ui,3.7.1.r371_v20110824-0800,"org.eclipse.jdt.ui.JavadocView",1335376019786
+activated,view,org.eclipse.jdt.ui,3.7.1.r371_v20110824-0800,"org.eclipse.jdt.ui.JavadocView",1335376019802
+activated,view,org.eclipse.ui.ide,3.7.0.v20110809-1737,"org.eclipse.ui.views.ProblemView",1335376020145
+activated,editor,com.android.ide.eclipse.adt,18.0.0.v201203301601-306762,"com.android.ide.eclipse.editors.manifest.ManifestEditor",1335376027489
+started,bundle,org.eclipse.wst.xsl.debug.ui,1.0.200.v201101281837,"org.eclipse.wst.xsl.debug.ui",1335376034708
+deactivated,workbench,org.eclipse.ui.workbench,3.7.0.I20110519-0100,"",1335376035490
+activated,workbench,org.eclipse.ui.workbench,3.7.0.I20110519-0100,"",1335376036365
+activated,editor,com.android.ide.eclipse.adt,18.0.0.v201203301601-306762,"com.android.ide.eclipse.editors.CommonXmlEditor",1335376036505
+closed,editor,com.android.ide.eclipse.adt,18.0.0.v201203301601-306762,"com.android.ide.eclipse.editors.manifest.ManifestEditor",1335376036521
+activated,view,org.eclipse.jdt.ui,3.7.1.r371_v20110824-0800,"org.eclipse.jdt.ui.PackageExplorer",1335376039068
+opened,editor,com.android.ide.eclipse.adt,18.0.0.v201203301601-306762,"com.android.ide.eclipse.editors.manifest.ManifestEditor",1335376039380
+activated,editor,com.android.ide.eclipse.adt,18.0.0.v201203301601-306762,"com.android.ide.eclipse.editors.manifest.ManifestEditor",1335376039396
+activated,view,org.eclipse.jdt.ui,3.7.1.r371_v20110824-0800,"org.eclipse.jdt.ui.PackageExplorer",1335376041099
+activated,editor,com.android.ide.eclipse.adt,18.0.0.v201203301601-306762,"com.android.ide.eclipse.editors.CommonXmlEditor",1335376042271
+activated,view,org.eclipse.ui.views,3.6.0.I20110412-0800,"org.eclipse.ui.views.ContentOutline",1335376052146
+activated,editor,com.android.ide.eclipse.adt,18.0.0.v201203301601-306762,"com.android.ide.eclipse.editors.CommonXmlEditor",1335376053334
+error,log,,,"palette: Failed to find style 'switchStyle' in current theme",1335376072350
+error,log,,,"palette: Failed to find style 'switchStyle' in current theme",1335376072350
+error,log,,,"palette: Failed to find style 'switchStyle' in current theme",1335376072350
+error,log,,,"palette: Failed to find style 'switchStyle' in current theme",1335376072350
+error,log,,,"palette: Failed to find style 'switchStyle' in current theme",1335376072350
+error,log,,,"palette: Failed to find style 'switchStyle' in current theme",1335376072350
+error,log,,,"",1335376072350
+deactivated,workbench,org.eclipse.ui.workbench,3.7.0.I20110519-0100,"",1335376077068
+activated,workbench,org.eclipse.ui.workbench,3.7.0.I20110519-0100,"",1335376086803
+activated,view,org.eclipse.jdt.ui,3.7.1.r371_v20110824-0800,"org.eclipse.jdt.ui.PackageExplorer",1335376107194
+activated,editor,com.android.ide.eclipse.adt,18.0.0.v201203301601-306762,"com.android.ide.eclipse.editors.manifest.ManifestEditor",1335376111897
+executed,command,org.eclipse.jdt.ui,3.7.1.r371_v20110824-0800,"org.eclipse.jdt.ui.edit.text.java.open.editor",1335376111913
+deactivated,workbench,org.eclipse.ui.workbench,3.7.0.I20110519-0100,"",1335376114460
+activated,workbench,org.eclipse.ui.workbench,3.7.0.I20110519-0100,"",1335376116694
+deactivated,workbench,org.eclipse.ui.workbench,3.7.0.I20110519-0100,"",1335376126132
+activated,workbench,org.eclipse.ui.workbench,3.7.0.I20110519-0100,"",1335376137460
+deactivated,workbench,org.eclipse.ui.workbench,3.7.0.I20110519-0100,"",1335376139038
+activated,workbench,org.eclipse.ui.workbench,3.7.0.I20110519-0100,"",1335376140304
+activated,view,org.eclipse.jdt.ui,3.7.1.r371_v20110824-0800,"org.eclipse.jdt.ui.PackageExplorer",1335376142070
+activated,editor,com.android.ide.eclipse.adt,18.0.0.v201203301601-306762,"com.android.ide.eclipse.editors.manifest.ManifestEditor",1335376142976
+activated,view,org.eclipse.jdt.ui,3.7.1.r371_v20110824-0800,"org.eclipse.jdt.ui.PackageExplorer",1335376145460
+opened,editor,org.eclipse.jdt.ui,3.7.1.r371_v20110824-0800,"org.eclipse.jdt.ui.CompilationUnitEditor",1335376150914
+activated,editor,org.eclipse.jdt.ui,3.7.1.r371_v20110824-0800,"org.eclipse.jdt.ui.CompilationUnitEditor",1335376151007
+activated,view,org.eclipse.jdt.ui,3.7.1.r371_v20110824-0800,"org.eclipse.jdt.ui.PackageExplorer",1335376151804
+opened,editor,org.eclipse.jdt.ui,3.7.1.r371_v20110824-0800,"org.eclipse.jdt.ui.CompilationUnitEditor",1335376152007
+activated,editor,org.eclipse.jdt.ui,3.7.1.r371_v20110824-0800,"org.eclipse.jdt.ui.CompilationUnitEditor",1335376152070
+activated,view,org.eclipse.jdt.ui,3.7.1.r371_v20110824-0800,"org.eclipse.jdt.ui.PackageExplorer",1335376154726
+activated,editor,org.eclipse.jdt.ui,3.7.1.r371_v20110824-0800,"org.eclipse.jdt.ui.CompilationUnitEditor",1335376154961
+activated,view,org.eclipse.jdt.ui,3.7.1.r371_v20110824-0800,"org.eclipse.jdt.ui.PackageExplorer",1335376156617
+activated,editor,com.android.ide.eclipse.adt,18.0.0.v201203301601-306762,"com.android.ide.eclipse.editors.manifest.ManifestEditor",1335376162179
+activated,editor,com.android.ide.eclipse.adt,18.0.0.v201203301601-306762,"com.android.ide.eclipse.editors.CommonXmlEditor",1335376162586
+activated,view,org.eclipse.jdt.ui,3.7.1.r371_v20110824-0800,"org.eclipse.jdt.ui.PackageExplorer",1335376165211
+activated,editor,com.android.ide.eclipse.adt,18.0.0.v201203301601-306762,"com.android.ide.eclipse.editors.CommonXmlEditor",1335376169680
+activated,editor,com.android.ide.eclipse.adt,18.0.0.v201203301601-306762,"com.android.ide.eclipse.editors.manifest.ManifestEditor",1335376169711
+closed,editor,com.android.ide.eclipse.adt,18.0.0.v201203301601-306762,"com.android.ide.eclipse.editors.CommonXmlEditor",1335376169711
+activated,editor,org.eclipse.jdt.ui,3.7.1.r371_v20110824-0800,"org.eclipse.jdt.ui.CompilationUnitEditor",1335376170727
+closed,editor,com.android.ide.eclipse.adt,18.0.0.v201203301601-306762,"com.android.ide.eclipse.editors.manifest.ManifestEditor",1335376170727
+activated,editor,org.eclipse.jdt.ui,3.7.1.r371_v20110824-0800,"org.eclipse.jdt.ui.CompilationUnitEditor",1335376172820
+closed,editor,org.eclipse.jdt.ui,3.7.1.r371_v20110824-0800,"org.eclipse.jdt.ui.CompilationUnitEditor",1335376172820
+activated,view,org.eclipse.jdt.ui,3.7.1.r371_v20110824-0800,"org.eclipse.jdt.ui.PackageExplorer",1335376174695
+closed,editor,org.eclipse.jdt.ui,3.7.1.r371_v20110824-0800,"org.eclipse.jdt.ui.CompilationUnitEditor",1335376174695
+opened,editor,com.android.ide.eclipse.adt,18.0.0.v201203301601-306762,"com.android.ide.eclipse.editors.CommonXmlEditor",1335376189414
+activated,editor,com.android.ide.eclipse.adt,18.0.0.v201203301601-306762,"com.android.ide.eclipse.editors.CommonXmlEditor",1335376189430
+opened,editor,com.android.ide.eclipse.adt,18.0.0.v201203301601-306762,"com.android.ide.eclipse.editors.CommonXmlEditor",1335376190133
+activated,editor,com.android.ide.eclipse.adt,18.0.0.v201203301601-306762,"com.android.ide.eclipse.editors.CommonXmlEditor",1335376190164
+deactivated,workbench,org.eclipse.ui.workbench,3.7.0.I20110519-0100,"",1335376194946
+activated,workbench,org.eclipse.ui.workbench,3.7.0.I20110519-0100,"",1335376195789
+activated,view,org.eclipse.jdt.ui,3.7.1.r371_v20110824-0800,"org.eclipse.jdt.ui.PackageExplorer",1335376195789
+executed,command,org.eclipse.ui,3.7.0.I20110602-0100,"org.eclipse.ui.edit.delete",1335376195821
+activated,editor,com.android.ide.eclipse.adt,18.0.0.v201203301601-306762,"com.android.ide.eclipse.editors.CommonXmlEditor",1335376196743
+deactivated,workbench,org.eclipse.ui.workbench,3.7.0.I20110519-0100,"",1335376198305
+activated,workbench,org.eclipse.ui.workbench,3.7.0.I20110519-0100,"",1335376201055
+activated,view,org.eclipse.jdt.ui,3.7.1.r371_v20110824-0800,"org.eclipse.jdt.ui.PackageExplorer",1335376201071
+activated,editor,com.android.ide.eclipse.adt,18.0.0.v201203301601-306762,"com.android.ide.eclipse.editors.CommonXmlEditor",1335376201227
+activated,editor,com.android.ide.eclipse.adt,18.0.0.v201203301601-306762,"com.android.ide.eclipse.editors.CommonXmlEditor",1335376204680
+deactivated,workbench,org.eclipse.ui.workbench,3.7.0.I20110519-0100,"",1335376394588
+activated,workbench,org.eclipse.ui.workbench,3.7.0.I20110519-0100,"",1335376395620
+deactivated,workbench,org.eclipse.ui.workbench,3.7.0.I20110519-0100,"",1335376398104
+activated,workbench,org.eclipse.ui.workbench,3.7.0.I20110519-0100,"",1335376406338
+deactivated,workbench,org.eclipse.ui.workbench,3.7.0.I20110519-0100,"",1335376455089
+activated,workbench,org.eclipse.ui.workbench,3.7.0.I20110519-0100,"",1335376456948
+error,log,,,"main.xml: Dimension ""281"" in attribute ""layout_width"" is missing unit!",1335376456995
+deactivated,workbench,org.eclipse.ui.workbench,3.7.0.I20110519-0100,"",1335376459776
+activated,workbench,org.eclipse.ui.workbench,3.7.0.I20110519-0100,"",1335376472355
+error,log,,,"main.xml: Dimension ""281"" in attribute ""layout_width"" is missing unit!",1335376472401
+error,log,,,"main.xml: Dimension ""281"" in attribute ""layout_width"" is missing unit!",1335376476651
+deactivated,workbench,org.eclipse.ui.workbench,3.7.0.I20110519-0100,"",1335376479542
+activated,workbench,org.eclipse.ui.workbench,3.7.0.I20110519-0100,"",1335376481026
+error,log,,,"main.xml: Dimension ""281"" in attribute ""layout_width"" is missing unit!",1335376481089
+error,log,,,"main.xml: Dimension ""281"" in attribute ""layout_width"" is missing unit!",1335376483589
+deactivated,workbench,org.eclipse.ui.workbench,3.7.0.I20110519-0100,"",1335376485276
+activated,workbench,org.eclipse.ui.workbench,3.7.0.I20110519-0100,"",1335376487886
+error,log,,,"main.xml: Dimension ""281"" in attribute ""layout_width"" is missing unit!",1335376487933
+deactivated,workbench,org.eclipse.ui.workbench,3.7.0.I20110519-0100,"",1335376492620
+activated,workbench,org.eclipse.ui.workbench,3.7.0.I20110519-0100,"",1335376493777
+error,log,,,"main.xml: Dimension ""281"" in attribute ""layout_width"" is missing unit!",1335376493823
+error,log,,,"main.xml: Dimension ""281"" in attribute ""layout_width"" is missing unit!",1335376493823
+deactivated,workbench,org.eclipse.ui.workbench,3.7.0.I20110519-0100,"",1335376497652
+activated,workbench,org.eclipse.ui.workbench,3.7.0.I20110519-0100,"",1335376498745
+error,log,,,"main.xml: Dimension ""281"" in attribute ""layout_width"" is missing unit!",1335376498792
+error,log,,,"main.xml: Dimension ""281"" in attribute ""layout_width"" is missing unit!",1335376498792
+error,log,,,"main.xml: Dimension ""281"" in attribute ""layout_width"" is missing unit!",1335376498792
+error,log,,,"main.xml: Dimension ""281"" in attribute ""layout_width"" is missing unit!",1335376504995
+error,log,,,"main.xml: Dimension ""281"" in attribute ""layout_width"" is missing unit!",1335376504995
+error,log,,,"main.xml: Dimension ""281"" in attribute ""layout_width"" is missing unit!",1335376504995
+error,log,,,"main.xml: Dimension ""281"" in attribute ""layout_width"" is missing unit!",1335376507183
+error,log,,,"main.xml: Dimension ""281"" in attribute ""layout_width"" is missing unit!",1335376507183
+error,log,,,"main.xml: Dimension ""281"" in attribute ""layout_width"" is missing unit!",1335376507183
+executed,command,org.eclipse.ui,3.7.0.I20110602-0100,"org.eclipse.ui.edit.undo",1335376507214
+deactivated,workbench,org.eclipse.ui.workbench,3.7.0.I20110519-0100,"",1335376515292
+activated,workbench,org.eclipse.ui.workbench,3.7.0.I20110519-0100,"",1335376517042
+error,log,,,"main.xml: Dimension ""281"" in attribute ""layout_width"" is missing unit!",1335376517089
+error,log,,,"main.xml: Dimension ""281"" in attribute ""layout_width"" is missing unit!",1335376517089
+error,log,,,"main.xml: Dimension ""281"" in attribute ""layout_width"" is missing unit!",1335376517089
+deactivated,workbench,org.eclipse.ui.workbench,3.7.0.I20110519-0100,"",1335376526652
+activated,workbench,org.eclipse.ui.workbench,3.7.0.I20110519-0100,"",1335376528964
+error,log,,,"main.xml: Failed to convert 10 into a drawable",1335376529011
+error,log,,,"main.xml: Dimension ""281"" in attribute ""layout_width"" is missing unit!",1335376529027
+error,log,,,"main.xml: Dimension ""281"" in attribute ""layout_width"" is missing unit!",1335376529027
+error,log,,,"main.xml: Dimension ""281"" in attribute ""layout_width"" is missing unit!",1335376529027
+deactivated,workbench,org.eclipse.ui.workbench,3.7.0.I20110519-0100,"",1335376537480
+error,log,,,"main.xml: Failed to convert 10 into a drawable",1335376542996
+error,log,,,"main.xml: Dimension ""281"" in attribute ""layout_width"" is missing unit!",1335376543011
+error,log,,,"main.xml: Dimension ""281"" in attribute ""layout_width"" is missing unit!",1335376543011
+error,log,,,"main.xml: Dimension ""281"" in attribute ""layout_width"" is missing unit!",1335376543027
+error,log,,,"main.xml: Failed to convert 10 into a drawable",1335376543074
+error,log,,,"main.xml: Dimension ""281"" in attribute ""layout_width"" is missing unit!",1335376543089
+error,log,,,"main.xml: Dimension ""281"" in attribute ""layout_width"" is missing unit!",1335376543089
+error,log,,,"main.xml: Dimension ""281"" in attribute ""layout_width"" is missing unit!",1335376543105
+activated,workbench,org.eclipse.ui.workbench,3.7.0.I20110519-0100,"",1335376543152
+error,log,,,"main.xml: Failed to convert 10 into a drawable",1335376545542
+error,log,,,"main.xml: Dimension ""281"" in attribute ""layout_width"" is missing unit!",1335376545558
+error,log,,,"main.xml: Dimension ""281"" in attribute ""layout_width"" is missing unit!",1335376545558
+error,log,,,"main.xml: Dimension ""281"" in attribute ""layout_width"" is missing unit!",1335376545558
+error,log,,,"main.xml: Failed to convert 10 into a drawable",1335376546933
+error,log,,,"main.xml: Dimension ""281"" in attribute ""layout_width"" is missing unit!",1335376546949
+error,log,,,"main.xml: Dimension ""281"" in attribute ""layout_width"" is missing unit!",1335376546949
+error,log,,,"main.xml: Dimension ""281"" in attribute ""layout_width"" is missing unit!",1335376546964
+deactivated,workbench,org.eclipse.ui.workbench,3.7.0.I20110519-0100,"",1335376576480
+activated,workbench,org.eclipse.ui.workbench,3.7.0.I20110519-0100,"",1335376578699
+error,log,,,"main.xml: Failed to convert 10 into a drawable",1335376578730
+error,log,,,"main.xml: Dimension ""10"" in attribute ""layout_marginTop"" is missing unit!",1335376578730
+error,log,,,"main.xml: Dimension ""281"" in attribute ""layout_width"" is missing unit!",1335376578746
+error,log,,,"main.xml: Dimension ""281"" in attribute ""layout_width"" is missing unit!",1335376578746
+error,log,,,"main.xml: Dimension ""281"" in attribute ""layout_width"" is missing unit!",1335376578761
+error,log,,,"main.xml: Failed to convert 10 into a drawable",1335376581293
+error,log,,,"main.xml: Dimension ""281"" in attribute ""layout_width"" is missing unit!",1335376581308
+error,log,,,"main.xml: Dimension ""281"" in attribute ""layout_width"" is missing unit!",1335376581308
+error,log,,,"main.xml: Dimension ""281"" in attribute ""layout_width"" is missing unit!",1335376581324
+executed,command,org.eclipse.ui,3.7.0.I20110602-0100,"org.eclipse.ui.edit.undo",1335376581371
+deactivated,workbench,org.eclipse.ui.workbench,3.7.0.I20110519-0100,"",1335376601839
+activated,workbench,org.eclipse.ui.workbench,3.7.0.I20110519-0100,"",1335376604668
+error,log,,,"main.xml: Failed to convert 10 into a drawable",1335376604714
+error,log,,,"main.xml: Dimension ""281"" in attribute ""layout_width"" is missing unit!",1335376604730
+error,log,,,"main.xml: Dimension ""281"" in attribute ""layout_width"" is missing unit!",1335376604730
+error,log,,,"main.xml: Dimension ""281"" in attribute ""layout_width"" is missing unit!",1335376604746
+error,log,,,"main.xml: Dimension ""15"" in attribute ""layout_margin"" is missing unit!",1335376604746
+deactivated,workbench,org.eclipse.ui.workbench,3.7.0.I20110519-0100,"",1335376615996
+activated,workbench,org.eclipse.ui.workbench,3.7.0.I20110519-0100,"",1335376617136
+error,log,,,"main.xml: Failed to convert 10 into a drawable",1335376617183
+error,log,,,"main.xml: Dimension ""281"" in attribute ""layout_width"" is missing unit!",1335376617199
+error,log,,,"main.xml: Dimension ""281"" in attribute ""layout_width"" is missing unit!",1335376617199
+error,log,,,"main.xml: Dimension ""15"" in attribute ""layout_margin"" is missing unit!",1335376617199
+error,log,,,"main.xml: Dimension ""281"" in attribute ""layout_width"" is missing unit!",1335376617214
+error,log,,,"main.xml: Dimension ""15"" in attribute ""layout_margin"" is missing unit!",1335376617214
+deactivated,workbench,org.eclipse.ui.workbench,3.7.0.I20110519-0100,"",1335376625839
+activated,workbench,org.eclipse.ui.workbench,3.7.0.I20110519-0100,"",1335376629652
+error,log,,,"main.xml: Failed to convert 10 into a drawable",1335376629699
+error,log,,,"main.xml: Dimension ""281"" in attribute ""layout_width"" is missing unit!",1335376629699
+error,log,,,"main.xml: Dimension ""10"" in attribute ""layout_margin"" is missing unit!",1335376629699
+error,log,,,"main.xml: Dimension ""281"" in attribute ""layout_width"" is missing unit!",1335376629714
+error,log,,,"main.xml: Dimension ""15"" in attribute ""layout_margin"" is missing unit!",1335376629714
+error,log,,,"main.xml: Dimension ""281"" in attribute ""layout_width"" is missing unit!",1335376629714
+error,log,,,"main.xml: Dimension ""15"" in attribute ""layout_margin"" is missing unit!",1335376629714
+deactivated,workbench,org.eclipse.ui.workbench,3.7.0.I20110519-0100,"",1335376635449
+activated,workbench,org.eclipse.ui.workbench,3.7.0.I20110519-0100,"",1335376636683
+error,log,,,"main.xml: Failed to convert 10 into a drawable",1335376636714
+error,log,,,"main.xml: Dimension ""281"" in attribute ""layout_width"" is missing unit!",1335376636730
+error,log,,,"main.xml: Dimension ""10"" in attribute ""layout_margin"" is missing unit!",1335376636730

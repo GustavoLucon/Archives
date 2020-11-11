@@ -1,0 +1,8 @@
+INDEX VERSION 1.126+C:\Users\Guga\Desktop\TCC\.metadata\.plugins\org.eclipse.jdt.core
+3605705229.index
+1148163856.index
+3545902272.index
+1494059194.index
+1895151578.index
+1195819569.index
+4043864088.index

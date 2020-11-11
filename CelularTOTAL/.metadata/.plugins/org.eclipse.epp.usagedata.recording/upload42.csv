@@ -1,0 +1,151 @@
+what,kind,bundleId,bundleVersion,description,time
+error,log,,,"Problems occurred when invoking code from plug-in: ""org.eclipse.jdt.ui"".",1336341911761
+error,log,,,"Error in JDT Core during reconcile",1336341911812
+error,log,,,"Exception occurred during problem detection:\r\n----------------------------------- SOURCE BEGIN -------------------------------------\r\nimport java.applet.*;\r\nimport java.awt.*;\r\nimport java.awt.event.*;\r\nimport java.io.*;\r\nimport java.net.*;\r\nimport java.util.*;\r\n\r\npublic class AStarApplet extends java.applet.Applet implements ItemListener,ActionListener\r\n{\r\n    boolean isDesign = false;\r\n    CheckboxGroup group;\r\n    Checkbox blocks,start,finish;\r\n    Choice level = new Choice();\r\n    Choice method = new Choice();\r\n    Choice preset = new Choice();\r\n    Choice user = new Choice();\r\n    Button go,clear,save,load,userSave;\r\n    \r\n    Map map = new Map();\r\n    PathFinder finder = new HuristicAStar();//new OneTailAStar();\r\n\tpublic void init()\r\n\t{\r\n\t\t//{{INIT_CONTROLS\r\n\t\tsetLayout(new BorderLayout(0,0));\r\n\t\tsetSize(612,482);\r\n\t\t//}}\r\n\t\tPanel m = new Panel();\r\n\t\tmethod.add(""Classic A*"");\r\n\t\tmethod.add(""Old"");\r\n\t\tmethod.add(""Fudge"");\r\n\t\tuser.add(""Author"");\r\n\t\tuser.add(""Users"");\r\n\t\tif(!isDesign){\r\n\t\t    //we are an applet\r\n\t\t   // userSave = new Button(""Save"");\r\n\t\t   // m.add(new Label(""Map Set:""));\r\n\t\t   // m.add(user);\r\n\t\t    m.add(new Label(""Load Map:""));\r\n\t\t    m.add(preset);\r\n\t\t  //  m.add(userSave);\r\n\t\t    findSavedMaps(""Saves"");\r\n\t\t    \r\n\t\t}\r\n\t\tm.add(new Label(""Method:""));\r\n\t\tm.add(method);\r\n\t\tadd(m,""North"");\r\n        add(map,""Center"");\r\n        Panel p = new Panel();\r\n        p.setLayout(new GridLayout(4,1));\r\n        Panel b = new Panel();\r\n        b.setLayout(new GridLayout(2,1));\r\n        level.add(""Impossible"");\r\n        level.add(""Very Tough (""+GridCell.VERY_TOUGH+"")"");\r\n        level.add(""Tough (""+GridCell.TOUGH+"")"");\r\n        level.add(""Normal (""+GridCell.NORMAL+"")"");\r\n        level.add(""Easy (""+GridCell.EASY+"")"");\r\n        \r\n        level.addItemListener(this);\r\n        preset.addItemListener(this);\r\n        method.addItemListener(this);\r\n        \r\n        group = new CheckboxGroup();\r\n        blocks = new Checkbox(""set blocks"",group,true);\r\n        start = new Checkbox(""set start"",group,false);\r\n        finish = new Checkbox(""set finish"",group,false);\r\n        blocks.addItemListener(this);\r\n        start.addItemListener(this);\r\n        finish.addItemListener(this);\r\n        b.add(blocks);       \r\n        b.add(level);\r\n        \r\n        p.add(b);\r\n        //p.add(level);\r\n        p.add(start);\r\n        p.add(finish);\r\n        add(p,""East"");\r\n        Panel g = new Panel();\r\n        if(!isDesign){\r\n            g.setLayout(new GridLayout(3,1,2,10));\r\n        }\r\n        else{\r\n            g.setLayout(new GridLayout(2,2,2,30));\r\n        }\r\n        go = new Button(""  Go  "");\r\n        save = new Button(""Save"");\r\n        load = new Button(""Load"");\r\n        clear = new Button(""Clear"");\r\n        g.add(go);\r\n        g.add(clear);\r\n        \r\n        if(isDesign){g.add(save);g.add(load);}\r\n        p.add(g);\r\n        go.addActionListener(this);\r\n        clear.addActionListener(this);\r\n        save.addActionListener(this);\r\n        load.addActionListener(this);\r\n\t\t}\r\n\t\t\r\n\t\tpublic void itemStateChanged(ItemEvent e){\r\n\t\t    if(e.getSource()==level){\r\n\t\t        blocks.setState(true);\r\n\t\t        GridCell.setEditMode(GridCell.SET_BLOCKS);\r\n\t\t        switch(level.getSelectedIndex()){\r\n\t\t            case 0:\r\n\t\t                GridCell.setNewBlockStrength(GridCell.BLOCK);\r\n\t\t                return;\r\n\t\t            case 1:\r\n\t\t                GridCell.setNewBlockStrength(GridCell.VERY_TOUGH);\r\n\t\t                return;\r\n\t\t            case 2:\r\n\t\t                GridCell.setNewBlockStrength(GridCell.TOUGH);\r\n\t\t                return;\r\n\t\t            case 3:\r\n\t\t                GridCell.setNewBlockStrength(GridCell.NORMAL);\r\n\t\t                return;\r\n\t\t            case 4:\r\n\t\t                GridCell.setNewBlockStrength(GridCell.EASY);\r\n\t\t                return;\r\n\t\t            default:\r\n\t\t                GridCell.setNewBlockStrength(GridCell.NORMAL);\r\n\t\t                return;\r\n\t\t        }\r\n\t\t    }\r\n\t\t    if(e.getSource()==method){\r\n\t\t        switch(method.getSelectedIndex()){\r\n\t\t            case 0:\r\n\t\t                finder = new HuristicAStar();\r\n\t\t                System.out.println(""Switched to Huristic A*"");\r\n\t\t                break;\r\n\t\t            case 1:\r\n\t\t                finder = new OneTailAStar();\r\n\t\t                System.out.println(""Switched to OneTailAStar"");\r\n\t\t                break;\r\n\t\t            case 2:\r\n\t\t                finder = new Fudge();\r\n\t\t                System.out.println(""Switched to version of Amit Patel's huristic"");\r\n\t\t                break;\r\n\t\t        }\r\n\t\t        return;\r\n\t\t    }\r\n\t\t       \r\n\t\t        \r\n\t\t    if(e.getSource()==preset){\r\n\t\t        //load in a file as an applet\r\n\t\t        System.out.println(""request to load ""+preset.getSelectedItem());\r\n\t\t        loadPreDef();\r\n\t\t        return;\r\n\t\t    }\r\n\t\t    \r\n\t\t    Checkbox box = group.getSelectedCheckbox();\r\n\t\t    if(box == blocks){GridCell.setEditMode(GridCell.SET_BLOCKS);return;}\r\n\t\t    if(box == start){GridCell.setEditMode(GridCell.SET_START);return;}\r\n\t\t    if(box == finish){GridCell.setEditMode(GridCell.SET_FINISH);return;}\r\n\t\t    \r\n\t\t}\r\n\t\t\r\n\t\tpublic void actionPerformed(ActionEvent e){\r\n\t\t    if(e.getSource() == go){\r\n\t\t        finder.findPath(map);\r\n\t\t    }\r\n\t\t    if(e.getSource() == clear){\r\n\t\t        GridCell.clearAll();\r\n\t\t        map.repaint();\r\n\t\t    }\r\n\t\t    if(e.getSource() == save){\r\n\t\t      if(isDesign){\r\n\t\t        try{\r\n\t\t            FileDialog fd = new FileDialog(new Frame(),""Save a grid"",FileDialog.SAVE);\r\n\t\t            fd.setFile(""*.grd"");\r\n\t\t            fd.setDirectory(""Saves"");\r\n\t\t            fd.setFilenameFilter(new FilenameFilter(){public boolean accept(File f,String n){System.out.println(""accept requested"");return n.endsWith(""grd"");}});\r\n\t\t            fd.show();\r\n\t\t            File file = new File(fd.getDirectory(),fd.getFile());\r\n\t\t            FileOutputStream fos = new FileOutputStream(file);\r\n\t\t            ObjectOutputStream oos = new ObjectOutputStream(fos);\r\n\t\t            oos.writeObject(map);\r\n\t\t            oos.flush();\r\n\t\t            oos.close();\r\n\t\t            System.out.println(""Grid Saved"");\r\n\t\t        }\r\n\t\t        catch(IOException ex){\r\n\t\t            System.err.println(""Save failed ""+ex);\r\n\t\t        }\r\n\t\t      }\r\n\t\t      else{\r\n\t\t        //saving as an applet!\r\n\t\t        savePreDef();\r\n\t\t      }\r\n\t\t        \r\n\t\t      \r\n\t\t    }\r\n\t\t    if(e.getSource() == load){\r\n\t\t        try{\r\n\t\t            FileDialog fd = new FileDialog(new Frame(),""Select Map to Load"",FileDialog.LOAD);\r\n\t\t            fd.setFile(""*.grd"");\r\n\t\t            fd.setDirectory(""Saves"");\r\n\t\t            fd.setFilenameFilter(new FilenameFilter(){public boolean accept(File f,String n){System.out.println(""accept requested"");return n.endsWith(""grd"");}});\r\n\t\t            fd.show();\r\n\t\t            File file = new File(fd.getDirectory(),fd.getFile());\r\n\t\t            FileInputStream fis = new FileInputStream(file);\r\n\t\t            ObjectInputStream ois = new ObjectInputStream(fis);\r\n\t\t            remove(map);\r\n\t\t            map = (Map)ois.readObject();\r\n\t\t            add(map,""Center"");\r\n\t\t            ois.close();\r\n\t\t            System.out.println(""Grid Loaded"");\r\n\t\t        }\r\n\t\t        catch(Throwable ex){\r\n\t\t            System.err.println(""Load failed ""+ex);\r\n\t\t            add(map,""Center"");\r\n\t\t        }\r\n\t\t        \r\n\t\t    }\r\n\t\t}\r\n\t\t\r\n\t\tprivate void loadPreDef(){\r\n\t\t    Map temp = map;\r\n\t\t        try{\r\n\t\t            URL load = new URL(getDocumentBase(),""Saves/""+preset.getSelectedItem());\r\n\t\t            ObjectInputStream ois = new ObjectInputStream(load.openStream());     \r\n\t\t            remove(map);\r\n\t\t            map = (Map)ois.readObject();\r\n\t\t            add(map,""Center"");\r\n\t\t            map.invalidate();\r\n\t\t            ois.close();\r\n\t\t            System.out.println(""Grid Loaded"");\r\n\t\t            invalidate();\r\n\t\t        }\r\n\t\t        catch(Throwable ex){\r\n\t\t            System.err.println(""Load failed ""+ex);\r\n\t\t            add(temp,""Center"");\r\n\t\t        }\r\n\t\t}\r\n\t\t\r\n\t\tprivate void savePreDef(){\r\n\t\t    Map temp = map;\r\n\t\t        try{\r\n\t\t            URL save = new URL(getDocumentBase(),""User/""+System.currentTimeMillis());//gridName.getText());\r\n\t\t            \r\n\t\t            ObjectOutputStream oos = new ObjectOutputStream(save.openConnection().getOutputStream());     \r\n\t\t            oos.writeObject(map);\r\n\t\t            oos.flush();\r\n\t\t            oos.close();\r\n\t\t            System.out.println(""Grid Saved"");\r\n\t\t        }\r\n\t\t        catch(Throwable ex){\r\n\t\t            System.err.println(""Load failed ""+ex);\r\n\t\t            add(temp,""Center"");\r\n\t\t        }\r\n\t\t}\r\n\t\t    \r\n\t\t\r\n\t\tpublic Dimension getPreferredSize(){\r\n\t\t    return new Dimension(520,420);\r\n\t\t}\r\n\r\n        public void findSavedMaps(String folder){\r\n            try{\r\n\t\t        URL test = new URL(getCodeBase(),folder);\r\n\t\t        preset.removeAll();\r\n\t\t        System.out.println(test);\r\n\t\t      //  System.out.println(test.getFile());\r\n\t\t        InputStream buff = (InputStream)test.openConnection().getInputStream();\r\n\t\t        StreamTokenizer st = new StreamTokenizer(new InputStreamReader(buff));\r\n\t\t        int type = st.nextToken();\r\n\t\t        int trys = 0;\r\n\t\t        Vector files = new Vector();\r\n\t\t        String last = """";\r\n\t\t        while(type!=-1 && trys < 1000){\r\n\t\t            //System.out.println(st.sval);\r\n\t\t            if(st.sval!=null && st.sval.endsWith("".grd"") && !st.sval.equals(last)){\r\n\t\t                files.addElement(st.sval);\r\n\t\t                last = st.sval;\r\n\t\t            }\r\n\t\t            type = st.nextToken();\r\n\t\t            trys++;\r\n\t\t        }\r\n\t\t        for(int i=0;i<files.size();i++){\r\n\t\t            preset.add(files.elementAt(i).toString());\r\n\t\t        }\r\n\t\t        if(files.size()>0){loadPreDef();}\r\n\t\t        \r\n\t\t    }\r\n\t\t    catch(Throwable e){System.out.println(e);}\r\n\t\t}\r\n            \r\n\r\n        public static void main(String args[]){\r\n            AStarApplet app = new AStarApplet();\r\n            app.isDesign = true;\r\n            Frame f = new Frame();\r\n            f.setSize(612,482);\r\n            f.setResizable(false);\r\n            f.setLayout(new BorderLayout());\r\n            //f.add(new Button(""Save""));\r\n            f.add(app,""Center"");\r\n            f.addWindowListener(new WindowAdapter(){public void windowClosing(WindowEvent e){System.exit(0);}});\r\n            app.init();\r\n           \r\n            f.show();\r\n            app.start();\r\n        }    \r\n\t//{{DECLARE_CONTROLS\r\n\t//}}\r\n\r\n}\r\n----------------------------------- SOURCE END -------------------------------------",1336341911883
+error,log,,,"Problems occurred when invoking code from plug-in: ""org.eclipse.jdt.ui"".",1336341911935
+error,log,,,"Error in JDT Core during reconcile",1336341911986
+started,bundle,org.eclipse.wst.html.core,1.1.502.v201202091936,"org.eclipse.wst.html.core",1336341912471
+activated,view,org.eclipse.jdt.ui,3.7.1.r371_v20110824-0800,"org.eclipse.jdt.ui.PackageExplorer",1336341912642
+opened,editor,org.eclipse.jdt.ui,3.7.1.r371_v20110824-0800,"org.eclipse.jdt.ui.CompilationUnitEditor",1336341913025
+activated,editor,org.eclipse.jdt.ui,3.7.1.r371_v20110824-0800,"org.eclipse.jdt.ui.CompilationUnitEditor",1336341913154
+deactivated,workbench,org.eclipse.ui.workbench,3.7.0.I20110519-0100,"",1336341913999
+activated,workbench,org.eclipse.ui.workbench,3.7.0.I20110519-0100,"",1336341915047
+activated,view,org.eclipse.jdt.ui,3.7.1.r371_v20110824-0800,"org.eclipse.jdt.ui.PackageExplorer",1336341915119
+opened,editor,org.eclipse.jdt.ui,3.7.1.r371_v20110824-0800,"org.eclipse.jdt.ui.CompilationUnitEditor",1336341918310
+activated,editor,org.eclipse.jdt.ui,3.7.1.r371_v20110824-0800,"org.eclipse.jdt.ui.CompilationUnitEditor",1336341918412
+activated,view,org.eclipse.jdt.ui,3.7.1.r371_v20110824-0800,"org.eclipse.jdt.ui.PackageExplorer",1336341919829
+activated,editor,org.eclipse.jdt.ui,3.7.1.r371_v20110824-0800,"org.eclipse.jdt.ui.CompilationUnitEditor",1336341920727
+error,log,,,"Problems occurred when invoking code from plug-in: ""org.eclipse.jdt.ui"".",1336341921098
+error,log,,,"Error in JDT Core during AST creation",1336341921437
+error,log,,,"Problems occurred when invoking code from plug-in: ""org.eclipse.jdt.ui"".",1336341922030
+error,log,,,"Error in JDT Core during AST creation",1336341922053
+executed,command,,,"AUTOGEN:::org.eclipse.jdt.internal.ui.CompilationUnitEditor.ruler.actions/org.eclipse.jdt.internal.ui.javaeditor.JavaSelectRulerAction",1336341923256
+error,log,,,"Problems occurred when invoking code from plug-in: ""org.eclipse.jdt.ui"".",1336341932762
+error,log,,,"Error in JDT Core during AST creation",1336341933112
+error,log,,,"Problems occurred when invoking code from plug-in: ""org.eclipse.jdt.ui"".",1336341933196
+error,log,,,"Error in JDT Core during AST creation",1336341933218
+error,log,,,"Problems occurred when invoking code from plug-in: ""org.eclipse.jdt.ui"".",1336341933366
+error,log,,,"Error in JDT Core during AST creation",1336341933391
+error,log,,,"Problems occurred when invoking code from plug-in: ""org.eclipse.jdt.ui"".",1336341933421
+error,log,,,"Problems occurred when invoking code from plug-in: ""org.eclipse.jdt.ui"".",1336341933457
+error,log,,,"Error in JDT Core during AST creation",1336341933481
+error,log,,,"Problems occurred when invoking code from plug-in: ""org.eclipse.jdt.ui"".",1336341933515
+error,log,,,"Problems occurred when invoking code from plug-in: ""org.eclipse.jdt.ui"".",1336341933546
+error,log,,,"Error in JDT Core during AST creation",1336341933568
+error,log,,,"Problems occurred when invoking code from plug-in: ""org.eclipse.jdt.ui"".",1336341933604
+error,log,,,"Problems occurred when invoking code from plug-in: ""org.eclipse.jdt.ui"".",1336341933752
+error,log,,,"Error in JDT Core during AST creation",1336341933774
+error,log,,,"Problems occurred when invoking code from plug-in: ""org.eclipse.jdt.ui"".",1336341933806
+error,log,,,"Problems occurred when invoking code from plug-in: ""org.eclipse.jdt.ui"".",1336341933849
+error,log,,,"Error in JDT Core during AST creation",1336341933871
+error,log,,,"Problems occurred when invoking code from plug-in: ""org.eclipse.jdt.ui"".",1336341933901
+started,bundle,org.jboss.tools.seam.core,3.3.0.v20110915-1921-H35-M3,"org.jboss.tools.seam.core",1336341934144
+started,bundle,org.jboss.tools.seam.ui,3.3.0.v20110915-1921-H35-M3,"org.jboss.tools.seam.ui",1336341934173
+error,log,,,"Problems occurred when invoking code from plug-in: ""org.eclipse.jdt.ui"".",1336341934238
+error,log,,,"Error in JDT Core during AST creation",1336341934259
+error,log,,,"Problems occurred when invoking code from plug-in: ""org.eclipse.jdt.ui"".",1336341934289
+error,log,,,"An error occurred while computing quick fixes. Check log for details.",1336341934319
+executed,command,,,"AUTOGEN:::org.eclipse.jdt.internal.ui.CompilationUnitEditor.ruler.actions/org.eclipse.jdt.internal.ui.javaeditor.JavaSelectRulerAction",1336341934359
+error,log,,,"Problems occurred when invoking code from plug-in: ""org.eclipse.jdt.ui"".",1336341934907
+error,log,,,"Error in JDT Core during AST creation",1336341934938
+error,log,,,"Problems occurred when invoking code from plug-in: ""org.eclipse.jdt.ui"".",1336341934976
+error,log,,,"Error in JDT Core during AST creation",1336341935009
+error,log,,,"Problems occurred when invoking code from plug-in: ""org.eclipse.jdt.ui"".",1336341935055
+error,log,,,"Problems occurred when invoking code from plug-in: ""org.eclipse.jdt.ui"".",1336341935099
+error,log,,,"Error in JDT Core during AST creation",1336341935121
+error,log,,,"Problems occurred when invoking code from plug-in: ""org.eclipse.jdt.ui"".",1336341935153
+error,log,,,"Problems occurred when invoking code from plug-in: ""org.eclipse.jdt.ui"".",1336341935186
+error,log,,,"Error in JDT Core during AST creation",1336341935208
+error,log,,,"Problems occurred when invoking code from plug-in: ""org.eclipse.jdt.ui"".",1336341935237
+error,log,,,"Problems occurred when invoking code from plug-in: ""org.eclipse.jdt.ui"".",1336341935269
+error,log,,,"Error in JDT Core during AST creation",1336341935290
+error,log,,,"Problems occurred when invoking code from plug-in: ""org.eclipse.jdt.ui"".",1336341935361
+error,log,,,"Problems occurred when invoking code from plug-in: ""org.eclipse.jdt.ui"".",1336341935389
+error,log,,,"Error in JDT Core during AST creation",1336341935411
+error,log,,,"Problems occurred when invoking code from plug-in: ""org.eclipse.jdt.ui"".",1336341935444
+error,log,,,"Problems occurred when invoking code from plug-in: ""org.eclipse.jdt.ui"".",1336341935543
+error,log,,,"Error in JDT Core during AST creation",1336341935567
+error,log,,,"Problems occurred when invoking code from plug-in: ""org.eclipse.jdt.ui"".",1336341935599
+error,log,,,"An error occurred while computing quick fixes. Check log for details.",1336341935627
+executed,command,,,"AUTOGEN:::org.eclipse.jdt.internal.ui.CompilationUnitEditor.ruler.actions/org.eclipse.jdt.internal.ui.javaeditor.JavaSelectRulerAction",1336341935648
+error,log,,,"Problems occurred when invoking code from plug-in: ""org.eclipse.jdt.ui"".",1336341935839
+error,log,,,"Error in JDT Core during AST creation",1336341935862
+error,log,,,"Problems occurred when invoking code from plug-in: ""org.eclipse.jdt.ui"".",1336341938375
+error,log,,,"Error in JDT Core during AST creation",1336341938397
+error,log,,,"Problems occurred when invoking code from plug-in: ""org.eclipse.jdt.ui"".",1336341939924
+error,log,,,"Error in JDT Core during AST creation",1336341939963
+error,log,,,"Problems occurred when invoking code from plug-in: ""org.eclipse.jdt.ui"".",1336341940038
+error,log,,,"Error in JDT Core during AST creation",1336341940101
+error,log,,,"Problems occurred when invoking code from plug-in: ""org.eclipse.jdt.ui"".",1336341940131
+error,log,,,"Problems occurred when invoking code from plug-in: ""org.eclipse.jdt.ui"".",1336341940162
+error,log,,,"Error in JDT Core during AST creation",1336341940184
+error,log,,,"Problems occurred when invoking code from plug-in: ""org.eclipse.jdt.ui"".",1336341940218
+error,log,,,"Problems occurred when invoking code from plug-in: ""org.eclipse.jdt.ui"".",1336341940251
+error,log,,,"Error in JDT Core during AST creation",1336341940273
+error,log,,,"Problems occurred when invoking code from plug-in: ""org.eclipse.jdt.ui"".",1336341940304
+error,log,,,"Problems occurred when invoking code from plug-in: ""org.eclipse.jdt.ui"".",1336341940333
+error,log,,,"Error in JDT Core during AST creation",1336341940357
+error,log,,,"Problems occurred when invoking code from plug-in: ""org.eclipse.jdt.ui"".",1336341940385
+error,log,,,"Problems occurred when invoking code from plug-in: ""org.eclipse.jdt.ui"".",1336341940415
+error,log,,,"Error in JDT Core during AST creation",1336341940439
+error,log,,,"Problems occurred when invoking code from plug-in: ""org.eclipse.jdt.ui"".",1336341940469
+error,log,,,"Problems occurred when invoking code from plug-in: ""org.eclipse.jdt.ui"".",1336341940497
+error,log,,,"Error in JDT Core during AST creation",1336341940521
+error,log,,,"Problems occurred when invoking code from plug-in: ""org.eclipse.jdt.ui"".",1336341940553
+error,log,,,"An error occurred while computing quick fixes. Check log for details.",1336341940581
+executed,command,,,"AUTOGEN:::org.eclipse.jdt.internal.ui.CompilationUnitEditor.ruler.actions/org.eclipse.jdt.internal.ui.javaeditor.JavaSelectRulerAction",1336341940601
+error,log,,,"Problems occurred when invoking code from plug-in: ""org.eclipse.jdt.ui"".",1336341940788
+error,log,,,"Error in JDT Core during AST creation",1336341940811
+error,log,,,"Problems occurred when invoking code from plug-in: ""org.eclipse.jdt.ui"".",1336341942278
+error,log,,,"Error in JDT Core during AST creation",1336341942308
+error,log,,,"Problems occurred when invoking code from plug-in: ""org.eclipse.jdt.ui"".",1336341950374
+error,log,,,"Error in JDT Core during AST creation",1336341950740
+error,log,,,"Problems occurred when invoking code from plug-in: ""org.eclipse.jdt.ui"".",1336341951192
+error,log,,,"Error in JDT Core during AST creation",1336341951221
+started,bundle,org.eclipse.wst.sse.ui,1.3.2.v201201041522,"org.eclipse.wst.sse.ui",1336341952214
+started,bundle,org.eclipse.wst.xml.ui,1.1.202.v201112071516,"org.eclipse.wst.xml.ui",1336341952391
+started,bundle,org.jboss.tools.common.text.xml,3.3.0.v20110915-1551-H16-M3,"org.jboss.tools.common.text.xml",1336341952406
+activated,view,org.eclipse.jdt.ui,3.7.1.r371_v20110824-0800,"org.eclipse.jdt.ui.PackageExplorer",1336341952548
+deactivated,workbench,org.eclipse.ui.workbench,3.7.0.I20110519-0100,"",1336341959937
+activated,workbench,org.eclipse.ui.workbench,3.7.0.I20110519-0100,"",1336341961792
+activated,editor,org.eclipse.jdt.ui,3.7.1.r371_v20110824-0800,"org.eclipse.jdt.ui.CompilationUnitEditor",1336341961842
+error,log,,,"Problems occurred when invoking code from plug-in: ""org.eclipse.jdt.ui"".",1336341962021
+error,log,,,"Error in JDT Core during AST creation",1336341962382
+error,log,,,"Problems occurred when invoking code from plug-in: ""org.eclipse.jdt.ui"".",1336341962648
+error,log,,,"Error in JDT Core during AST creation",1336341962672
+error,log,,,"Problems occurred when invoking code from plug-in: ""org.eclipse.jdt.ui"".",1336341963777
+error,log,,,"Error in JDT Core during AST creation",1336341963809
+error,log,,,"Problems occurred when invoking code from plug-in: ""org.eclipse.jdt.ui"".",1336341963906
+error,log,,,"Error in JDT Core during AST creation",1336341963941
+error,log,,,"Problems occurred when invoking code from plug-in: ""org.eclipse.jdt.ui"".",1336341963982
+error,log,,,"Problems occurred when invoking code from plug-in: ""org.eclipse.jdt.ui"".",1336341964014
+error,log,,,"Error in JDT Core during AST creation",1336341964037
+error,log,,,"Problems occurred when invoking code from plug-in: ""org.eclipse.jdt.ui"".",1336341964075
+error,log,,,"Problems occurred when invoking code from plug-in: ""org.eclipse.jdt.ui"".",1336341964104
+error,log,,,"Error in JDT Core during AST creation",1336341964126
+error,log,,,"Problems occurred when invoking code from plug-in: ""org.eclipse.jdt.ui"".",1336341964158
+error,log,,,"Problems occurred when invoking code from plug-in: ""org.eclipse.jdt.ui"".",1336341964218
+error,log,,,"Error in JDT Core during AST creation",1336341964250
+error,log,,,"Problems occurred when invoking code from plug-in: ""org.eclipse.jdt.ui"".",1336341964286
+error,log,,,"Problems occurred when invoking code from plug-in: ""org.eclipse.jdt.ui"".",1336341964327
+error,log,,,"Error in JDT Core during AST creation",1336341964352
+error,log,,,"Problems occurred when invoking code from plug-in: ""org.eclipse.jdt.ui"".",1336341964398
+error,log,,,"An error occurred while computing quick fixes. Check log for details.",1336341964427
+executed,command,,,"AUTOGEN:::org.eclipse.jdt.internal.ui.CompilationUnitEditor.ruler.actions/org.eclipse.jdt.internal.ui.javaeditor.JavaSelectRulerAction",1336341964454
+error,log,,,"Problems occurred when invoking code from plug-in: ""org.eclipse.jdt.ui"".",1336341964650
+error,log,,,"Error in JDT Core during AST creation",1336341964673
+error,log,,,"Problems occurred when invoking code from plug-in: ""org.eclipse.jdt.ui"".",1336341965855
+error,log,,,"Error in JDT Core during AST creation",1336341965888
+executed,command,,,"AUTOGEN:::org.eclipse.jdt.debug.CompilationUnitEditor.BreakpointRulerActions/org.eclipse.jdt.debug.ui.actions.ManageBreakpointRulerAction",1336341966756
+error,log,,,"Problems occurred when invoking code from plug-in: ""org.eclipse.jdt.ui"".",1336341983248
+error,log,,,"Error in JDT Core during AST creation",1336341983593
+activated,view,org.eclipse.jdt.ui,3.7.1.r371_v20110824-0800,"org.eclipse.jdt.ui.PackageExplorer",1336341984074
+activated,editor,org.eclipse.jdt.ui,3.7.1.r371_v20110824-0800,"org.eclipse.jdt.ui.CompilationUnitEditor",1336341984314
+error,log,,,"Problems occurred when invoking code from plug-in: ""org.eclipse.jdt.ui"".",1336341984467
+error,log,,,"Error in JDT Core during AST creation",1336341984492
+error,log,,,"Problems occurred when invoking code from plug-in: ""org.eclipse.jdt.ui"".",1336341987975
+error,log,,,"Error in JDT Core during AST creation",1336341988001
+error,log,,,"Problems occurred when invoking code from plug-in: ""org.eclipse.jdt.ui"".",1336341988033
+error,log,,,"Error in JDT Core during AST creation",1336341988057
+error,log,,,"Problems occurred when invoking code from plug-in: ""org.eclipse.jdt.ui"".",1336341988107
+error,log,,,"Problems occurred when invoking code from plug-in: ""org.eclipse.jdt.ui"".",1336341988133

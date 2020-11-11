@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Move 3 elements(s) to &apos;errados/src/(default package)&apos;&#x0D;&#x0A;- Original project: &apos;Alucard&apos;&#x0D;&#x0A;- Destination element: &apos;errados/src/(default package)&apos;&#x0D;&#x0A;- Original elements:&#x0D;&#x0A;     Projeto1.WelcomeServlet2.java&#x0D;&#x0A;     Projeto1.HelloServlet.java&#x0D;&#x0A;     Projeto1.ServletPrincipal.java&#x0D;&#x0A;- Update references to refactored element" description="Move compilation units" destination="=errados/src&lt;" element1="/src&lt;Projeto1{WelcomeServlet2.java" element2="/src&lt;Projeto1{HelloServlet.java" element3="/src&lt;Projeto1{ServletPrincipal.java" files="0" flags="589830" folders="0" id="org.eclipse.jdt.ui.move" policy="org.eclipse.jdt.ui.moveResources" qualified="false" references="true" stamp="1318045674548" units="3" version="1.0"/>
+</session>

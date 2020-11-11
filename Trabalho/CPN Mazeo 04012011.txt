@@ -1,0 +1,22 @@
+Procura pela pasta do operfit
+diz o caminho -
+iniciar
+executar
+cmd
+cd..
+cd..
+cd caminho
+x
+Ctrl t
+Ctrl c
+enter
+:\rml\201210
+f
+*.ntx
+Ctrl t
+Ctrl d
+q
+wopcreate
+r2042
+finalizou testa
+

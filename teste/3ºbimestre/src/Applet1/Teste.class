@@ -1,0 +1,13 @@
+package Applet1;
+import javax.swing.JApplet;
+import java.awt.*;
+
+	@SuppressWarnings("serial")
+	public class Teste extends JApplet
+	{
+	public void paint (Graphics g)
+	{
+	g.drawString("ola, pessoal! meu primeiro applet",100,20);
+	}
+
+	}

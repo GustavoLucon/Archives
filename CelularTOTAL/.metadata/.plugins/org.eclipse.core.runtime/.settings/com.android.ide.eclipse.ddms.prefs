@@ -1,0 +1,9 @@
+#Thu Jun 14 17:44:35 BRT 2012
+logcat.view.colsize.Level=24
+eclipse.preferences.version=1
+logcat.view.colsize.Application=128
+logcat.view.colsize.Time=130
+logcat.view.colsize.Tag=127
+logcat.view.colsize.Text=983
+logcat.view.filters.list=name\: 'test', tag\: '', text\: '', pid\: '', app\: '', level\: 'verbose', 
+logcat.view.colsize.PID=48

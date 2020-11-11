@@ -1,0 +1,58 @@
+package com.example.testlista;
+
+import android.os.Bundle;
+import android.app.Activity;
+import android.app.ListActivity;
+import android.view.Menu;
+import android.view.View;
+import android.view.View.OnClickListener;
+import android.widget.AdapterView;
+import android.widget.AdapterView.OnItemClickListener;
+import android.widget.ArrayAdapter;
+import android.widget.Button;
+import android.widget.ListView;
+import android.widget.Toast;
+
+public class MainActivity extends Activity{
+
+	@Override
+    public void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.main);
+        
+        Button btn1 = (Button)findViewById(R.id.button1);
+	               
+        btn1.setOnClickListener(new OnClickListener()
+        {
+
+			@Override
+			public void onClick(View arg0) {
+				// TODO Auto-generated method stub
+				   setContentView(R.layout.teste);
+			} 
+        	
+        	
+        });
+        
+        Button btn1 = (Button)findViewById(R.id.button2);
+        
+        btn1.setOnClickListener(new OnClickListener()
+        {
+
+			@Override
+			public void onClick(View arg0) {
+				// TODO Auto-generated method stub
+				   setContentView(R.layout.main);
+			} 
+        	
+        	
+        });
+    }
+    
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        getMenuInflater().inflate(R.menu.main, menu);
+        return true;
+    }
+
+}

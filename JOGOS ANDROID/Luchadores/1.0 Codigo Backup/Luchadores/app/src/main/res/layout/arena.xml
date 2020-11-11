@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/arena">
+
+    <Button
+        android:layout_width="120dp"
+        android:layout_height="60dp"
+        android:id="@+id/Punch"
+        android:background="@drawable/punch"
+        android:layout_alignParentBottom="true"
+        android:layout_toEndOf="@+id/Shield" />
+
+    <Button
+        android:layout_width="120dp"
+        android:layout_height="60dp"
+        android:id="@+id/Shield"
+        android:background="@drawable/shield"
+        android:layout_alignParentBottom="true"
+        android:layout_toEndOf="@+id/Stomp" />
+
+    <Button
+        android:layout_width="120dp"
+        android:layout_height="60dp"
+        android:id="@+id/Stomp"
+        android:layout_alignParentBottom="true"
+        android:layout_toEndOf="@+id/special"
+        android:background="@drawable/stomp" />
+
+    <Button
+        android:layout_width="120dp"
+        android:layout_height="60dp"
+        android:id="@+id/special"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentStart="true"
+        android:background="@drawable/special" />
+
+    <Button
+        android:layout_width="110dp"
+        android:layout_height="60dp"
+        android:text="Limpar"
+        android:id="@+id/Limpar"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentEnd="true" />
+
+    <Button
+        android:layout_width="110dp"
+        android:layout_height="60dp"
+        android:text="Confirmar"
+        android:id="@+id/Confirmar"
+        android:layout_above="@+id/Punch"
+
+        android:layout_alignParentEnd="true" />
+
+    <TextView
+        android:layout_width="180dp"
+        android:layout_height="50dp"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:id="@+id/lvlOponente"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentStart="true" />
+
+    <TextView
+        android:layout_width="400dp"
+        android:layout_height="50dp"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:id="@+id/Golpes"
+        android:layout_alignBottom="@+id/lvlOponente"
+        android:layout_alignParentTop="true"
+        android:layout_alignEnd="@+id/Confirmar" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Tentar Novamente"
+        android:id="@+id/Retry"
+        android:layout_centerVertical="true"
+        android:layout_toEndOf="@+id/Stomp" />
+
+</RelativeLayout>

@@ -1,0 +1,25 @@
+import javax.swing.JOptionPane;
+
+public class Prova1 {
+	public static int exibir(int fi , int fi2)
+	{
+		int res = 1;
+		if(res == 13)
+		{
+		return fi;	
+		}
+		else
+		{
+		fi = res;
+		res = fi + fi2;
+		System.out.println(res);
+		return fi ;
+		}
+	}
+	public static void main (String args[])
+	{
+	int fib= 1;
+	int fib2 = 1;
+	exibir(fib , fib2);
+	}
+}

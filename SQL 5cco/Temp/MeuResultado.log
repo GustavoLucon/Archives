@@ -1,0 +1,51 @@
+
+SQL*Loader: Release 10.2.0.1.0 - Production on Sex Mai 27 20:56:42 2011
+
+Copyright (c) 1982, 2005, Oracle.  All rights reserved.
+
+Arquivo de Controle:   MeuControle.ctl
+Arquivo de Dados:      C:\Documents and Settings\admlab\Desktop\Prova\Carregando.txt
+  Arquivo de Incorreções:     c:\temp\ErroAoImportar.txt
+  Arquivo de Descarte:  nenhum(a) foi especificado(a)
+ 
+ (Permite todos os descartes)
+
+Número a ser carregado: ALL
+Número a ser ignorado: 0
+Erros permitidos: 50
+Array de ligação:     64 linhas, máximo de 256000 bytes
+Continuação:    nenhum(a) foi especificado(a)
+Caminho usado:      Convencional
+
+Tabela PRODUTO, carregada a partir de cada registro lógico.
+Opção de inserção em vigor para esta tabela: INSERT
+
+   Nome da Coluna                  Posição   Tam  Term Incl Tipo de Dados
+------------------------------ ---------- ----- ---- ---- ---------------------
+COD_PROD                            FIRST     *   ;       CHARACTER            
+NOME_PROD                            NEXT     *   ;       CHARACTER            
+DESCRICAO_PROD                       NEXT     *   ;       CHARACTER            
+VALOR_PROD                           NEXT     *   ;       CHARACTER            
+STATUS_PROD                          NEXT     *   ;       CHARACTER            
+
+
+Tabela PRODUTO:
+  5 Linhas carregado com êxito.
+  0 Linhas não carregado devido a erros de dados.
+  0 Linhas não carregado porque todas as cláusulas WHEN falharam.
+  0 Linhas não carregado porque todos os campos eram nulos.
+
+
+Espaço alocado para o array de ligação:                  82560 bytes(64 linhas)
+Bytes do buffer de leitura: 1048576
+
+Total de registros lógicos ignorados:          0
+Total de registros lógicos lidos:             5
+Total de registros lógicos rejeitados:         0
+Total de registros lógicos descartados:        0
+
+A execução começou em Sex Mai 27 20:56:42 2011
+A execução foi finalizada em Sex Mai 27 20:56:42 2011
+
+O tempo decorrido foi:     00:00:00.06
+O tempo de CPU foi:         00:00:00.03

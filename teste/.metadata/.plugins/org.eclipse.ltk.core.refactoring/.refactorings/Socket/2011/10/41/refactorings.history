@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Move 3 package(s) to &apos;6CCO/SD&apos;&#x0D;&#x0A;- Original project: &apos;Socket&apos;&#x0D;&#x0A;- Destination element: &apos;6CCO/SD&apos;&#x0D;&#x0A;- Original elements:&#x0D;&#x0A;     Socket/src/Socket&#x0D;&#x0A;     Socket/src/br.com.ibta.rmi.interfaces&#x0D;&#x0A;     Socket/src/br.com.ibta.rmi.beans" description="Move packages" destination="=6CCO/SD" element1="/src&lt;Socket" element2="/src&lt;br.com.ibta.rmi.interfaces" element3="/src&lt;br.com.ibta.rmi.beans" flags="589830" fragments="3" id="org.eclipse.jdt.ui.move" policy="org.eclipse.jdt.ui.movePackages" stamp="1318046841815" version="1.0"/>
+</session>

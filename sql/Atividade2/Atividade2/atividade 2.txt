@@ -1,0 +1,115 @@
+
+Lousa
+
+1)
+Insert Into Employees (Employee_ID,Last_Name,Email,Hire_Date,Job_Id,Salary)
+values ('123456','Diego','teste@teste.com',Sysdate,'ST_MAN',300);
+
+Insert Into Employees (Employee_ID,Last_Name,Email,Hire_Date,Job_Id,Salary)
+values ('654321','Vicente','teste2@teste.com',Sysdate,'ST_CLERK',700);
+
+
+2)
+
+UPDATE employees
+SET Salary = Salary+(Salary*0.15)
+WHERE Upper(Last_Name) = 'VICENTE';
+
+3)
+SavePoint ola;
+
+4)
+UPDATE employees
+SET Salary = Salary+(Salary*0.15);
+
+
+5)
+rollback;
+Select Salary from employees
+WHERE Upper(Last_Name) = 'VICENTE';
+
+6)
+ delete from Employees where Upper(Last_Name) = 'DIEGO';
+ 
+7) commit;
+
+Folha
+
+1)
+SELECT empno, ename, salary*12 "Annual Salary"
+FROM Employees;
+
+2)
+SELECT DISTINCT Job_ID
+FROM   employees;
+
+3)
+SELECT First_Name, Salary
+From employees
+WHERE Salary >= 2850;
+
+4)
+SELECT First_Name, DEPARTMENT_ID  
+From employees
+WHERE  DEPARTMENT_ID = 7566;
+
+alterado para
+
+SELECT First_Name, DEPARTMENT_ID  
+From employees
+WHERE  DEPARTMENT_ID = 10;
+
+5)
+SELECT First_Name, Job_ID, Hire_date  
+From employees
+WHERE  Hire_date Between '20/02/1981' and '01/05/1981'
+Order by Hire_date;
+
+alterado para
+
+SELECT First_Name, Job_ID, Hire_date  
+From employees
+WHERE  Hire_date Between '20/02/1981' and '01/05/1991'
+Order by Hire_date;
+
+
+6)
+SELECT First_Name, DEPARTMENT_ID  
+From employees
+WHERE DEPARTMENT_ID Between 10 and 30
+Order by First_Name;
+
+7)
+SELECT First_Name,Hire_date  
+From employees
+where Hire_date  Between '01/01/1982' and '30/12/1982';
+
+alterado para
+
+SELECT First_Name,Hire_date  
+From employees
+where Hire_date  Between '01/01/1982' and '30/12/1992';
+
+8)
+SELECT First_Name,Job_ID
+From employees
+Where manager_ID IS NULL;
+
+9)
+SELECT First_Name ,Commission_pct , Salary
+From employees
+where Commission_pct IS NOT NULL
+Order by Salary DESC , Commission_pct DESC;  
+
+10)
+
+Select first_name
+From employees
+where Upper(First_Name) LIKE '__A%';
+
+11)
+
+Select first_name
+From employees
+where Upper(First_Name) LIKE '%L%L%' 
+AND (DEPARTMENT_ID = 30 OR MANAGER_ID = 7782) ;

@@ -1,0 +1,75 @@
+package boleto;
+
+import java.io.File;
+import java.math.BigDecimal;
+
+import br.com.nordestefomento.jrimum.bopepo.BancoSuportado;
+import br.com.nordestefomento.jrimum.bopepo.Boleto;
+import br.com.nordestefomento.jrimum.bopepo.view.BoletoViewer;
+import br.com.nordestefomento.jrimum.domkee.comum.pessoa.endereco.CEP;
+import br.com.nordestefomento.jrimum.domkee.comum.pessoa.endereco.Endereco;
+import br.com.nordestefomento.jrimum.domkee.comum.pessoa.endereco.UnidadeFederativa;
+import br.com.nordestefomento.jrimum.domkee.financeiro.banco.Banco;
+import br.com.nordestefomento.jrimum.domkee.financeiro.banco.Pessoa;
+import br.com.nordestefomento.jrimum.domkee.financeiro.banco.febraban.Agencia;
+import br.com.nordestefomento.jrimum.domkee.financeiro.banco.febraban.Carteira;
+import br.com.nordestefomento.jrimum.domkee.financeiro.banco.febraban.ContaBancaria;
+import br.com.nordestefomento.jrimum.domkee.financeiro.banco.febraban.Modalidade;
+import br.com.nordestefomento.jrimum.domkee.financeiro.banco.febraban.NumeroDaConta;
+import br.com.nordestefomento.jrimum.domkee.financeiro.banco.febraban.TipoDeTitulo;
+import br.com.nordestefomento.jrimum.domkee.financeiro.banco.febraban.Titulo;
+import br.com.nordestefomento.jrimum.domkee.financeiro.banco.febraban.Titulo.EnumAceite;
+
+public class GeraBoletaItau {
+
+public static void main(String args[]) {
+        
+	Pessoa cedente = new Pessoa("Paschoalotto Interaction Center", "05.500.934/0001-06");   
+	  
+    Banco banco = BancoSuportado.BANCO_BRADESCO.create(); 
+    ContaBancaria contaBancaria = new ContaBancaria(banco);   
+    contaBancaria.setNumeroDaConta(new NumeroDaConta(54860, "0"));   
+    contaBancaria.setCarteira(new Carteira(175));   
+    contaBancaria.setModalidade(new Modalidade(4));   
+    contaBancaria.setAgencia(new Agencia(75, "0"));   
+
+    Pessoa sacado = new Pessoa("DRIANA APARECIDA MUNHOZ CANO", "329.869.828-83");   
+
+    Endereco endereco = new Endereco();   
+    endereco.setUF(UnidadeFederativa.SP);   
+    endereco.setLocalidade("São Paulo");   
+    endereco.setCep(new CEP("04090-003"));   
+    endereco.setBairro("Centro");   
+    endereco.setLogradouro("Rua Teste");   
+    endereco.setNumero("00100");   
+    sacado.addEndereco(endereco);
+
+
+    Titulo titulo = new Titulo(contaBancaria, null,null);   
+    titulo.setNumeroDoDocumento("20301370.82602");   
+    titulo.setNossoNumero("12587720");   
+    titulo.setDigitoDoNossoNumero("8");   
+    titulo.setValor(new BigDecimal("492.11"));   
+    titulo.setDataDoDocumento("30/06/2010");   
+    titulo.setDataDoVencimento("30/06/2010");   
+    titulo.setTipoDeDocumento(TipoDeTitulo.DM_DUPLICATA_MERCANTIL);   
+    titulo.setAceite(EnumAceite.A);   
+
+    Boleto boleto = new Boleto(titulo);   
+    boleto.setLocalPagamento("Pagável em qualquer Banco até o Vencimento.");   
+    boleto.setInstrucao1("APOS O VENCIMENTO COBRAR MULTA DE 2%");   
+    boleto.setInstrucao2("APOS O VENCIMENTO COBRAR R$ 0,30 POR DIA DE ATRASO");   
+
+    //Boleto em PDF   
+    BoletoViewer boletoViewer = new BoletoViewer(boleto);   
+    File arquivoPdf = boletoViewer.getPdfAsFile("MeuPrimeiroBoleto.pdf");   
+       
+    java.awt.Desktop desktop = java.awt.Desktop.getDesktop();   
+//    desktop.open(arquivoPdf);   
+
+    //Imprimindo a linha digitável   
+    System.out.println(boleto.getLinhaDigitavel().write());   
+	        
+            
+	}
+}

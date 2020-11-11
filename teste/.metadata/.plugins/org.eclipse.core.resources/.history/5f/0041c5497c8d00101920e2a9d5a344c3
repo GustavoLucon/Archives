@@ -1,0 +1,44 @@
+package Pai;
+
+import java.awt.*;
+import java.awt.event.*;
+import javax.swing.*;
+
+public class teste extends JFrame{
+  private Image imagem;  
+
+  public teste() {
+    super("Estudos Java");
+    
+    Container c = getContentPane();
+    c.setLayout(new FlowLayout());
+	
+    JButton btn = new JButton("Carregar Imagem");
+    btn.addActionListener(
+      new ActionListener(){
+        public void actionPerformed(ActionEvent e){
+          // imagem a ser carregada
+          String minhaImagem = "C:\\fundo.png";          
+
+          // Obtém o Toolkit padrão
+          Toolkit toolkit = 
+            Toolkit.getDefaultToolkit();
+          imagem = toolkit.getImage(minhaImagem);
+
+          JOptionPane.showMessageDialog(null, 
+            "Acreditamos que a imagem foi carregada");
+        }
+      }
+    );
+
+    c.add(btn);
+    	
+    setSize(400, 300);
+    setVisible(true);
+  }
+  
+  public static void main(String args[]){
+    teste app = new teste();
+    app.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+  }
+}

@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Move 0 elements(s) to &apos;3ºbimestre/src/raulJoaquim&apos;&#x0D;&#x0A;- Destination element: &apos;3ºbimestre/src/raulJoaquim&apos;" description="Move compilation units" destination="=3ºbimestre/src&lt;raulJoaquim" files="0" flags="589830" folders="0" id="org.eclipse.jdt.ui.move" patterns="*" policy="org.eclipse.jdt.ui.moveResources" qualified="false" references="true" stamp="1270508289120" units="0" version="1.0"/>
+</session>

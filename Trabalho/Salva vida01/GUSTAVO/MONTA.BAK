@@ -1,0 +1,7 @@
+@echo off
+cls
+echo montando sistema para gerar arquivo do ITAU
+clipper itau/b/m
+rtlink fi itau
+pause
+itau
